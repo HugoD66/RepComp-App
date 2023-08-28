@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez un script PHP qui écrit 'Hello, World!' dans un fichier texte nommé 'hello.txt'.",
+    "correction": "file_put_contents('hello.txt', 'Hello, World!');"
+  },
+  "Exercice2": {
+    "description": "Créez un script PHP qui lit le contenu du fichier 'hello.txt' et l'affiche à l'écran.",
+    "correction": "$contenu = file_get_contents('hello.txt');\necho $contenu;"
+  },
+  "Exercice3": {
+    "description": "Créez un script PHP qui vérifie si le fichier 'hello.txt' existe. S'il existe, affichez 'Le fichier existe.', sinon, affichez 'Le fichier n'existe pas.'.",
+    "correction": "if (file_exists('hello.txt')) {\n  echo 'Le fichier existe.';\n} else {\n  echo 'Le fichier n'existe pas.';\n}"
+  },
+  "Exercice4": {
+    "description": "Créez un script PHP qui liste tous les fichiers et répertoires dans un répertoire donné (par exemple, 'images/').",
+    "correction": "$repertoire = 'images/';\n$contenu = scandir($repertoire);\nforeach ($contenu as $element) {\n  echo $element . '<br>';\n}"
+  },
+  "Exercice5": {
+    "description": "Créez un script PHP qui supprime le fichier 'hello.txt' s'il existe.",
+    "correction": "if (file_exists('hello.txt')) {\n  unlink('hello.txt');\n}"
+  }
+}

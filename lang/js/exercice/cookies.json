@@ -1,0 +1,27 @@
+{
+  "Exercice1": {
+    "description": "Écrivez un script JavaScript qui crée un cookie nommé 'nom' avec la valeur 'John Doe' et une durée de vie d'un jour.",
+    "code": "// Créez un cookie 'nom' avec la valeur 'John Doe' et une durée de vie d'un jour ici.",
+    "correction": "document.cookie = 'nom=John Doe; expires=Thu, 01 Jan 2024 00:00:00 UTC; path=/;';"
+  },
+  "Exercice2": {
+    "description": "Écrivez un script qui récupère la valeur du cookie 'nom' et l'affiche dans la console.",
+    "code": "// Récupérez la valeur du cookie 'nom' et affichez-la dans la console ici.",
+    "correction": "const cookies = document.cookie.split('; ');\nconst cookieMap = {};\ncookies.forEach((cookie) => {\n  const [name, value] = cookie.split('=');\n  cookieMap[name] = value;\n});\nconsole.log(cookieMap['nom']);"
+  },
+  "Exercice3": {
+    "description": "Écrivez un script qui supprime le cookie 'nom'.",
+    "code": "// Supprimez le cookie 'nom' ici.",
+    "correction": "document.cookie = 'nom=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';"
+  },
+  "Exercice4": {
+    "description": "Écrivez un script qui crée un cookie nommé 'panier' contenant un tableau JSON de produits.",
+    "code": "// Créez un cookie 'panier' contenant un tableau JSON de produits ici.",
+    "correction": "const produits = [\n  { nom: 'Produit 1', prix: 10 },\n  { nom: 'Produit 2', prix: 20 },\n  { nom: 'Produit 3', prix: 30 }\n];\ndocument.cookie = `panier=${JSON.stringify(produits)}; expires=Thu, 01 Jan 2024 00:00:00 UTC; path=/;`;"
+  },
+  "Exercice5": {
+    "description": "Écrivez un script qui récupère et analyse le cookie 'panier' pour afficher la liste des produits et leur prix dans la console.",
+    "code": "// Récupérez et analysez le cookie 'panier' pour afficher la liste des produits ici.",
+    "correction": "const cookies = document.cookie.split('; ');\nconst cookieMap = {};\ncookies.forEach((cookie) => {\n  const [name, value] = cookie.split('=');\n  cookieMap[name] = value;\n});\nconst panier = JSON.parse(cookieMap['panier']);\nconsole.log('Contenu du panier :');\npanier.forEach((produit) => {\n  console.log(`${produit.nom} - ${produit.prix} $`);\n});"
+  }
+}

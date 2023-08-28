@@ -1,0 +1,24 @@
+{
+  "general": "Les structures de contrôle en JavaScript sont essentielles pour contrôler le flux d'exécution de votre code. Elles permettent de prendre des décisions en fonction de conditions et de répéter des actions. Dans cette section, nous explorerons en détail les structures de contrôle if, else, switch, ainsi que les opérateurs de comparaison et les opérateurs logiques.",
+  "if": {
+    "description": "L'instruction if permet d'exécuter un bloc de code si une condition est vraie (true).",
+    "code" : "let age = 18;\n\nif (age >= 18) {\n    console.log(\"Vous êtes majeur.\");\n} else {\n    console.log(\"Vous êtes mineur.\");\n}\n"
+  },
+  "else if": {
+    "description": "L'instruction else if permet de gérer plusieurs conditions dans une séquence.",
+    "code" : "if (condition1) {\n    // Code à exécuter si condition1 est vraie\n} else if (condition2) {\n    // Code à exécuter si condition2 est vraie\n} else {\n    // Code à exécuter si aucune condition n'est vraie\n}\n"
+  },
+  "for  ": {
+    "description": "La boucle for est utilisée lorsque vous connaissez le nombre d'itérations à l'avance.",
+    "code" : "for (let i = 0; i < 5; i++) {\n    console.log(\"Itération \" + i);\n}\n"
+  },
+  "while  ": {
+    "description": "Explication de la méthode 1 pour manipuler les tableaux.",
+    "code" : "let i = 0;\nwhile (i < 5) {\n    console.log(\"Itération \" + i);\n    i++;\n} \n"
+  },
+  "do ... while ": {
+    "description": "La boucle do...while est similaire à la boucle while, mais elle garantit au moins une exécution du bloc de code, car elle teste la condition après l'exécution.",
+    "code" : "let i = 0;\ndo {\n    console.log(\"Itération \" + i);\n    i++;\n} while (i < 5);\n"
+  }
+}
+

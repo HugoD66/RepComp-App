@@ -1,0 +1,27 @@
+{
+  "Exercice1": {
+    "description": "Écrivez un programme JavaScript qui modifie le contenu textuel d'un élément HTML ayant l'ID 'demo' pour afficher 'Hello, World!' à la place.",
+    "code": "// Utilisez la méthode getElementById pour obtenir l'élément avec l'ID 'demo' et modifiez sa propriété textContent.",
+    "correction": "document.getElementById('demo').textContent = 'Hello, World!';"
+  },
+  "Exercice2": {
+    "description": "Écrivez un programme JavaScript qui modifie le contenu HTML d'un élément ayant l'ID 'demo' pour afficher un titre h1 avec le texte 'My Heading'.",
+    "code": "// Utilisez la méthode getElementById pour obtenir l'élément avec l'ID 'demo' et modifiez sa propriété innerHTML.",
+    "correction": "document.getElementById('demo').innerHTML = '<h1>My Heading</h1>';"
+  },
+  "Exercice3": {
+    "description": "Écrivez un programme JavaScript qui change la couleur de fond d'un élément HTML avec l'ID 'myElement' en bleu.",
+    "code": "// Utilisez la méthode getElementById pour obtenir l'élément avec l'ID 'myElement' et modifiez sa propriété style.backgroundColor.",
+    "correction": "document.getElementById('myElement').style.backgroundColor = 'blue';"
+  },
+  "Exercice4": {
+    "description": "Écrivez un programme JavaScript qui ajoute une nouvelle liste d'éléments (éléments de liste) à un élément HTML ayant l'ID 'myList'. Chaque élément de liste doit contenir un numéro de liste unique.",
+    "code": "// Utilisez la méthode getElementById pour obtenir l'élément avec l'ID 'myList'. Créez de nouveaux éléments de liste et ajoutez-les en tant qu'enfants de 'myList'. Assurez-vous d'attribuer des numéros de liste uniques.",
+    "correction": "const myList = document.getElementById('myList');\n\nfor (let i = 1; i <= 5; i++) {\n  const listItem = document.createElement('li');\n  listItem.textContent = 'Item ' + i;\n  myList.appendChild(listItem);\n}"
+  },
+  "Exercice5": {
+    "description": "Écrivez un programme JavaScript qui ajoute un gestionnaire d'événements 'click' à un bouton HTML avec l'ID 'myButton'. Lorsque le bouton est cliqué, il doit afficher 'Hello, World!' dans une boîte d'alerte.",
+    "code": "// Utilisez la méthode getElementById pour obtenir le bouton avec l'ID 'myButton'. Utilisez addEventListener pour ajouter un gestionnaire d'événements 'click' qui affiche une boîte d'alerte.",
+    "correction": "document.getElementById('myButton').addEventListener('click', function() {\n  alert('Hello, World!');\n});"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "general": "Les jointures SQL sont des opérations permettant de combiner des données de plusieurs tables en utilisant des clés communes. Elles sont essentielles pour interroger des bases de données relationnelles et récupérer des informations liées entre différentes tables.",
+
+  "inner_join": {
+    "description": "Une jointure interne (INNER JOIN) retourne uniquement les lignes qui ont des correspondances dans les deux tables. C'est l'opération la plus courante pour combiner des données.",
+    "exemple": "Exemple de jointure interne :",
+    "code": " SELECT commandes.id, clients.nom FROM commandes INNER JOIN clients ON commandes.client_id = clients.id;"
+  },
+
+  "left_join": {
+    "description": "Une jointure externe gauche (LEFT JOIN) retourne toutes les lignes de la table de gauche et les lignes correspondantes de la table de droite. Si aucune correspondance n'est trouvée, des valeurs NULL sont renvoyées pour les colonnes de la table de droite.",
+    "exemple": "Exemple de jointure externe gauche :",
+    "code": " SELECT clients.nom, commandes.numero FROM clients LEFT JOIN commandes ON clients.id = commandes.client_id;"
+  },
+
+  "right_join": {
+    "description": "Une jointure externe droite (RIGHT JOIN) est similaire à une jointure externe gauche mais retourne toutes les lignes de la table de droite et les lignes correspondantes de la table de gauche.",
+    "exemple": "Exemple de jointure externe droite :",
+    "code": " SELECT produits.nom, ventes.quantite FROM produits RIGHT JOIN ventes ON produits.id = ventes.produit_id;"
+  },
+
+  "full_outer_join": {
+    "description": "Une jointure externe complète (FULL OUTER JOIN) retourne toutes les lignes lorsque des correspondances sont trouvées dans l'une ou l'autre des tables. Les valeurs NULL sont renvoyées pour les colonnes sans correspondance.",
+    "exemple": "Exemple de jointure externe complète :",
+    "code": " SELECT clients.nom, commandes.numero FROM clients FULL OUTER JOIN commandes ON clients.id = commandes.client_id;"
+  },
+
+  "self_join": {
+    "description": "Une auto-jointure (SELF JOIN) est une jointure où une table est jointe à elle-même. Cela permet de comparer des enregistrements au sein de la même table.",
+    "exemple": "Exemple d'auto-jointure :",
+    "code": " SELECT e1.nom, e2.nom FROM employes AS e1, employes AS e2 WHERE e1.superviseur_id = e2.id;"
+  }
+}

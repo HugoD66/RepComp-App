@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une variable SCSS nommée '$primary-color' et attribuez-lui la valeur 'blue'.",
+    "correction": "$primary-color: blue;"
+  },
+  "Exercice2": {
+    "description": "Utilisez la variable '$primary-color' définie précédemment pour définir la couleur d'arrière-plan d'une classe '.header' à cette couleur.",
+    "correction": ".header {\n  background-color: $primary-color;\n}"
+  },
+  "Exercice3": {
+    "description": "Créez une liste SCSS nommée '$font-sizes' contenant les valeurs '12px', '16px', '20px', et '24px'.",
+    "correction": "$font-sizes: 12px, 16px, 20px, 24px;"
+  },
+  "Exercice4": {
+    "description": "Utilisez la boucle @each pour générer des classes CSS '.font-size-X' où X est une valeur de la liste '$font-sizes'. Chaque classe doit définir la taille de la police.",
+    "correction": "@each $size in $font-sizes {\n  .font-size-#{$size} {\n    font-size: $size;\n  }\n}"
+  },
+  "Exercice5": {
+    "description": "Créez une fonction SCSS nommée 'border-radius' qui accepte un argument '$radius' et renvoie la propriété 'border-radius' avec la valeur de '$radius'. Utilisez cette fonction pour définir la bordure arrondie d'une classe '.rounded' avec un rayon de '10px'.",
+    "correction": "@function border-radius($radius) {\n  @return border-radius: $radius;\n}\n\n.rounded {\n  @include border-radius(10px);\n}"
+  }
+}

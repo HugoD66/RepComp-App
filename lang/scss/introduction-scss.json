@@ -1,0 +1,27 @@
+{
+  "variables": {
+    "description": "Les variables SCSS permettent de stocker des valeurs réutilisables dans vos feuilles de style.",
+    "example": "Exemple de déclaration de variable :",
+    "code": "$primary-color: #007bff;"
+  },
+  "nesting": {
+    "description": "L'imbrication de sélecteurs permet de structurer votre code de manière plus lisible.",
+    "example": "Exemple d'imbrication :",
+    "code": ".header {\n  .logo {\n    font-size: 24px;\n  }\n}"
+  },
+  "mixins": {
+    "description": "Les mixins sont des blocs de code réutilisables que vous pouvez inclure dans d'autres sélecteurs.",
+    "example": "Exemple de déclaration de mixin :",
+    "code": "@mixin center-absolute {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n\n.modal {\n  width: 80%;\n  @include center-absolute;\n}"
+  },
+  "operations": {
+    "description": "SCSS prend en charge les opérations mathématiques pour simplifier les calculs de valeurs.",
+    "example": "Exemple d'opérations mathématiques :",
+    "code": ".box {\n  width: 100px + 20px;\n  height: 2 * 50px;\n}"
+  },
+  "imports": {
+    "description": "Vous pouvez diviser vos styles en plusieurs fichiers SCSS et les importer les uns dans les autres.",
+    "example": "Exemple d'importation de fichiers :",
+    "code": "// _variables.scss\n$primary-color: #007bff;\n\n// main.scss\n@import 'variables';\n\nbutton {\n  background-color: $primary-color;\n  color: white;\n}"
+  }
+}

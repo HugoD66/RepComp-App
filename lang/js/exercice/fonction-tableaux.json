@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Écrivez une fonction JavaScript qui prend un tableau de nombres en entrée et renvoie la somme de tous les éléments.",
+    "correction": "function sumArray(arr) {\n  return arr.reduce((acc, currentValue) => acc + currentValue, 0);\n}"
+  },
+  "Exercice2": {
+    "description": "Écrivez une fonction JavaScript qui prend un tableau de chaînes de caractères en entrée et renvoie la chaîne la plus longue.",
+    "correction": "function findLongestString(arr) {\n  return arr.reduce((longest, current) => current.length > longest.length ? current : longest, '');\n}"
+  },
+  "Exercice3": {
+    "description": "Écrivez une fonction JavaScript qui prend un tableau de nombres en entrée et renvoie un nouveau tableau contenant les nombres pairs uniquement.",
+    "correction": "function filterEvenNumbers(arr) {\n  return arr.filter(num => num % 2 === 0);\n}"
+  },
+  "Exercice4": {
+    "description": "Écrivez une fonction JavaScript qui prend un tableau de chaînes de caractères en entrée et renvoie un nouveau tableau contenant uniquement les chaînes de caractères qui commencent par la lettre 'A' (en majuscule ou en minuscule).",
+    "correction": "function filterStringsStartingWithA(arr) {\n  return arr.filter(str => str.charAt(0).toLowerCase() === 'a');\n}"
+  },
+  "Exercice5": {
+    "description": "Écrivez une fonction JavaScript qui prend un tableau d'objets avec des propriétés 'nom' et 'âge' en entrée et renvoie un nouveau tableau contenant uniquement les objets des personnes majeures (âge >= 18).",
+    "correction": "function filterAdults(arr) {\n  return arr.filter(person => person.age >= 18);\n}"
+  }
+}

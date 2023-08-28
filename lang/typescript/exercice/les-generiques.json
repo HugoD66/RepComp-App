@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une fonction générique nommée 'premierElement' qui prend un tableau en paramètre et retourne le premier élément de ce tableau.",
+    "correction": "function premierElement<T>(tableau: T[]): T {\n  return tableau[0];\n}"
+  },
+  "Exercice2": {
+    "description": "Créez une fonction générique nommée 'inverserElements' qui prend un tableau en paramètre et renvoie un nouveau tableau avec les éléments inversés.",
+    "correction": "function inverserElements<T>(tableau: T[]): T[] {\n  return tableau.reverse();\n}"
+  },
+  "Exercice3": {
+    "description": "Créez une classe générique nommée 'Pile' qui permet de gérer une pile d'éléments de n'importe quel type. La classe doit avoir des méthodes 'empiler' et 'depiler'.",
+    "correction": "class Pile<T> {\n  private elements: T[] = [];\n\n  empiler(element: T): void {\n    this.elements.push(element);\n  }\n\n  depiler(): T | undefined {\n    return this.elements.pop();\n  }\n}"
+  },
+  "Exercice4": {
+    "description": "Créez une fonction générique nommée 'filtrerElements' qui prend un tableau et une fonction de filtrage en paramètres, et renvoie un nouveau tableau contenant uniquement les éléments qui satisfont la condition de filtrage.",
+    "correction": "function filtrerElements<T>(tableau: T[], condition: (element: T) => boolean): T[] {\n  return tableau.filter(condition);\n}"
+  },
+  "Exercice5": {
+    "description": "Créez une interface générique nommée 'Paire' qui prend deux types de données en paramètres et représente une paire de valeurs. Créez ensuite une fonction générique 'creerPaire' qui prend deux valeurs et renvoie une instance de 'Paire' contenant ces valeurs.",
+    "correction": "interface Paire<T, U> {\n  premiereValeur: T;\n  deuxiemeValeur: U;\n}\n\nfunction creerPaire<T, U>(premiereValeur: T, deuxiemeValeur: U): Paire<T, U> {\n  return { premiereValeur, deuxiemeValeur };\n}"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "general": "SQL (Structured Query Language) est un langage de programmation utilisé pour gérer et interroger des bases de données relationnelles. Les opérations de base en SQL vous permettent de manipuler les données, de les extraire, de les mettre à jour et de les supprimer dans une base de données.",
+
+  "select": {
+    "description": "L'opération SELECT est utilisée pour extraire des données d'une table ou d'une ou plusieurs tables. Vous pouvez spécifier les colonnes que vous souhaitez récupérer, ainsi que les critères de filtrage pour les lignes à récupérer.",
+    "exemple": "Exemple de requête SELECT :",
+    "code": " SELECT nom, prénom FROM utilisateurs WHERE âge > 25;"
+  },
+
+  "insert": {
+    "description": "L'opération INSERT permet d'ajouter de nouvelles lignes de données à une table. Vous spécifiez les valeurs à insérer pour chaque colonne dans la nouvelle ligne.",
+    "exemple": "Exemple de requête INSERT :",
+    "code": " INSERT INTO utilisateurs (nom, prénom, âge) VALUES ('Doe', 'John', 30);"
+  },
+
+  "update": {
+    "description": "L'opération UPDATE est utilisée pour mettre à jour des données existantes dans une table. Vous spécifiez les colonnes à mettre à jour et les nouvelles valeurs pour ces colonnes, ainsi que les critères pour sélectionner les lignes à mettre à jour.",
+    "exemple": "Exemple de requête UPDATE :",
+    "code": " UPDATE utilisateurs SET âge = 31 WHERE nom = 'Doe';"
+  },
+
+  "delete": {
+    "description": "L'opération DELETE permet de supprimer des lignes de données d'une table. Vous spécifiez les critères pour sélectionner les lignes à supprimer.",
+    "exemple": "Exemple de requête DELETE :",
+    "code": " DELETE FROM utilisateurs WHERE âge < 30;"
+  },
+
+  "orderby": {
+    "description": "L'opération ORDER BY est utilisée pour trier les résultats d'une requête SELECT en fonction des valeurs d'une ou plusieurs colonnes. Vous pouvez trier les données par ordre croissant (ASC) ou décroissant (DESC).",
+    "exemple": "Exemple de requête avec ORDER BY :",
+    "code": " SELECT nom, prénom FROM utilisateurs ORDER BY âge DESC;"
+  },
+
+  "groupby": {
+    "description": "L'opération GROUP BY est utilisée pour regrouper les résultats d'une requête SELECT en fonction des valeurs d'une ou plusieurs colonnes. Vous pouvez ensuite appliquer des fonctions d'agrégation telles que SUM, AVG, COUNT, etc., sur chaque groupe de données.",
+    "exemple": "Exemple de requête avec GROUP BY :",
+    "code": " SELECT pays, COUNT(*) FROM commandes GROUP BY pays;"
+  }
+}

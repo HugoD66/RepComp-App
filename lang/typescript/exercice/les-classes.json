@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Définissez une classe 'Animal' avec une propriété 'nom' de type 'string' et une méthode 'parler' qui renvoie un message de bruit générique (par exemple, 'Animal fait un bruit').",
+    "correction": "class Animal {\n  nom: string;\n\n  constructor(nom: string) {\n    this.nom = nom;\n  }\n\n  parler(): string {\n    return 'Animal fait un bruit';\n  }\n}"
+  },
+  "Exercice2": {
+    "description": "Définissez une classe 'Chien' qui étend la classe 'Animal' et ajoutez une méthode 'parler' qui renvoie 'Woof!' pour les chiens.",
+    "correction": "class Chien extends Animal {\n  parler(): string {\n    return 'Woof!';\n  }\n}"
+  },
+  "Exercice3": {
+    "description": "Définissez une classe 'Chat' qui étend la classe 'Animal' et ajoutez une méthode 'parler' qui renvoie 'Miaou!' pour les chats.",
+    "correction": "class Chat extends Animal {\n  parler(): string {\n    return 'Miaou!';\n  }\n}"
+  },
+  "Exercice4": {
+    "description": "Créez une instance de la classe 'Chien' et appelez sa méthode 'parler'.",
+    "correction": "const chien = new Chien('Rex');\nconsole.log(chien.parler()); // Affichera 'Woof!'"
+  },
+  "Exercice5": {
+    "description": "Créez une instance de la classe 'Chat' et appelez sa méthode 'parler'.",
+    "correction": "const chat = new Chat('Minou');\nconsole.log(chat.parler()); // Affichera 'Miaou!'"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "js": {
+    "types": [
+      "structure-de-contrôle",
+      "Tableaux",
+      "fonctions",
+      "fonctions-avancées",
+      "objets",
+      "array()",
+      "console",
+      "dates",
+      "sucre-synthaxique",
+      "destructuration",
+      "shallow-copy",
+      "deep-copy",
+      "doc-js",
+      "tests-unitaires",
+      "tests-fonctionnels",
+      "number()",
+      "tests-d'intégration",
+      "fonctions-usuelles",
+      "classes",
+      "variables",
+      "timers",
+      "promesses",
+      "asynchrone",
+      "fetch",
+      "ajax",
+      "express",
+      "node",
+      "npm",
+      "commentaires",
+      "fonction-tableaux",
+      "api-dom",
+      "ecouteur-event",
+      "template",
+      "customevent",
+      "local-storage",
+      "cookies",
+      "interserction-observer",
+      "apparition-defilement",
+      "gestion-formulaires"
+
+    ]
+  },
+  "sql": {
+    "types": [
+      "db-relationnelles",
+      "operations-de-base",
+      "instructions-sql",
+      "jointures",
+      "fonctions-sql",
+      "passage-UML-relationnel",
+      "introduction-db",
+      "jointures-avancées",
+      "transactions"
+    ]
+  },
+  "php": {
+      "types": [
+        "introduction",
+        "variables",
+        "tableaux",
+        "structures-de-contrôle",
+        "fonctions",
+        "objets",
+        "classes",
+        "héritage",
+        "polymorphisme",
+        "interfaces",
+        "exceptions",
+        "gestion-erreurs",
+        "gestion-fichiers",
+        "gestion-formulaires",
+        "gestion-cookies"
+      ]
+  },
+  "c": {
+
+  },
+  "typescript": {
+    "types" : [
+      "pour-les-programmeurs-JS",
+      "les-bases",
+      "les-classes",
+      "les-types",
+      "retrecissement",
+      "type-objets",
+      "manipulation-types",
+      "les-interfaces",
+      "les-generiques",
+      "les-decorateurs",
+      "les-modules",
+      "creation-types"
+    ]
+  },
+  "scss": {
+    "types" : [
+      "introduction-css",
+      "declarations-usuelles",
+      "responsive",
+      "introduction-scss",
+      "at-rules",
+      "interpolation"
+
+    ]
+  },
+  "angular": {
+    "types" : [
+
+    ]
+  }
+}
+

@@ -1,0 +1,27 @@
+{
+  "Exercice1": {
+    "description": "Utilisez la destructuration pour extraire les propriétés `nom` et `âge` de l'objet `personne`.",
+    "code": "// Utilisez la destructuration pour extraire `nom` et `âge` de l'objet `personne`.",
+    "correction": "const personne = { nom: 'Alice', âge: 30 };\nconst { nom, âge } = personne;\nconsole.log(nom, âge);"
+  },
+  "Exercice2": {
+    "description": "Utilisez la destructuration pour extraire les éléments `x` et `y` du tableau `[3, 4]`.",
+    "code": "// Utilisez la destructuration pour extraire `x` et `y` du tableau `[3, 4]`.",
+    "correction": "const [x, y] = [3, 4];\nconsole.log(x, y);"
+  },
+  "Exercice3": {
+    "description": "Utilisez la destructuration pour extraire la valeur `ville` de l'objet `adresse` imbriqué dans l'objet `personne`.",
+    "code": "// Utilisez la destructuration pour extraire `ville` de l'objet `adresse` dans `personne`.",
+    "correction": "const personne = { nom: 'Bob', adresse: { rue: '123 Rue Principale', ville: 'Paris' } };\nconst { adresse: { ville } } = personne;\nconsole.log(ville);"
+  },
+  "Exercice4": {
+    "description": "Utilisez la destructuration pour extraire le premier et le dernier élément du tableau `[10, 20, 30, 40, 50]`.",
+    "code": "// Utilisez la destructuration pour extraire le premier et le dernier élément du tableau.",
+    "correction": "const tableau = [10, 20, 30, 40, 50];\nconst [premier, , , , dernier] = tableau;\nconsole.log(premier, dernier);"
+  },
+  "Exercice5": {
+    "description": "Utilisez la destructuration pour extraire les propriétés `prenom` et `nom` de l'objet `utilisateur` et renommez-les en `firstName` et `lastName`.",
+    "code": "// Utilisez la destructuration pour extraire et renommer `prenom` et `nom` en `firstName` et `lastName`.",
+    "correction": "const utilisateur = { prenom: 'John', nom: 'Doe' };\nconst { prenom: firstName, nom: lastName } = utilisateur;\nconsole.log(firstName, lastName);"
+  }
+}

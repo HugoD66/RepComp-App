@@ -1,0 +1,27 @@
+{
+  "general": "Cette section couvre les concepts fondamentaux de TypeScript pour vous aider à démarrer.",
+
+  "types_de_donnees": {
+    "description": "Les types de données sont essentiels en TypeScript pour déclarer le type de valeur que peut contenir une variable.",
+    "exemple": "Exemple de déclaration de variable en TypeScript :",
+    "code": "let age: number = 30;"
+  },
+
+  "tableaux_et_tuples": {
+    "description": "Explorez la manière de définir et de travailler avec des tableaux en TypeScript, ainsi que la nouveauté des tuples.",
+    "exemple": "Exemple de déclaration de tableau en TypeScript :",
+    "code": "let fruits: string[] = ['pomme', 'banane', 'fraise'];"
+  },
+
+  "enumerations": {
+    "description": "Apprenez à utiliser les énumérations pour définir un ensemble de valeurs nommées.",
+    "exemple": "Exemple de déclaration d'énumération en TypeScript :",
+    "code": "enum JoursSemaine { Lundi, Mardi, Mercredi, Jeudi, Vendredi, Samedi, Dimanche };"
+  },
+
+  "interfaces": {
+    "description": "Découvrez comment définir des interfaces pour décrire la structure des objets en TypeScript.",
+    "exemple": "Exemple de déclaration d'interface en TypeScript :",
+    "code": "interface Personne { nom: string; age: number; };"
+  }
+}

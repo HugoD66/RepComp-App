@@ -1,0 +1,20 @@
+{
+  "introduction": {
+    "description": "PHP (Hypertext Preprocessor) est un langage de script côté serveur conçu pour le développement web. Il est principalement utilisé pour créer des pages web dynamiques et interactives.",
+    "exemple": "Exemple de code PHP simple : ",
+    "code": "<pre>echo 'Bonjour, monde !';</pre>"
+  },
+  "qu_est_ce_que_php": {
+    "description": "PHP est un langage de script open source qui peut être intégré directement dans le code HTML. Il est exécuté côté serveur, ce qui signifie que le code PHP est traité sur le serveur web avant que le résultat ne soit renvoyé au navigateur du client sous forme de page HTML.",
+    "exemple": "Exemple de code PHP intégré dans HTML :",
+    "code": "<pre>&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Exemple PHP&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;h1&gt;&lt;?php echo 'Bienvenue sur notre site !'; ?&gt;&lt;/h1&gt;\n  &lt;/body&gt;\n&lt;/html&gt;</pre>"
+  },
+  "pourquoi_utiliser_php": {
+    "description": "Il existe plusieurs raisons pour lesquelles PHP est largement utilisé dans le développement web :",
+    "exemple": "Facilité d'apprentissage : PHP est relativement simple à apprendre et à comprendre, en particulier pour ceux qui ont déjà des connaissances en HTML.\nGratuit et open source : PHP est gratuit à utiliser et dispose d'une vaste communauté de développeurs qui contribuent à son amélioration continue.\nGrande compatibilité : Il peut être exécuté sur la plupart des serveurs web, y compris Apache, Nginx et IIS.\nPrise en charge de bases de données : PHP peut se connecter à de nombreuses bases de données, ce qui le rend idéal pour les applications web qui nécessitent une gestion de base de données.\nGrande bibliothèque : Il existe de nombreuses bibliothèques et frameworks PHP, tels que Laravel et Symfony, qui facilitent le développement d'applications complexes.\nÉvolutivité : PHP est adapté pour le développement de petites pages web et d'applications d'entreprise à grande échelle.\nIntégration aisée : Il peut être intégré à d'autres technologies web, telles que JavaScript et CSS."
+  },
+  "comment_fonctionne_php": {
+    "description": "PHP fonctionne en exécutant des scripts PHP sur un serveur web. Voici comment cela fonctionne généralement :",
+    "exemple": "Le navigateur d'un utilisateur envoie une requête HTTP à un serveur web.\nLe serveur web reçoit la requête et identifie qu'elle nécessite le traitement PHP.\nLe serveur web transmet la requête au moteur PHP, qui exécute le code PHP contenu dans le fichier demandé.\nLe code PHP génère du contenu, tel que du HTML, qui est renvoyé au serveur web.\nLe serveur web renvoie la réponse générée par PHP au navigateur de l'utilisateur, qui affiche la page résultante."
+  }
+}

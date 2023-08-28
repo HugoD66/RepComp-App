@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez un ensemble de règles CSS pour rendre une page web responsive. Assurez-vous que le contenu s'adapte correctement lorsque la largeur de l'écran est réduite.",
+    "correction": "/* Utilisez les media queries pour rendre la page responsive */\n\n/* Par exemple, réorganisez et redimensionnez les éléments lorsque la largeur est inférieure à 768px */\n@media screen and (max-width: 768px) {\n  /* Vos règles CSS pour la conception responsive ici */\n}"
+  },
+  "Exercice2": {
+    "description": "Assurez-vous que les images de votre site web sont également responsives. Utilisez des règles CSS appropriées pour qu'elles s'ajustent correctement à différentes tailles d'écran.",
+    "correction": "/* Pour rendre les images responsive, utilisez 'max-width: 100%;' */\nimg {\n  max-width: 100%;\n  height: auto;\n}"
+  },
+  "Exercice3": {
+    "description": "Créez une barre de navigation (menu) qui devient une barre de menu déroulant ('hamburger menu') lorsque la largeur de l'écran est réduite. Utilisez CSS et éventuellement JavaScript si nécessaire.",
+    "correction": "/* Utilisez des media queries pour le menu déroulant */\n\n/* Par exemple, affichez le menu déroulant lorsque la largeur est inférieure à 768px */\n@media screen and (max-width: 768px) {\n  /* Vos règles CSS pour le menu déroulant ici */\n}"
+  },
+  "Exercice4": {
+    "description": "Assurez-vous que les tableaux sur votre site web sont lisibles et s'ajustent correctement à différentes tailles d'écran. Utilisez des règles CSS pour la mise en page.",
+    "correction": "/* Utilisez des media queries et des règles CSS pour rendre les tableaux responsive */\n\n/* Par exemple, ajustez la largeur des cellules et masquez certaines colonnes lorsque la largeur est réduite */\n@media screen and (max-width: 768px) {\n  /* Vos règles CSS pour les tableaux responsive ici */\n}"
+  },
+  "Exercice5": {
+    "description": "Créez un formulaire web qui s'adapte correctement à différents écrans, en utilisant des règles CSS pour la mise en page des champs et des boutons.",
+    "correction": "/* Utilisez des media queries et des règles CSS pour rendre le formulaire responsive */\n\n/* Par exemple, réorganisez les champs du formulaire et ajustez les marges lorsque la largeur est réduite */\n@media screen and (max-width: 768px) {\n  /* Vos règles CSS pour le formulaire responsive ici */\n}"
+  }
+}

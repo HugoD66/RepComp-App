@@ -1,0 +1,27 @@
+{
+  "general": "Les objets sont l'un des concepts fondamentaux en JavaScript. Ils permettent de regrouper des données et des fonctionnalités connexes dans une seule structure. Dans cette section, nous explorerons en détail la création, l'accès aux propriétés, la modification des propriétés, les méthodes, la portée, l'héritage, et la manipulation avancée d'objets en JavaScript.",
+  "creation": {
+    "description": "Créer un objet en JavaScript est simple. Vous pouvez utiliser des accolades pour définir un objet littéral ou le constructeur 'Object'. Ensuite, vous pouvez ajouter des propriétés et des valeurs à l'objet.",
+    "code": "let monObjet = {};\nmonObjet.propriete = 'Valeur';\n"
+  },
+  "acces_modification": {
+    "description": "Vous pouvez accéder aux propriétés d'un objet en utilisant la notation point ou la notation crochet. Pour modifier la valeur d'une propriété, utilisez la même notation.",
+    "code": "let monObjet = { nom: 'John', age: 30 };\nlet nom = monObjet.nom; // Accéder avec la notation point\nlet age = monObjet['age']; // Accéder avec la notation crochet\nmonObjet.age = 31; // Modifier la valeur de la propriété\n"
+  },
+  "methodes": {
+    "description": "Les méthodes d'objet sont des fonctions stockées en tant que propriétés d'un objet. Elles peuvent être utilisées pour effectuer des actions sur l'objet ou ses propriétés.",
+    "code": "let monObjet = {\n    nom: 'John',\n    saluer: function() {\n        console.log('Bonjour, je m\\'appelle ' + this.nom);\n    }\n};\nmonObjet.saluer(); // Appeler la méthode\n"
+  },
+  "portee": {
+    "description": "La portée des propriétés d'un objet détermine où elles sont accessibles. Les propriétés sont généralement locales à l'objet et peuvent être accédées à l'aide de 'this'.",
+    "code": "let monObjet = {\n    nom: 'John',\n    afficherNom: function() {\n        console.log('Mon nom est ' + this.nom);\n    }\n};\nmonObjet.afficherNom(); // 'Mon nom est John'\n"
+  },
+  "heritage": {
+    "description": "L'héritage est un concept important en JavaScript. Vous pouvez créer des objets qui héritent des propriétés et des méthodes d'autres objets. Cela permet de réutiliser et d'étendre le comportement des objets.",
+    "code": "function Animal(nom) {\n    this.nom = nom;\n}\n\nAnimal.prototype.manger = function() {\n    console.log(this.nom + ' mange de la nourriture.');\n};\n\nfunction Chien(nom, race) {\n    Animal.call(this, nom);\n    this.race = race;\n}\n\nChien.prototype = Object.create(Animal.prototype);\nChien.prototype.constructor = Chien;\nChien.prototype.aboyer = function() {\n    console.log(this.nom + ' aboie.');\n};\n\nlet monChien = new Chien('Max', 'Golden Retriever');\nmonChien.aboyer();\nmonChien.manger();\n"
+  },
+  "manipulation_avancee": {
+    "description": "Vous pouvez effectuer des manipulations avancées sur les objets, telles que la copie, la fusion, la sérialisation, la désérialisation, et bien plus encore. Ces opérations sont utiles pour la gestion avancée des données.",
+    "code": "// Copie d'un objet\nfunction copierObjet(objet) {\n    return JSON.parse(JSON.stringify(objet));\n}\n\nlet objetOriginal = { nom: 'Original' };\nlet objetCopie = copierObjet(objetOriginal);\n\n// Fusion de deux objets\nlet objet1 = { a: 1 };\nlet objet2 = { b: 2 };\nlet objetFusionne = { ...objet1, ...objet2 };\n\n// Sérialisation en JSON\nlet objetSerialise = JSON.stringify(objetOriginal);\n\n// Désérialisation depuis JSON\nlet objetDeserialise = JSON.parse(objetSerialise);\n"
+  }
+}

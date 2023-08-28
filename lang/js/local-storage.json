@@ -1,0 +1,31 @@
+{
+  "general": "Le localStorage est une fonctionnalité de stockage en local dans les navigateurs web, qui permet de stocker des données sous forme de paires clé-valeur. Ces données sont stockées de manière persistante même après la fermeture du navigateur, ce qui les rend idéales pour le stockage de petites quantités d'informations utilisateur.",
+
+  "stockage_donnees": {
+    "description": "Pour stocker des données dans le localStorage, vous pouvez utiliser la méthode `localStorage.setItem()` en fournissant une clé et une valeur. Les valeurs doivent être des chaînes de caractères.",
+    "code": "localStorage.setItem('nom', 'John');\nlocalStorage.setItem('age', '30');\n"
+  },
+
+  "recuperation_donnees": {
+    "description": "Pour récupérer des données depuis le localStorage, vous pouvez utiliser la méthode `localStorage.getItem()` en fournissant la clé de la valeur que vous souhaitez récupérer.",
+    "code": "const nom = localStorage.getItem('nom');\nconst age = localStorage.getItem('age');\nconsole.log(nom); // 'John'\nconsole.log(age); // '30'\n"
+  },
+
+  "modification_donnees": {
+    "description": "Pour modifier des données existantes dans le localStorage, vous pouvez simplement réassigner une nouvelle valeur à la même clé.",
+    "code": "localStorage.setItem('age', '31'); // Modification de l'âge\nconst nouvelAge = localStorage.getItem('age');\nconsole.log(nouvelAge); // '31'\n"
+  },
+
+  "suppression_donnees": {
+    "description": "Pour supprimer des données du localStorage, vous pouvez utiliser la méthode `localStorage.removeItem()` en fournissant la clé de la valeur à supprimer. Pour effacer toutes les données du localStorage, utilisez `localStorage.clear()`.",
+    "code": "localStorage.removeItem('nom'); // Suppression du nom\nlocalStorage.clear(); // Suppression de toutes les données\n"
+  },
+
+  "limites_localstorage": {
+    "description": "Le localStorage a des limites de stockage (généralement de quelques mégaoctets par domaine). Il est important de ne pas l'utiliser pour stocker de grandes quantités de données, car cela peut entraîner des problèmes de performance et de stockage. Les données stockées dans le localStorage sont disponibles uniquement pour le domaine du site web où elles ont été enregistrées."
+  },
+
+  "utilisations_localstorage": {
+    "description": "Le localStorage est utile pour stocker des préférences utilisateur, des jetons d'authentification, des paramètres de configuration, des scores de jeu, etc. Il est simple à utiliser pour stocker des données qui ne nécessitent pas un stockage complexe ou sécurisé."
+  }
+}

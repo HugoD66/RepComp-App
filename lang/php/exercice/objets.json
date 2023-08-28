@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez un objet PHP nommé 'utilisateur' avec deux propriétés : 'nom' et 'âge'. Attribuez des valeurs à ces propriétés, puis affichez-les à l'écran.",
+    "correction": "$utilisateur = new stdClass();\n$utilisateur->nom = 'John Doe';\n$utilisateur->age = 30;\necho 'Nom : ' . $utilisateur->nom . '<br>'; echo 'Âge : ' . $utilisateur->age;"
+  },
+  "Exercice2": {
+    "description": "Créez un objet PHP nommé 'produit' avec trois propriétés : 'nom', 'prix' et 'disponible'. Attribuez des valeurs à ces propriétés, puis affichez-les à l'écran.",
+    "correction": "$produit = new stdClass();\n$produit->nom = 'Ordinateur portable';\n$produit->prix = 999.99;\n$produit->disponible = true;\necho 'Nom du produit : ' . $produit->nom . '<br>'; echo 'Prix du produit : ' . $produit->prix . '<br>'; echo 'Disponible : ' . ($produit->disponible ? 'Oui' : 'Non');"
+  },
+  "Exercice3": {
+    "description": "Créez une classe PHP 'Rectangle' avec deux propriétés : 'longueur' et 'largeur'. Créez une méthode dans la classe qui calcule l'aire du rectangle. Créez ensuite un objet 'rect' et affichez son aire.",
+    "correction": "class Rectangle {\n  public $longueur;\n  public $largeur;\n\n  public function aire() {\n    return $this->longueur * $this->largeur;\n  }\n}\n\n$rect = new Rectangle();\n$rect->longueur = 5;\n$rect->largeur = 3;\necho 'Aire du rectangle : ' . $rect->aire();"
+  },
+  "Exercice4": {
+    "description": "Créez un objet PHP nommé 'voiture' en utilisant un tableau associatif avec des clés 'marque', 'modèle' et 'année'. Affichez les détails de la voiture à l'écran.",
+    "correction": "$voiture = [\n  'marque' => 'Toyota',\n  'modèle' => 'Camry',\n  'année' => 2022\n];\necho 'Marque : ' . $voiture['marque'] . '<br>'; echo 'Modèle : ' . $voiture['modèle'] . '<br>'; echo 'Année : ' . $voiture['année'];"
+  },
+  "Exercice5": {
+    "description": "Créez une classe PHP 'Cercle' avec une propriété 'rayon'. Créez une méthode dans la classe qui calcule la circonférence du cercle. Créez ensuite un objet 'cerc' avec un rayon de 7 et affichez sa circonférence.",
+    "correction": "class Cercle {\n  public $rayon;\n\n  public function circonference() {\n    return 2 * 3.14159 * $this->rayon;\n  }\n}\n\n$cerc = new Cercle();\n$cerc->rayon = 7;\necho 'Circonférence du cercle : ' . $cerc->circonference();"
+  }
+}

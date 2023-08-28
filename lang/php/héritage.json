@@ -1,0 +1,22 @@
+{
+  "general": "L'héritage est l'un des principaux concepts de la programmation orientée objet (POO) en PHP. Il permet de créer de nouvelles classes en se basant sur des classes existantes, favorisant la réutilisation de code et la création de hiérarchies de classes.",
+  "héritage_de_classes": {
+    "description": "En PHP, une classe peut hériter des propriétés (variables) et des méthodes (fonctions) d'une autre classe parente. La classe enfant étend la classe parente à l'aide du mot-clé `extends`.",
+    "exemple": "Exemple d'héritage de classes en PHP :",
+    "code": "<pre>class Animal {\n    public function parler() {\n        echo 'Animal parle.';\n    }\n}\n\nclass Chien extends Animal {\n    public function aboyer() {\n        echo 'Le chien aboie.';\n    }\n}\n\n$chien = new Chien();\n$chien->parler(); // Appelle la méthode de la classe parente\n$chien->aboyer(); // Appelle la méthode de la classe enfant</pre>"
+  },
+  "redéfinition_de_méthodes": {
+    "description": "Une classe enfant peut redéfinir (ou surcharger) les méthodes héritées de la classe parente pour les adapter à ses besoins spécifiques. Cela favorise la polymorphie.",
+    "exemple": "Exemple de redéfinition de méthodes en PHP :",
+    "code": "<pre>class Forme {\n    public function aire() {\n        echo 'Calcul de l'aire de la forme de base.';\n    }\n}\n\nclass Cercle extends Forme {\n    public function aire() {\n        echo 'Calcul de l'aire du cercle.';\n    }\n}\n\n$cercle = new Cercle();\n$cercle->aire(); // Appelle la méthode redéfinie</pre>"
+  },
+  "constructeurs_et_destructeurs": {
+    "description": "Les constructeurs et destructeurs sont également hérités, mais une classe enfant peut appeler le constructeur de la classe parente avec `parent::__construct()`.",
+    "exemple": "Exemple d'utilisation du constructeur en héritage en PHP :",
+    "code": "<pre>class Parente {\n    public function __construct() {\n        echo 'Constructeur de la classe parente.';\n    }\n}\n\nclass Enfant extends Parente {\n    public function __construct() {\n        parent::__construct(); // Appelle le constructeur de la classe parente\n        echo 'Constructeur de la classe enfant.';\n    }\n}\n\n$enfant = new Enfant(); // Affiche les messages des deux constructeurs</pre>"
+  },
+  "visibilité_et_modificateurs_d'accès": {
+    "description": "PHP prend en charge la définition de la visibilité des propriétés et méthodes (public, protected, private) pour contrôler l'accès aux membres de la classe parente depuis la classe enfant.",
+    "exemple": null
+  }
+}

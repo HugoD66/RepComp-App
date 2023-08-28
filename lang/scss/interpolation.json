@@ -1,0 +1,32 @@
+{
+  "general": "L'interpolation en SCSS est une fonctionnalité qui vous permet d'insérer des valeurs dynamiques ou des expressions JavaScript dans vos sélecteurs, noms de variables, ou propriétés CSS. Elle utilise la syntaxe '#{}' pour encadrer les expressions à évaluer.",
+  "avantages": {
+    "description": "L'interpolation est utile pour plusieurs raisons :",
+    "exemple": "Permet d'intégrer des valeurs générées dynamiquement dans votre code CSS.\nPermet d'utiliser des variables ou des conditions pour générer des sélecteurs CSS.\nPermet d'utiliser des expressions JavaScript complexes pour calculer des valeurs CSS.\nPermet de créer des styles conditionnels basés sur des variables ou des conditions."
+  },
+  "variable_names": {
+    "description": "L'interpolation peut être utilisée pour dynamiquement générer le nom de variable à partir d'une chaîne.",
+    "example": "Exemple d'interpolation pour générer un nom de variable :",
+    "code": "$primary-color: #007bff;\n$theme: 'primary';\n\n$dynamic-color: #{$theme}-color;"
+  },
+  "selectors": {
+    "description": "Vous pouvez utiliser l'interpolation pour générer dynamiquement des sélecteurs CSS basés sur des variables ou des conditions.",
+    "example": "Exemple d'interpolation pour générer dynamiquement un sélecteur CSS :",
+    "code": "$theme: 'dark';\n\n.#{$theme} {\n  background-color: #333;\n  color: white;\n}"
+  },
+  "property_values": {
+    "description": "L'interpolation peut être utilisée pour insérer des valeurs de propriété CSS dynamiquement.",
+    "example": "Exemple d'interpolation pour insérer une valeur de propriété CSS dynamique :",
+    "code": "$font-size: 16px;\n\np {\n  font-size: #{$font-size};\n}"
+  },
+  "math_expressions": {
+    "description": "Vous pouvez utiliser l'interpolation pour effectuer des calculs mathématiques dans vos valeurs CSS.",
+    "example": "Exemple d'interpolation pour effectuer un calcul mathématique :",
+    "code": "$base-padding: 10px;\n$multiplier: 2;\n\n.element {\n  padding: #{$base-padding} * #{$multiplier};\n}"
+  },
+  "conditional_styles": {
+    "description": "L'interpolation est utile pour créer des styles conditionnels basés sur des variables ou des conditions.",
+    "example": "Exemple d'interpolation pour des styles conditionnels :",
+    "code": "$theme: 'light';\n\nbody {\n  background-color: #{$theme == 'light' ? '#fff' : '#333'};\n  color: #{$theme == 'light' ? '#333' : '#fff'};\n}"
+  }
+}

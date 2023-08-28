@@ -1,0 +1,32 @@
+{
+  "Exercice1": {
+    "description": "Utilisez la console pour afficher le message 'Bonjour, le monde !' dans la console.",
+    "code": "// Utilisez la console pour afficher le message 'Bonjour, le monde !' ici.",
+    "correction": "console.log('Bonjour, le monde !');"
+  },
+  "Exercice2": {
+    "description": "Écrivez un script JavaScript qui déclare une variable `prenom` avec votre prénom et affiche 'Bonjour, [votre prénom] !' dans la console en utilisant la variable.",
+    "code": "// Déclarez la variable prenom et affichez 'Bonjour, [votre prénom] !' ici.",
+    "correction": "const prenom = 'VotrePrénom';\nconsole.log(`Bonjour, ${prenom} !`);"
+  },
+  "Exercice3": {
+    "description": "Déclarez une variable `age` avec votre âge et affichez 'Vous avez [votre âge] ans.' dans la console en utilisant la variable.",
+    "code": "// Déclarez la variable age et affichez 'Vous avez [votre âge] ans.' ici.",
+    "correction": "const age = VotreAge;\nconsole.log(`Vous avez ${age} ans.`);"
+  },
+  "Exercice4": {
+    "description": "Écrivez un script qui calcule la somme de deux nombres de votre choix et affiche le résultat dans la console.",
+    "code": "// Calculez la somme de deux nombres et affichez le résultat ici.",
+    "correction": "const nombre1 = VotreNombre1;\nconst nombre2 = VotreNombre2;\nconst somme = nombre1 + nombre2;\nconsole.log(`La somme de ${nombre1} et ${nombre2} est égale à ${somme}.`);"
+  },
+  "Exercice5": {
+    "description": "Écrivez un script qui demande à l'utilisateur son prénom à l'aide de la fonction `prompt()` et affiche 'Bonjour, [prénom de l'utilisateur] !' dans la console.",
+    "code": "// Utilisez la fonction prompt() pour demander le prénom de l'utilisateur et affichez 'Bonjour, [prénom de l'utilisateur] !' ici.",
+    "correction": "const prenomUtilisateur = prompt('Entrez votre prénom :');\nconsole.log(`Bonjour, ${prenomUtilisateur} !`);"
+  },
+  "Exercice6": {
+    "description": "Écrivez un script qui demande à l'utilisateur deux nombres à l'aide de la fonction `prompt()`, les additionne et affiche le résultat dans la console.",
+    "code": "// Utilisez la fonction prompt() pour demander deux nombres à l'utilisateur, effectuez l'addition et affichez le résultat ici.",
+    "correction": "const nombre1 = parseFloat(prompt('Entrez le premier nombre :'));\nconst nombre2 = parseFloat(prompt('Entrez le deuxième nombre :'));\nconst somme = nombre1 + nombre2;\nconsole.log(`La somme de ${nombre1} et ${nombre2} est égale à ${somme}.`);"
+  }
+}

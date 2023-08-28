@@ -1,0 +1,47 @@
+{
+    "general": "L'objet console est un outil essentiel pour le débogage et l'affichage de messages dans JavaScript. Il offre plusieurs méthodes pour interagir avec la console du navigateur et afficher des informations, des avertissements et des erreurs.",
+    "log": {
+      "description": "La méthode `log()` est utilisée pour afficher des messages d'information dans la console.",
+      "code": "console.log('Ceci est un message d'information.');\n"
+    },
+    "info": {
+      "description": "La méthode `info()` est utilisée pour afficher des messages d'information dans la console, souvent avec un style visuel différent.",
+      "code": "console.info('Ceci est un message d'information.');\n"
+    },
+    "warn": {
+      "description": "La méthode `warn()` est utilisée pour afficher des avertissements dans la console, généralement en jaune.",
+      "code": "console.warn('Ceci est un avertissement.');\n"
+    },
+    "error": {
+      "description": "La méthode `error()` est utilisée pour afficher des erreurs dans la console, généralement en rouge.",
+      "code": "console.error('Ceci est une erreur.');\n"
+    },
+    "clear": {
+      "description": "La méthode `clear()` est utilisée pour effacer le contenu de la console, ce qui peut être utile pour nettoyer l'affichage.",
+      "code": "console.clear();\n"
+    },
+    "table": {
+      "description": "La méthode `table()` permet d'afficher un tableau d'objets sous forme de tableau dans la console.",
+      "code": "const joueurs = [{ nom: 'Alice', score: 42 }, { nom: 'Bob', score: 35 }];\nconsole.table(joueurs);\n"
+    },
+    "group": {
+      "description": "La méthode `group()` crée un groupe de messages dans la console, ce qui peut être utile pour organiser les messages.",
+      "code": "console.group('Informations sur le joueur');\nconsole.log('Nom : Alice');\nconsole.log('Score : 42');\nconsole.groupEnd();\n"
+    },
+    "time": {
+      "description": "Les méthodes `time()` et `timeEnd()` permettent de mesurer le temps écoulé entre deux points du code.",
+      "code": "console.time('Chronomètre');\n// Code à mesurer\nconsole.timeEnd('Chronomètre');\n"
+    },
+    "assert": {
+      "description": "La méthode `assert()` est utilisée pour vérifier si une assertion est vraie. Si l'assertion est fausse, un message d'erreur est affiché.",
+      "code": "console.assert(2 + 2 === 5, 'Erreur : 2 + 2 ne fait pas 5.');\n"
+    },
+    "count": {
+      "description": "La méthode `count()` permet de compter le nombre de fois qu'elle a été appelée avec le même label.",
+      "code": "console.count('Appel de fonction');\nconsole.count('Appel de fonction');\n"
+    },
+    "trace": {
+      "description": "La méthode `trace()` affiche une trace de la pile d'appels, ce qui peut être utile pour déterminer où une fonction a été appelée.",
+      "code": "function fonctionA() {\n  fonctionB();\n}\nfunction fonctionB() {\n  console.trace();\n}\nfonctionA();\n"
+    }
+}

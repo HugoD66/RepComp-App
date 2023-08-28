@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une fonction nommée 'add' qui prend deux nombres en entrée et retourne leur somme.",
+    "correction": "function add(a, b) {\n  return a + b;\n}"
+  },
+  "Exercice2": {
+    "description": "Créez une fonction nommée 'subtract' qui prend deux nombres en entrée et retourne leur différence.",
+    "correction": "function subtract(a, b) {\n  return a - b;\n}"
+  },
+  "Exercice3": {
+    "description": "Créez une fonction nommée 'multiply' qui prend deux nombres en entrée et retourne leur produit.",
+    "correction": "function multiply(a, b) {\n  return a * b;\n}"
+  },
+  "Exercice4": {
+    "description": "Créez une fonction nommée 'divide' qui prend deux nombres en entrée et retourne leur quotient. Assurez-vous de gérer la division par zéro.",
+    "correction": "function divide(a, b) {\n  if (b === 0) {\n    throw new Error('Division par zéro');\n  }\n  return a / b;\n}"
+  },
+  "Exercice5": {
+    "description": "Créez une fonction nommée 'power' qui prend un nombre de base et un exposant en entrée, puis retourne le résultat de la puissance.",
+    "correction": "function power(base, exponent) {\n  return Math.pow(base, exponent);\n}"
+  }
+}

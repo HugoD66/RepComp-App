@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une table 'Utilisateurs' avec les colonnes 'ID', 'Nom', et 'Âge'.",
+    "correction": "CREATE TABLE Utilisateurs (ID INT PRIMARY KEY, Nom VARCHAR(255), Age INT);"
+  },
+  "Exercice2": {
+    "description": "Insérez un nouvel utilisateur dans la table 'Utilisateurs'.",
+    "correction": "INSERT INTO Utilisateurs (Nom, Age) VALUES ('John Doe', 30);"
+  },
+  "Exercice3": {
+    "description": "Sélectionnez tous les utilisateurs dont l'âge est supérieur à 25 ans.",
+    "correction": "SELECT * FROM Utilisateurs WHERE Age > 25;"
+  },
+  "Exercice4": {
+    "description": "Mettez à jour l'âge de l'utilisateur dont le nom est 'Alice' pour le changer en 28 ans.",
+    "correction": "UPDATE Utilisateurs SET Age = 28 WHERE Nom = 'Alice';"
+  },
+  "Exercice5": {
+    "description": "Supprimez tous les utilisateurs dont l'âge est inférieur à 30 ans.",
+    "correction": "DELETE FROM Utilisateurs WHERE Age < 30;"
+  }
+}

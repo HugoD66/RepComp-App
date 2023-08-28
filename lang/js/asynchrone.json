@@ -1,0 +1,31 @@
+{
+  "general": "La programmation asynchrone en JavaScript est une technique qui permet d'exécuter des opérations de manière non bloquante. Cela signifie que le programme peut continuer à fonctionner pendant l'attente d'une opération longue, telle qu'un appel réseau ou une lecture de fichier, sans bloquer l'ensemble de l'application.\n",
+  "callbacks": {
+    "description": "Les callbacks sont des fonctions que vous passez en tant qu'arguments à d'autres fonctions. Ils sont souvent utilisés pour spécifier ce qui doit être fait après qu'une opération asynchrone est terminée.",
+    "code": "function traiterDonnees(data, callback) {\n  // Opération asynchrone\n  setTimeout(() => {\n    callback(data);\n  }, 1000);\n}\n\ntaiterDonnees('Données importantes', (resultat) => {\n  console.log('Données traitées : ' + resultat);\n});\n"
+  },
+  "promesses": {
+    "description": "Les promesses sont un modèle de gestion asynchrone plus récent et plus propre. Elles permettent de gérer plus facilement les opérations asynchrones et de séquencer les appels.",
+    "code": "const maPromesse = new Promise((resolve, reject) => {\n  // Opération asynchrone\n  setTimeout(() => {\n    resolve('Succès');\n  }, 1000);\n});\n\nmaPromesse\n  .then(resultat => {\n    console.log('Opération réussie : ' + resultat);\n  })\n  .catch(erreur => {\n    console.error('Erreur : ' + erreur);\n  });\n"
+  },
+  "async_await": {
+    "description": "L'opérateur `async` est utilisé pour déclarer une fonction asynchrone, tandis que `await` est utilisé à l'intérieur de cette fonction pour attendre la résolution d'une promesse. Cette syntaxe rend le code asynchrone plus lisible et séquentiel.",
+    "code": "async function traitementAsynchrone() {\n  try {\n    const resultat = await maPromesse;\n    console.log('Opération réussie : ' + resultat);\n  } catch (erreur) {\n    console.error('Erreur : ' + erreur);\n  }\n}\n"
+  },
+  "gestion_des_erreurs": {
+    "description": "La gestion des erreurs est essentielle en programmation asynchrone. Utilisez `try...catch` pour capturer les erreurs et assurez-vous de gérer les erreurs correctement dans vos callbacks ou vos promesses.",
+    "code": "try {\n  // Code asynchrone\n} catch (erreur) {\n  console.error('Erreur : ' + erreur);\n}"
+  },
+  "callbacks_enfer": {
+    "description": "Le callback hell, également appelé pyramide de la mort, se produit lorsque de nombreux callbacks sont imbriqués, ce qui rend le code difficile à lire et à entretenir. Les promesses et `async`/`await` peuvent résoudre ce problème.",
+    "code": "fichierLecture('fichier1.txt', (err, data1) => {\n  if (err) throw err;\n  fichierLecture('fichier2.txt', (err, data2) => {\n    if (err) throw err;\n    fichierEcriture('fichier3.txt', data1 + data2, (err) => {\n      if (err) throw err;\n      console.log('Opérations terminées');\n    });\n  });\n});\n"
+  },
+  "utilisation_typique": {
+    "description": "La programmation asynchrone est couramment utilisée dans les appels réseau, les opérations de fichier, la gestion des événements, les animations, et dans toutes les situations où une réponse asynchrone est attendue.",
+    "code": "fetch('https://api.example.com/data')\n  .then(response => response.json())\n  .then(data => {\n    console.log('Données récupérées : ' + JSON.stringify(data));\n  })\n  .catch(error => {\n    console.error('Erreur : ' + error);\n  });\n"
+  },
+  "meilleures_pratiques": {
+    "description": "Il est recommandé d'utiliser les promesses ou `async`/`await` pour rendre le code asynchrone plus lisible. Gérez correctement les erreurs et évitez le callback hell en modularisant le code.",
+    "code": "async function traitementAsynchrone() {\n  try {\n    const resultat = await maPromesse;\n    console.log('Opération réussie : ' + resultat\n"
+  }
+}

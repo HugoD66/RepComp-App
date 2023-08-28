@@ -1,0 +1,45 @@
+{
+  "general": "Les feuilles de style en cascade (CSS) sont un langage de style utilisé pour définir l'apparence et la mise en page des éléments HTML d'une page web. CSS permet de contrôler la couleur, la police, la taille, la marge, le rembourrage et de nombreuses autres propriétés d'un élément HTML.",
+
+  "sélecteurs": {
+    "description": "Les sélecteurs CSS déterminent quels éléments HTML sont ciblés pour l'application des règles de style. Il existe plusieurs types de sélecteurs, y compris les sélecteurs d'éléments, les sélecteurs de classe, les sélecteurs d'ID et les sélecteurs de groupe.",
+    "exemple": "Exemple de sélecteur d'élément :",
+    "code": "p {\n  color: blue;\n}"
+  },
+
+  "propriétés_css": {
+    "description": "Les propriétés CSS définissent les aspects spécifiques d'un élément HTML, tels que la couleur du texte, la taille de la police, la marge, le rembourrage, etc. Il existe des centaines de propriétés CSS.",
+    "exemple": "Exemple de propriété CSS :",
+    "code": "h1 {\n  font-size: 24px;\n}"
+  },
+
+  "valeurs_css": {
+    "description": "Chaque propriété CSS accepte une ou plusieurs valeurs spécifiques. Les valeurs peuvent être des nombres, des chaînes de texte, des couleurs, des pourcentages, etc. Le choix des valeurs détermine l'apparence de l'élément.",
+    "exemple": "Exemple de valeur CSS :",
+    "code": "p {\n  margin: 10px 0;\n}"
+  },
+
+  "sélecteurs_avancés": {
+    "description": "En plus des sélecteurs de base, CSS propose des sélecteurs avancés tels que les sélecteurs d'enfant, les sélecteurs adjacents, les sélecteurs de pseudo-classe et les sélecteurs de pseudo-élément, qui permettent de cibler des éléments de manière plus spécifique.",
+    "exemple": "Exemple de sélecteur d'enfant :",
+    "code": "ul > li {\n  list-style: square;\n}"
+  },
+
+  "boîte_de_modèle": {
+    "description": "Le modèle de boîte CSS est la manière dont chaque élément HTML est rendu sous forme de boîte rectangulaire, comprenant la marge, la bordure, le rembourrage et le contenu. Vous pouvez contrôler ces aspects avec des propriétés CSS.",
+    "exemple": "Exemple de modèle de boîte CSS :",
+    "code": "div {\n  border: 1px solid #000;\n  padding: 10px;\n}"
+  },
+
+  "positionnement_et_disposition": {
+    "description": "CSS permet de contrôler le positionnement des éléments sur la page. Vous pouvez utiliser des propriétés pour définir si un élément doit être positionné de manière statique, relative, absolue ou fixe, ainsi que pour gérer la disposition des éléments en bloc ou en ligne.",
+    "exemple": "Exemple de positionnement CSS :",
+    "code": "div {\n  position: relative;\n  top: 20px;\n}"
+  },
+
+  "styles_réactifs": {
+    "description": "Les médias queries sont utilisées pour créer des styles réactifs, qui s'adaptent à différentes tailles d'écran. Cela permet de rendre votre site web convivial pour les appareils mobiles et les ordinateurs de bureau.",
+    "exemple": "Exemple de média query CSS :",
+    "code": "@media screen and (max-width: 768px) {\n  body {\n    font-size: 16px;\n  }\n}"
+  }
+}

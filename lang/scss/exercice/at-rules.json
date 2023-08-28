@@ -1,0 +1,23 @@
+{
+  "Exercice1": {
+    "description": "Créez un fichier SCSS avec un @import pour inclure un autre fichier SCSS externe nommé 'variables'. Assurez-vous que le chemin du fichier 'variables' est correct.",
+    "correction": "@import 'variables';"
+  },
+  "Exercice2": {
+    "description": "Utilisez l'at-rule @if pour définir une variable de couleur 'background-color' à 'red' si une variable booléenne '$theme-dark' est définie à true, sinon définissez-la à 'white'.",
+    "correction": "@if $theme-dark {\n  $background-color: red;\n} else {\n  $background-color: white;\n}"
+  },
+  "Exercice3": {
+    "description": "Utilisez l'at-rule @for pour générer une série de classes '.btn-1' à '.btn-5' avec des marges différentes, commençant par 10px et augmentant de 10px à chaque itération.",
+    "correction": "@for $i from 1 through 5 {\n  .btn-#{$i} {\n    margin: 10px + 10px * $i;\n  }\n}"
+  },
+  "Exercice4": {
+    "description": "Utilisez l'at-rule @each pour parcourir une liste de couleurs et générer des classes CSS '.color-X' où X est la couleur.",
+    "correction": "$colors: red, blue, green, yellow;\n@each $color in $colors {\n  .color-#{$color} {\n    background-color: $color;\n  }\n}"
+  },
+  "Exercice5": {
+    "description": "Utilisez l'at-rule @while pour générer une série de classes '.col-1' à '.col-10' avec des largeurs différentes, commençant par 10% et doublant à chaque itération.",
+    "correction": "$i: 1;\n@while $i <= 10 {\n  .col-#{$i} {\n    width: 10% * $i;\n  }\n  $i: $i + 1;\n}"
+  }
+}
+

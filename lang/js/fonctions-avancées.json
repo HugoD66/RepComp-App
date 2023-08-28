@@ -1,0 +1,18 @@
+{
+  "fonctions_recursives": {
+    "description": "Les fonctions récursives sont des fonctions qui s'appellent elles-mêmes pour résoudre un problème. Elles sont couramment utilisées pour résoudre des problèmes qui peuvent être décomposés en des sous-problèmes similaires.",
+    "code": "// Exemple de fonction récursive pour calculer la factorielle\nfunction factorielle(n) {\n    if (n === 0) {\n        return 1;\n    } else {\n        return n * factorielle(n - 1);\n    }\n}\n\nlet resultat = factorielle(5); // resultat contiendra 120\n"
+  },
+  "fonctions_flechees": {
+    "description": "Les fonctions fléchées sont une manière concise de déclarer des fonctions en JavaScript. Elles sont souvent utilisées pour des fonctions simples qui n'ont pas besoin d'instructions complexes.",
+    "code": "// Exemple de fonction fléchée pour additionner deux nombres\nconst addition = (a, b) => a + b;\n\nlet resultat = addition(5, 3); // resultat contiendra 8\n"
+  },
+  "fonctions_recursives_avancees": {
+    "description": "Les fonctions récursives avancées peuvent résoudre des problèmes plus complexes en utilisant la récursion. Elles peuvent être utilisées pour des tâches telles que la recherche dans des structures de données arborescentes.",
+    "code": "// Exemple de fonction récursive pour rechercher un élément dans un arbre binaire\nfunction rechercheArbre(arbre, valeur) {\n    if (!arbre) {\n        return false;\n    }\n    if (arbre.valeur === valeur) {\n        return true;\n    }\n    return rechercheArbre(arbre.gauche, valeur) || rechercheArbre(arbre.droite, valeur);\n}\n"
+  },
+  "fonctions_flechees_avancees": {
+    "description": "Les fonctions fléchées avancées peuvent simplifier le code en utilisant des fonctions fléchées pour des tâches plus complexes, telles que le filtrage et la transformation de tableaux.",
+    "code": "// Exemple de fonction fléchée pour filtrer des nombres pairs dans un tableau\nconst nombres = [1, 2, 3, 4, 5, 6];\nconst pairs = nombres.filter(nombre => nombre % 2 === 0);\n\nconsole.log(pairs); // Affichera [2, 4, 6]\n"
+  }
+}

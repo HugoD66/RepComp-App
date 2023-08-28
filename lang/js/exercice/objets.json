@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez un objet `personne` avec deux propriétés : `nom` et `âge`. Remplissez ces propriétés avec des valeurs de votre choix.",
+    "correction": "const person = {\n  name: 'John',\n  age: 30\n};"
+  },
+  "Exercice2": {
+    "description": "Ajoutez une nouvelle propriété `ville` à l'objet `personne` créé précédemment et assignez-lui une valeur.",
+    "correction": "person.city = 'Paris';"
+  },
+  "Exercice3": {
+    "description": "Créez une fonction `afficherDetails` qui prend un objet `personne` en paramètre et affiche ses propriétés `nom`, `âge` et `ville` dans la console.",
+    "correction": "function displayDetails(person) {\n  console.log(`Nom : ${person.name}, Âge : ${person.age}, Ville : ${person.city}`);\n}"
+  },
+  "Exercice4": {
+    "description": "Créez un objet `voiture` avec trois propriétés : `marque`, `modèle` et `année`. Remplissez ces propriétés avec des valeurs de votre choix.",
+    "correction": "const car = {\n  brand: 'Toyota',\n  model: 'Camry',\n  year: 2020\n};"
+  },
+  "Exercice5": {
+    "description": "Créez une fonction `modifierAnnee` qui prend un objet `voiture` en paramètre et modifie la propriété `année` de la voiture en ajoutant 5 ans à sa valeur actuelle.",
+    "correction": "function updateYear(car) {\n  car.year += 5;\n}"
+  }
+}

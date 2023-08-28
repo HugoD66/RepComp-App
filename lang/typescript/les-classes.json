@@ -1,0 +1,27 @@
+{
+  "general": "Les classes sont un concept fondamental en programmation orientée objet (POO). En TypeScript, vous pouvez définir des classes pour créer des objets avec des propriétés et des méthodes associées. Les classes offrent une manière structurée et réutilisable d'organiser votre code.",
+
+  "définition_de_classe": {
+    "description": "Pour définir une classe en TypeScript, utilisez le mot-clé `class`, suivi du nom de la classe. Vous pouvez également déclarer des propriétés et des méthodes à l'intérieur de la classe.",
+    "exemple": "Exemple de définition de classe en TypeScript :",
+    "code": "class Animal {\n    nom: string;\n\n    constructor(nom: string) {\n        this.nom = nom;\n    }\n\n    faireDuBruit() {\n        console.log(`L'animal ${this.nom} fait du bruit.`);\n    }\n}"
+  },
+
+  "instanciation_d_objets": {
+    "description": "Pour créer un objet à partir d'une classe, utilisez l'opérateur `new` suivi du nom de la classe. Vous pouvez également passer des arguments au constructeur de la classe lors de la création de l'objet.",
+    "exemple": "Exemple d'instanciation d'objet en TypeScript :",
+    "code": "const chat = new Animal('Chat');\nchat.faireDuBruit(); // Affiche 'L'animal Chat fait du bruit.'"
+  },
+
+  "héritage": {
+    "description": "En TypeScript, vous pouvez créer une hiérarchie de classes en utilisant l'héritage. Une classe peut hériter des propriétés et des méthodes d'une autre classe parente.",
+    "exemple": "Exemple d'héritage en TypeScript :",
+    "code": "class Chien extends Animal {\n    aboyer() {\n        console.log(`${this.nom} aboie.`);\n    }\n}\nconst chien = new Chien('Chien');\nchien.faireDuBruit(); // Affiche 'L'animal Chien fait du bruit.'\nchien.aboyer(); // Affiche 'Chien aboie.'"
+  },
+
+  "modificateurs_d_accès": {
+    "description": "Vous pouvez utiliser des modificateurs d'accès tels que `public`, `private` et `protected` pour contrôler la visibilité des membres (propriétés et méthodes) d'une classe.",
+    "exemple": "Exemple d'utilisation de modificateurs d'accès en TypeScript :",
+    "code": "class Voiture {\n    private vitesse: number;\n\n    constructor() {\n        this.vitesse = 0;\n    }\n\n    accélérer() {\n        this.vitesse += 10;\n    }\n}\nconst voiture = new Voiture();\nvoiture.accélérer(); // Fonctionne\nconsole.log(voiture.vitesse); // Erreur : La propriété 'vitesse' est privée.\n"
+  }
+}

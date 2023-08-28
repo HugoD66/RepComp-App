@@ -1,0 +1,40 @@
+{
+  "general": "Les commentaires JSDoc sont une manière de documenter du code JavaScript en utilisant une syntaxe spécifique. Ils sont largement utilisés pour générer une documentation précise et utile pour les bibliothèques et les projets JavaScript.",
+  "syntaxe": {
+    "description": "Les commentaires JSDoc commencent par '/**' et se terminent par '*/'. Vous pouvez ajouter des balises et des descriptions pour documenter différentes parties du code.",
+    "code": "/**\n * C'est un exemple de commentaire JSDoc.\n * @param {string} nom - Le nom de l'utilisateur.\n * @param {number} age - L'âge de l'utilisateur.\n * @returns {string} - Un message de salutation.\n */\n"
+  },
+  "balises_communes": {
+    "description": "Il existe de nombreuses balises JSDoc standard que vous pouvez utiliser pour documenter différentes parties de votre code. Voici quelques-unes des balises les plus couramment utilisées :",
+    "exemple": [
+      "@param {type} nom - Description de la variable.\n",
+      "@returns {type} - Description de la valeur de retour.\n",
+      "@throws {type} - Description de l'exception levée.\n",
+      "@deprecated - Marque une fonction ou une méthode comme obsolète.\n",
+      "@example - Fournit un exemple d'utilisation.\n",
+      "@see - Fournit un lien vers d'autres ressources ou documentation.\n"
+    ]
+  },
+  "types": {
+    "description": "Les commentaires JSDoc vous permettent de spécifier le type des variables, des paramètres et des valeurs de retour. Cela aide les développeurs à comprendre le comportement attendu.",
+    "exemple": [
+      "@param {string} nom - Le nom de l'utilisateur.\n",
+      "@param {number} age - L'âge de l'utilisateur.\n",
+      "@returns {string} - Un message de salutation.\n"
+    ]
+  },
+  "utilisation": {
+    "description": "Les commentaires JSDoc sont utilisés pour générer une documentation automatique à partir du code source. Vous pouvez utiliser des outils tels que JSDoc ou VSCode pour extraire la documentation.",
+    "exemple": "/** @param {string} nom - Le nom de l'utilisateur. */"
+  },
+  "meilleures_pratiques": {
+    "description": "Pour tirer le meilleur parti des commentaires JSDoc, suivez ces meilleures pratiques :",
+    "exemple": [
+      "1. Soyez précis : Fournissez des descriptions claires et précises.\n",
+      "2. Utilisez des types appropriés : Spécifiez correctement les types pour éviter les erreurs.\n",
+      "3. Documentez tous les éléments publics : Documentez toutes les fonctions, classes et variables accessibles depuis l'extérieur.\n",
+      "4. Mettez à jour la documentation : Tenez la documentation à jour à mesure que le code évolue.\n",
+      "5. Utilisez des exemples : Incluez des exemples d'utilisation pour illustrer le comportement du code.\n"
+    ]
+  }
+}

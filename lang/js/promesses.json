@@ -1,0 +1,35 @@
+{
+  "general": "Les promesses en JavaScript sont un modèle de gestion asynchrone qui facilite le traitement des opérations qui prennent du temps, comme les appels réseau ou les opérations de fichier. Elles offrent une manière plus propre et plus lisible de gérer les opérations asynchrones par rapport aux callbacks.",
+  "creation": {
+    "description": "Pour créer une promesse, utilisez le constructeur `Promise`. Il prend une fonction exécuteur avec deux arguments : `resolve` et `reject`. Vous appelez `resolve` lorsque la promesse est résolue avec succès et `reject` en cas d'échec.",
+    "code": "const maPromesse = new Promise((resolve, reject) => {\n  // Code asynchrone\n  if (succes) {\n    resolve(resultat);\n  } else {\n    reject(erreur);\n  }\n});"
+  },
+  "then_catch": {
+    "description": "Vous pouvez attacher des gestionnaires aux promesses avec les méthodes `then()` et `catch()`. Le gestionnaire `then()` est exécuté lorsque la promesse est résolue avec succès, tandis que `catch()` gère les erreurs.\n",
+    "code": "maPromesse\n  .then(resultat => {\n    // Traitement du résultat\n  })\n  .catch(erreur => {\n    // Gestion des erreurs\n  });"
+  },
+  "finally": {
+    "description": "La méthode `finally()` est utilisée pour exécuter un code quel que soit le résultat de la promesse, que ce soit une résolution ou un rejet. Cela peut être utile pour effectuer un nettoyage.",
+    "code": "maPromesse\n  .then(resultat => {\n    // Traitement du résultat\n  })\n  .catch(erreur => {\n    // Gestion des erreurs\n  })\n  .finally(() => {\n    // Code à exécuter toujours\n  });\n"
+  },
+  "promesses_en_chaine": {
+    "description": "Vous pouvez enchaîner plusieurs opérations asynchrones en retournant des promesses à partir de gestionnaires `then()`. Cela permet de séquencer les opérations.",
+    "code": "maPromesse\n  .then(resultat1 => {\n    return autrePromesse(resultat1);\n  })\n  .then(resultat2 => {\n    // Traitement avec resultat2\n  })\n  .catch(erreur => {\n    // Gestion des erreurs\n  });\n"
+  },
+  "promises_all_race": {
+    "description": "Les fonctions utilitaires `Promise.all()` et `Promise.race()` permettent respectivement d'attendre que toutes les promesses se résolvent ou qu'au moins une se résolve.",
+    "code": "const promesses = [promesse1, promesse2, promesse3];\n\nPromise.all(promesses)\n  .then(resultats => {\n    // Tous les résultats sont prêts\n  })\n  .catch(erreur => {\n    // Gestion des erreurs\n  });\n\nPromise.race(promesses)\n  .then(resultat => {\n    // Première promesse résolue\n  })\n  .catch(erreur => {\n    // Gestion des erreurs\n  });\n"
+  },
+  "async_await": {
+    "description": "L'opérateur `async` permet de déclarer une fonction asynchrone, qui retourne une promesse. Vous pouvez utiliser `await` dans cette fonction pour attendre la résolution d'une autre promesse, rendant le code plus lisible et séquentiel.",
+    "code": "async function traitementAsynchrone() {\n  try {\n    const resultat = await maPromesse;\n    // Utilisation du résultat\n  } catch (erreur) {\n    // Gestion des erreurs\n  }\n}\n"
+  },
+  "utilisation_typique": {
+    "description": "Les promesses sont couramment utilisées pour gérer des appels réseau, des opérations de fichier, des requêtes HTTP, des animations asynchrones, et toute opération nécessitant une réponse asynchrone.",
+    "code": "fetch('https://api.example.com/data')\n  .then(response => response.json())\n  .then(data => {\n    // Traitement des données\n  })\n  .catch(error => {\n    // Gestion des erreurs\n  });\n"
+  },
+  "meilleures_pratiques": {
+    "description": "Il est recommandé de toujours gérer les erreurs avec `catch()` pour éviter des erreurs non capturées, d'utiliser `finally()` pour le nettoyage, et de penser à la séquentialité lors de l'enchaînement des promesses.",
+    "code": "maPromesse\n  .then(resultat => {\n    // Traitement du résultat\n  })\n  .catch(erreur => {\n    // Gestion des erreurs\n  })\n  .finally(() => {\n    // Code à exécuter toujours\n  });\n"
+  }
+}

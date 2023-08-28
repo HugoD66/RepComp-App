@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une promesse qui résout avec le message 'Promesse résolue avec succès !' après une courte attente (par exemple, 2 secondes).",
+    "correction": "const promise = new Promise((resolve) => {\n  setTimeout(() => {\n    resolve('Promise resolved successfully!');\n  }, 2000);\n});"
+  },
+  "Exercice2": {
+    "description": "Créez une promesse qui se résout avec un nombre aléatoire entre 1 et 10 après une courte attente (par exemple, 1 seconde).",
+    "correction": "const promise = new Promise((resolve) => {\n  setTimeout(() => {\n    const randomNumber = Math.floor(Math.random() * 10) + 1;\n    resolve(randomNumber);\n  }, 1000);\n});"
+  },
+  "Exercice3": {
+    "description": "Créez une promesse qui se résout avec succès si un nombre donné est pair et est rejetée si le nombre est impair.",
+    "correction": "function checkIfEven(number) {\n  return new Promise((resolve, reject) => {\n    if (number % 2 === 0) {\n      resolve('Even');\n    } else {\n      reject('Odd');\n    }\n  });\n}"
+  },
+  "Exercice4": {
+    "description": "Créez une promesse qui se résout avec un tableau de chaînes de caractères après une courte attente (par exemple, 2 secondes).",
+    "correction": "const promise = new Promise((resolve) => {\n  setTimeout(() => {\n    const stringArray = ['apple', 'banana', 'cherry'];\n    resolve(stringArray);\n  }, 2000);\n});"
+  },
+  "Exercice5": {
+    "description": "Créez une promesse qui se résout avec succès après une courte attente (par exemple, 1 seconde), puis créez une autre promesse qui est rejetée après une autre courte attente (par exemple, 2 secondes).",
+    "correction": "const promise1 = new Promise((resolve) => {\n  setTimeout(() => {\n    resolve('Promise 1 resolved');\n  }, 1000);\n});\n\nconst promise2 = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    reject('Promise 2 rejected');\n  }, 2000);\n});"
+  }
+}

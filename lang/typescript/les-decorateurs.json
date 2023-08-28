@@ -1,0 +1,33 @@
+{
+  "general": "Les décorateurs en TypeScript sont des fonctions spéciales qui permettent de modifier la classe, la méthode, la propriété ou le paramètre sur lesquels ils sont appliqués. Ils sont principalement utilisés pour ajouter des métadonnées à votre code et pour étendre le comportement des éléments décorés.",
+
+  "qu_est_ce_qu_un_decorateur": {
+    "description": "Un décorateur est une fonction qui est préfixée par le symbole @ et qui est placée juste avant la déclaration d'une classe, d'une méthode, d'une propriété ou d'un paramètre. Lorsque le code est exécuté, le décorateur est appelé avec des informations sur l'élément qu'il décore.",
+    "exemple": "Exemple de décorateur en TypeScript :",
+    "code": "@log\nclass MaClasse {\n    // ... contenu de la classe ...\n}"
+  },
+
+  "utilisation_des_decorateurs": {
+    "description": "Les décorateurs sont utilisés pour diverses tâches, telles que la journalisation, la validation, la mesure des performances, l'injection de dépendances, etc. Ils offrent une manière élégante d'ajouter des fonctionnalités à votre code sans le rendre complexe.",
+    "exemple": "Exemple d'utilisation d'un décorateur pour la journalisation en TypeScript :",
+    "code": "function log(target: any, propertyName: string) {\n    const descriptor = Reflect.getOwnPropertyDescriptor(target, propertyName);\n    const originalMethod = descriptor.value;\n    descriptor.value = function (...args: any[]) {\n        console.log(`Appel de ${propertyName} avec arguments : ${args}`);\n        return originalMethod.apply(this, args);\n    };\n    return descriptor;\n}"
+  },
+
+  "types_de_decorateurs": {
+    "description": "Il existe différents types de décorateurs en TypeScript, tels que les décorateurs de classe, de méthode, de propriété et de paramètre. Chaque type a un but spécifique et une utilisation appropriée.",
+    "exemple": "Exemple de décorateur de méthode en TypeScript :",
+    "code": "function validate(target: any, propertyName: string, descriptor: PropertyDescriptor) {\n    const originalMethod = descriptor.value;\n    descriptor.value = function (...args: any[]) {\n        if (args.some(arg => typeof arg !== 'number')) {\n            throw new Error(`Les arguments de ${propertyName} doivent être des nombres.`);\n        }\n        return originalMethod.apply(this, args);\n    };\n    return descriptor;\n}\n\nclass Calculatrice {\n    @validate\n    additionner(a: number, b: number): number {\n        return a + b;\n    }\n}"
+  },
+
+  "décorateurs_dans_les_frameworks": {
+    "description": "Les décorateurs sont couramment utilisés dans les frameworks TypeScript tels qu'Angular pour ajouter des fonctionnalités aux composants, aux services, aux routes, etc. Ils facilitent la configuration et l'extension du comportement des applications.",
+    "exemple": "Exemple de décorateur Angular :",
+    "code": "@Component({\n    selector: 'app-mon-composant',\n    templateUrl: './mon-composant.component.html'\n})\nexport class MonComposant {\n    // ... contenu du composant ...\n}"
+  },
+
+  "personnalisation_de_decorateurs": {
+    "description": "Il est possible de créer ses propres décorateurs personnalisés en TypeScript pour répondre aux besoins spécifiques de votre application. Cela permet d'ajouter des fonctionnalités sur mesure à votre code.",
+    "exemple": "Exemple de décorateur personnalisé en TypeScript :",
+    "code": "function monDecorateur(parametre: any) {\n    return function (target: any) {\n        // ... logique personnalisée ici ...\n    };\n}"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une variable en PHP pour stocker votre nom et affichez-le à l'écran.",
+    "correction": "$monNom = 'John Doe';\necho $monNom;"
+  },
+  "Exercice2": {
+    "description": "Créez trois variables pour stocker votre nom, prénom et âge. Affichez-les à l'écran dans une phrase.",
+    "correction": "$nom = 'Doe';\n$prenom = 'John';\n$age = 30;\necho 'Je m'appelle ' . $prenom . ' ' . $nom . ' et j'ai ' . $age . ' ans.';"
+  },
+  "Exercice3": {
+    "description": "Créez une variable contenant un montant en euros. Convertissez ce montant en dollars en utilisant un taux de change (par exemple, 1 euro = 1,18 dollar) et affichez le résultat.",
+    "correction": "$montantEuros = 100;\n$tauxChange = 1.18;\n$montantDollars = $montantEuros * $tauxChange;\necho $montantEuros . ' euros équivalent à ' . $montantDollars . ' dollars.';"
+  },
+  "Exercice4": {
+    "description": "Créez une variable contenant une chaîne de caractères. Comptez le nombre de caractères dans cette chaîne et affichez le résultat.",
+    "correction": "$chaine = 'Bonjour, monde!';\n$nombreCaracteres = strlen($chaine);\necho 'La chaîne contient ' . $nombreCaracteres . ' caractères.';"
+  },
+  "Exercice5": {
+    "description": "Créez une variable contenant un nombre entier. Vérifiez si ce nombre est pair ou impair et affichez le résultat.",
+    "correction": "$nombre = 42;\nif ($nombre % 2 == 0) {\n  echo 'Le nombre est pair.';\n} else {\n  echo 'Le nombre est impair.';\n}"
+  }
+}

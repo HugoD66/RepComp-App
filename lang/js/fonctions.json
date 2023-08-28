@@ -1,0 +1,39 @@
+{
+  "general": "Les fonctions sont l'un des concepts fondamentaux en JavaScript. Elles permettent de regrouper un ensemble d'instructions réutilisables dans votre programme. Dans cette section, nous explorerons en détail la création, l'appel, les paramètres, les valeurs de retour, la portée et les différentes méthodes de déclaration des fonctions en JavaScript.",
+  "declaration": {
+    "description": "Les fonctions peuvent être déclarées de plusieurs manières en JavaScript. L'une des façons les plus courantes est la déclaration de fonction nommée, où vous utilisez le mot-clé 'function' suivi du nom de la fonction.",
+    "code": "function maFonction(parametre1, parametre2) {\n    // Instructions de la fonction\n}"
+  },
+  "expression": {
+    "description": "Vous pouvez également déclarer des fonctions sous forme d'expressions de fonction. Dans ce cas, la fonction n'a pas besoin d'être nommée, ce qui en fait une fonction anonyme.",
+    "code": "const maFonction = function(parametre1, parametre2) {\n    // Instructions de la fonction\n};\n"
+  },
+  "fonction_flechee": {
+    "description": "Les fonctions fléchées sont une autre façon de déclarer des fonctions en JavaScript. Elles ont une syntaxe plus concise et ne modifient pas la valeur de 'this' lorsqu'elles sont exécutées.",
+    "code": "const maFonction = (parametre1, parametre2) => {\n    // Instructions de la fonction\n};\n"
+  },
+  "appel": {
+    "description": "Pour exécuter une fonction, vous devez l'appeler en utilisant son nom suivi de parenthèses contenant les arguments. Les arguments sont les valeurs que vous passez à la fonction pour qu'elle les utilise.",
+    "code": "maFonction(valeur1, valeur2);\n"
+  },
+  "parametres": {
+    "description": "Les paramètres d'une fonction sont des variables utilisées pour recevoir les valeurs des arguments passés lors de l'appel de la fonction. Vous pouvez définir des paramètres dans la déclaration de la fonction.",
+    "code": "function addition(a, b) {\n    return a + b;\n}\n"
+  },
+  "valeur_retour": {
+    "description": "Une fonction peut renvoyer une valeur à l'endroit où elle a été appelée à l'aide du mot-clé 'return'. Cette valeur peut être utilisée dans d'autres parties de votre code.",
+    "code": "function addition(a, b) {\n    return a + b;\n}\n\nlet resultat = addition(5, 3); // resultat contiendra 8\n"
+  },
+  "portee": {
+    "description": "La portée des variables dans une fonction détermine où une variable est accessible. Les variables déclarées à l'intérieur d'une fonction sont généralement locales à cette fonction, tandis que les variables déclarées à l'extérieur des fonctions sont généralement globales et accessibles depuis n'importe où dans le programme.",
+    "code": "let variableGlobale = 'Je suis globale';\n\nfunction maFonction() {\n    let variableLocale = 'Je suis locale';\n    console.log(variableGlobale); // Accessible\n    console.log(variableLocale); // Accessible\n}\n\nconsole.log(variableGlobale); // Accessible\nconsole.log(variableLocale); // Non accessible\n"
+  },
+  "arguments": {
+    "description": "En plus des paramètres définis lors de la déclaration de la fonction, JavaScript offre un objet 'arguments' qui vous permet d'accéder à tous les arguments passés à la fonction, même s'ils ne sont pas définis comme paramètres.",
+    "code": "function maFonction() {\n    console.log(arguments[0]); // Premier argument\n    console.log(arguments[1]); // Deuxième argument\n}\n\nmaFonction('Bonjour', 'Monde');\n"
+  },
+  "fonctions_predefinies": {
+    "description": "JavaScript dispose de nombreuses fonctions prédéfinies, telles que 'console.log()', 'alert()', 'prompt()', etc., que vous pouvez utiliser sans avoir à les déclarer vous-même.",
+    "code": "console.log('Hello, World!');\nalert('Ceci est une alerte.');\n"
+  }
+}

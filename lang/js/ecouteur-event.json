@@ -1,0 +1,38 @@
+{
+  "general": "Les écouteurs d'événement en JavaScript permettent de détecter et de réagir aux interactions de l'utilisateur avec une page web. Ils sont essentiels pour rendre les pages web interactives et réactives.",
+
+  "ajout_evenement": {
+    "description": "Pour ajouter un écouteur d'événement à un élément HTML, vous pouvez utiliser la méthode `addEventListener`. Vous spécifiez le type d'événement que vous souhaitez écouter (comme 'click', 'mouseover', etc.) et la fonction à exécuter lorsque cet événement se produit.",
+    "code": "const monElement = document.getElementById('monElement');\nmonElement.addEventListener('click', maFonction);\n"
+  },
+
+  "fonction_evenement": {
+    "description": "La fonction associée à un événement est appelée chaque fois que l'événement se produit. Cette fonction peut contenir le code que vous souhaitez exécuter en réponse à l'événement.",
+    "code": "function maFonction() {\n  alert('Événement de clic détecté !');\n}\n"
+  },
+
+  "suppression_evenement": {
+    "description": "Vous pouvez également supprimer un écouteur d'événement en utilisant la méthode `removeEventListener`. Cela peut être utile si vous ne souhaitez plus écouter un événement sur un élément.",
+    "code": "monElement.removeEventListener('click', maFonction);\n"
+  },
+
+  "evenements_delegation": {
+    "description": "Lorsque vous avez de nombreux éléments similaires à écouter, il peut être plus efficace d'utiliser l'événement de délégation. Cela consiste à ajouter un seul écouteur d'événement à un parent commun de ces éléments et de déterminer quel élément a déclenché l'événement.",
+    "code": "const parentElement = document.getElementById('parentElement');\nparentElement.addEventListener('click', function(event) {\n  if (event.target.classList.contains('elementCible')) {\n    // Code à exécuter\n  }\n});\n"
+  },
+
+  "objets_evenement": {
+    "description": "Lorsqu'un événement se produit, un objet d'événement est créé et passé à la fonction de gestion de l'événement. Cet objet contient des informations sur l'événement, telles que le type, la cible et les propriétés spécifiques à cet événement.",
+    "code": "monElement.addEventListener('click', function(event) {\n  console.log('Type d'événement : ' + event.type);\n  console.log('Cible : ' + event.target);\n  // Autres propriétés de l'événement\n});\n"
+  },
+
+  "arret_propagation": {
+    "description": "Les événements se propagent généralement de l'élément déclencheur vers le haut de la hiérarchie DOM (de l'enfant vers le parent). Vous pouvez arrêter cette propagation en utilisant la méthode `stopPropagation()` pour éviter que d'autres écouteurs d'événements soient déclenchés.",
+    "code": "monElement.addEventListener('click', function(event) {\n  event.stopPropagation();\n  // Code à exécuter\n});\n"
+  },
+
+  "prevention_comportement_par_defaut": {
+    "description": "Certains événements, tels que les clics sur des liens, ont un comportement par défaut, comme la navigation vers une nouvelle page. Vous pouvez prévenir ce comportement par défaut en utilisant la méthode `preventDefault()`.",
+    "code": "const lien = document.getElementById('lien');\nlien.addEventListener('click', function(event) {\n  event.preventDefault();\n  // Code à exécuter au lieu de la navigation\n});\n"
+  }
+}

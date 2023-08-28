@@ -1,0 +1,31 @@
+{
+  "general": "Les fonctions usuelles en JavaScript sont des fonctions prédéfinies qui sont disponibles pour une utilisation courante dans le langage. Elles offrent des fonctionnalités essentielles pour la manipulation de données, le calcul, la gestion des chaînes de caractères et bien plus encore.",
+  "mathematiques": {
+    "description": "Les fonctions mathématiques usuelles sont utilisées pour effectuer des opérations mathématiques courantes, telles que l'arrondi, la puissance, la racine carrée, etc.",
+    "code": "Math.round(4.7) // Renvoie 5\n Math.pow(2, 3) // Renvoie 8\n Math.sqrt(16) // Renvoie 4\n"
+  },
+  "tableaux": {
+    "description": "Les fonctions usuelles pour les tableaux permettent de manipuler et de parcourir des tableaux de données.",
+    "code": "arr.indexOf(5) // Renvoie l'indice de la première occurrence de 5\n arr.indexOf(5) // Renvoie l'indice de la première occurrence de 5\n arr.find(x => x > 10) // Renvoie la première valeur supérieure à 10\n"
+  },
+  "chaines_caracteres": {
+    "description": "Les fonctions usuelles pour les chaînes de caractères permettent de manipuler et de formater des chaînes de texte.",
+    "code": "str.length // Renvoie la longueur de la chaîne de caractères\nstr.toUpperCase() // Convertit en majuscules\nstr.toLowerCase() // Convertit en minuscules\n"
+  },
+  "dates_heures": {
+    "description": "Les fonctions usuelles pour les dates et heures permettent de manipuler des objets de date, de formater des dates et de calculer des écarts temporels.",
+    "code": "new Date() // Renvoie la date et l'heure actuelles\ndate.toLocaleDateString('fr-FR') // Renvoie la date au format local\n"
+  },
+  "conversion_type": {
+    "description": "Les fonctions usuelles pour la conversion de types permettent de convertir des valeurs d'un type à un autre.",
+    "code": "parseInt('42') // Convertit une chaîne en nombre entier\n parseFloat('3.14') // Convertit une chaîne en nombre à virgule flottante\n"
+  },
+  "autres_utilitaires": {
+    "description": "Il existe de nombreuses autres fonctions usuelles, telles que celles pour générer des nombres aléatoires, manipuler des objets, effectuer des opérations logiques, etc.",
+    "code": "Math.random() // Renvoie un nombre aléatoire entre 0 et 1\nObject.keys(obj) // Renvoie les propriétés d'un objet en tant que tableau\nObject.values(obj) // Renvoie les valeurs d'un objet en tant que tableau\n"
+  },
+  "utilisation": {
+    "description": "Les fonctions usuelles sont utilisées de manière courante dans le développement JavaScript pour effectuer des tâches courantes de manière efficace et fiable.",
+    "code": "function calculMoyenne(notes) {\n  const somme = notes.reduce((total, note) => total + note, 0);\n  return somme / notes.length;\n}\n"
+  }
+}

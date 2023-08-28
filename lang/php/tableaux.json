@@ -1,0 +1,23 @@
+{
+  "general": "Les tableaux en PHP sont des structures de données qui permettent de stocker et de manipuler des collections de valeurs. Ils sont flexibles et polyvalents, ce qui en fait l'une des structures de données les plus couramment utilisées en PHP.",
+  "tableaux_indexés": {
+    "description": "Les tableaux indexés sont des tableaux dont les éléments sont accessibles par leur position numérique, appelée indice. Les indices commencent généralement à zéro.",
+    "exemple": "Exemple de tableau indexé en PHP :",
+    "code": "<pre>\n$fruits = ['pomme', 'banane', 'fraise'];\necho $fruits[1]; // Affiche 'banane'\n</pre>"
+  },
+  "tableaux_associatifs": {
+    "description": "Les tableaux associatifs sont des tableaux dont les éléments sont accessibles par des clés textuelles plutôt que des indices numériques. Chaque élément a une clé associée.",
+    "exemple": "Exemple de tableau associatif en PHP :",
+    "code": "<pre>\n$personne = ['nom' => 'Doe', 'prénom' => 'John', 'âge' => 30];\necho $personne['prénom']; // Affiche 'John'\n</pre>"
+  },
+  "parcourir_des_tableaux": {
+    "description": "Pour parcourir les tableaux en PHP, on utilise des boucles telles que `foreach` pour itérer à travers les éléments du tableau.",
+    "exemple": "Exemple de boucle `foreach` pour parcourir un tableau en PHP :",
+    "code": "<pre>\n$fruits = ['pomme', 'banane', 'fraise'];\nforeach ($fruits as $fruit) {\n    echo $fruit . '\\n';\n}\n</pre>"
+  },
+  "opérations_sur_les_tableaux": {
+    "description": "PHP propose de nombreuses fonctions et opérations pour travailler avec des tableaux, notamment l'ajout, la suppression, la fusion et le tri des éléments.",
+    "exemple": "Exemple d'ajout d'éléments à un tableau en PHP :",
+    "code": "<pre>\n$fruits = ['pomme', 'banane'];\narray_push($fruits, 'fraise');\nprint_r($fruits);\n// Affiche : Array ([0] => pomme [1] => banane [2] => fraise)\n</pre>"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez un formulaire HTML avec un champ de texte (input) et un bouton de soumission. Lorsque le formulaire est soumis, affichez le contenu du champ de texte à l'écran en utilisant PHP.",
+    "correction": "&lt;form method='post' action='traitement.php'&gt;\n  &lt;input type='text' name='message'&gt;\n  &lt;input type='submit' value='Envoyer'&gt;\n&lt;/form&gt;"
+  },
+  "Exercice2": {
+    "description": "Modifiez le formulaire précédent pour qu'il ait un champ de sélection (select) avec plusieurs options. Lorsque le formulaire est soumis, affichez l'option sélectionnée à l'écran en utilisant PHP.",
+    "correction": "&lt;form method='post' action='traitement.php'&gt;\n  &lt;select name='choix'&gt;\n    &lt;option value='option1'&gt;Option 1&lt;/option&gt;\n    &lt;option value='option2'&gt;Option 2&lt;/option&gt;\n  &lt;/select&gt;\n  &lt;input type='submit' value='Envoyer'&gt;\n&lt;/form&gt;"
+  },
+  "Exercice3": {
+    "description": "Créez un formulaire qui demande à l'utilisateur son nom et son prénom. Lorsque le formulaire est soumis, affichez un message de salutation personnalisé en utilisant PHP.",
+    "correction": "&lt;form method='post' action='traitement.php'&gt;\n  &lt;input type='text' name='nom' placeholder='Nom'&gt;\n  &lt;input type='text' name='prenom' placeholder='Prénom'&gt;\n  &lt;input type='submit' value='Envoyer'&gt;\n&lt;/form&gt;"
+  },
+  "Exercice4": {
+    "description": "Modifiez le formulaire précédent pour qu'il utilise la méthode GET au lieu de POST. Affichez les valeurs des champs 'nom' et 'prenom' dans l'URL après la soumission.",
+    "correction": "&lt;form method='get' action='traitement.php'&gt;\n  &lt;input type='text' name='nom' placeholder='Nom'&gt;\n  &lt;input type='text' name='prenom' placeholder='Prénom'&gt;\n  &lt;input type='submit' value='Envoyer'&gt;\n&lt;/form&gt;"
+  },
+  "Exercice5": {
+    "description": "Créez un formulaire qui permet à l'utilisateur de télécharger un fichier. Lorsque le formulaire est soumis, affichez le nom du fichier téléchargé en utilisant PHP.",
+    "correction": "&lt;form method='post' action='traitement.php' enctype='multipart/form-data'&gt;\n  &lt;input type='file' name='fichier'&gt;\n  &lt;input type='submit' value='Envoyer'&gt;\n&lt;/form&gt;"
+  }
+}

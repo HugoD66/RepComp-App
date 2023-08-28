@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Écrivez un programme JavaScript qui fait apparaître un élément HTML ayant une classe CSS 'fade-in' lorsque l'utilisateur fait défiler la page jusqu'à cet élément.",
+    "code": "// Utilisez la méthode getBoundingClientRect() pour vérifier si l'élément est visible dans la fenêtre du navigateur. Ajoutez la classe 'fade-in' pour afficher l'élément en utilisant des transitions CSS.",
+    "correction": "const elementToFadeIn = document.querySelector('.fade-in');\nwindow.addEventListener('scroll', () => {\n  const rect = elementToFadeIn.getBoundingClientRect();\n  const windowHeight = window.innerHeight;\n  if (rect.top <= windowHeight && rect.bottom >= 0) {\n    elementToFadeIn.classList.add('fade-in');\n  }\n});"
+  },
+  "Exercice2": {
+    "description": "Écrivez un programme JavaScript qui fait apparaître plusieurs éléments HTML ayant la classe CSS 'fade-in' lorsque l'utilisateur fait défiler la page jusqu'à ces éléments. Les éléments doivent apparaître un par un au fur et à mesure que l'utilisateur fait défiler.",
+    "code": "// Utilisez la méthode getBoundingClientRect() pour vérifier si chaque élément est visible dans la fenêtre du navigateur. Ajoutez la classe 'fade-in' pour afficher chaque élément en utilisant des transitions CSS, un par un.",
+    "correction": "const elementsToFadeIn = document.querySelectorAll('.fade-in');\nwindow.addEventListener('scroll', () => {\n  elementsToFadeIn.forEach((element) => {\n    const rect = element.getBoundingClientRect();\n    const windowHeight = window.innerHeight;\n    if (rect.top <= windowHeight && rect.bottom >= 0) {\n      element.classList.add('fade-in');\n    }\n  });\n});"
+  },
+  "Exercice3": {
+    "description": "Écrivez un programme JavaScript qui fait apparaître un élément HTML en utilisant une animation CSS lorsque l'utilisateur fait défiler la page jusqu'à cet élément.",
+    "code": "// Utilisez la méthode getBoundingClientRect() pour vérifier si l'élément est visible dans la fenêtre du navigateur. Ajoutez une classe pour déclencher l'animation CSS.",
+    "correction": "const elementToAnimate = document.querySelector('.animate-on-scroll');\nwindow.addEventListener('scroll', () => {\n  const rect = elementToAnimate.getBoundingClientRect();\n  const windowHeight = window.innerHeight;\n  if (rect.top <= windowHeight && rect.bottom >= 0) {\n    elementToAnimate.classList.add('animate');\n  }\n});"
+  },
+  "Exercice4": {
+    "description": "Écrivez un programme JavaScript qui fait apparaître un élément HTML en utilisant une transition CSS lorsque l'utilisateur fait défiler la page jusqu'à cet élément.",
+    "code": "// Utilisez la méthode getBoundingClientRect() pour vérifier si l'élément est visible dans la fenêtre du navigateur. Ajoutez la classe 'fade-in' ou toute autre classe de transition pour afficher l'élément avec une transition CSS.",
+    "correction": "const elementToTransition = document.querySelector('.transition-on-scroll');\nwindow.addEventListener('scroll', () => {\n  const rect = elementToTransition.getBoundingClientRect();\n  const windowHeight = window.innerHeight;\n  if (rect.top <= windowHeight && rect.bottom >= 0) {\n    elementToTransition.classList.add('transition');\n  }\n});"
+  }
+}

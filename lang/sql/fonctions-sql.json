@@ -1,0 +1,33 @@
+{
+  "general": "Les fonctions SQL sont des instructions prédéfinies que vous pouvez utiliser pour effectuer diverses opérations sur les données dans une base de données relationnelle. Elles permettent de manipuler, calculer et extraire des informations de manière efficace.",
+
+  "fonctions_agregation": {
+    "description": "Les fonctions d'agrégation SQL sont utilisées pour effectuer des calculs sur un ensemble de valeurs. Elles incluent des fonctions telles que SUM (somme), AVG (moyenne), COUNT (nombre d'enregistrements), MIN (valeur minimale) et MAX (valeur maximale).",
+    "exemple": "Exemple d'utilisation de SUM :",
+    "code": " SELECT SUM(prix) FROM produits;"
+  },
+
+  "fonctions_de_date": {
+    "description": "Les fonctions de date SQL vous permettent de manipuler des données de date et d'heure. Elles incluent des fonctions telles que DATE(), CURDATE(), NOW(), DATE_FORMAT(), et TIMESTAMPDIFF().",
+    "exemple": "Exemple d'utilisation de DATE_FORMAT :",
+    "code": " SELECT DATE_FORMAT(date_commande, '%d/%m/%Y') FROM commandes;"
+  },
+
+  "fonctions_de_chaine": {
+    "description": "Les fonctions de chaîne SQL vous permettent de manipuler des données de texte. Elles incluent des fonctions telles que CONCAT() (concaténation de chaînes), LENGTH() (longueur de chaîne), UPPER() (conversion en majuscules) et LOWER() (conversion en minuscules).",
+    "exemple": "Exemple d'utilisation de CONCAT :",
+    "code": " SELECT CONCAT(nom, ' ', prenom) AS nom_complet FROM clients;"
+  },
+
+  "fonctions_mathematiques": {
+    "description": "Les fonctions mathématiques SQL vous permettent d'effectuer des opérations mathématiques sur les données. Elles incluent des fonctions telles que ABS() (valeur absolue), ROUND() (arrondi), et SQRT() (racine carrée).",
+    "exemple": "Exemple d'utilisation de ROUND :",
+    "code": " SELECT ROUND(prix, 2) FROM produits;"
+  },
+
+  "fonctions_conditionnelles": {
+    "description": "Les fonctions conditionnelles SQL vous permettent de retourner des valeurs en fonction de conditions spécifiques. Elles incluent des fonctions telles que IF() (si), CASE WHEN THEN ELSE END (cas quand alors sinon fin), et COALESCE() (première valeur non nulle).",
+    "exemple": "Exemple d'utilisation de CASE WHEN :",
+    "code": " SELECT nom, CASE WHEN age >= 18 THEN 'Majeur' ELSE 'Mineur' END AS statut FROM clients;"
+  }
+}

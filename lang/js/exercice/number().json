@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une variable `nombre` et attribuez-lui une valeur numérique. Utilisez ensuite `Number()` pour convertir cette variable en un nombre si ce n'est pas déjà le cas.",
+    "correction": "let number = '42';\nif (typeof number !== 'number') {\n  number = Number(number);\n}"
+  },
+  "Exercice2": {
+    "description": "Créez une fonction `estNombrePair` qui prend un nombre en paramètre et retourne `true` si le nombre est pair, sinon retourne `false`.",
+    "correction": "function isEvenNumber(number) {\n  return number % 2 === 0;\n}"
+  },
+  "Exercice3": {
+    "description": "Créez une fonction `arrondiDecimal` qui prend un nombre décimal en paramètre et retourne ce nombre arrondi à deux décimales.",
+    "correction": "function roundToTwoDecimals(number) {\n  return Math.round(number * 100) / 100;\n}"
+  },
+  "Exercice4": {
+    "description": "Créez une fonction `estNaN` qui prend une valeur en paramètre et retourne `true` si la valeur est NaN (Not-a-Number), sinon retourne `false`.",
+    "correction": "function isNaN(value) {\n  return isNaN(value);\n}"
+  },
+  "Exercice5": {
+    "description": "Créez une fonction `conversionBinaire` qui prend un nombre entier en paramètre et retourne sa représentation binaire en tant que chaîne de caractères.",
+    "correction": "function decimalToBinary(number) {\n  if (typeof number === 'number' && Number.isInteger(number)) {\n    return number.toString(2);\n  } else {\n    return 'Entrez un nombre entier valide';\n  }\n}"
+  }
+}

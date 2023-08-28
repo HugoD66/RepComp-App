@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une variable SCSS appelée '$couleur-principale' et attribuez-lui la valeur 'bleu'. Utilisez cette variable pour définir la couleur du texte d'un élément.",
+    "correction": "$couleur-principale: bleu;\n\n.element {\n  color: $couleur-principale;\n}"
+  },
+  "Exercice2": {
+    "description": "Définissez un mixin SCSS appelé 'arrondi' qui applique un bord arrondi de 5 pixels à un élément. Utilisez ce mixin pour arrondir les coins d'un div.",
+    "correction": "@mixin arrondi {\n  border-radius: 5px;\n}\n\ndiv {\n  @include arrondi;\n}"
+  },
+  "Exercice3": {
+    "description": "Créez une règle de boucle SCSS 'for' pour générer des classes .col-1 à .col-5 avec des largeurs de 20% à 100% par incréments de 20%.",
+    "correction": "@for $i from 1 through 5 {\n  .col-#{$i} {\n    width: 20% * $i;\n  }\n}"
+  },
+  "Exercice4": {
+    "description": "Déclarez une liste SCSS appelée '$couleurs' contenant les couleurs 'rouge', 'vert' et 'bleu'. Utilisez une boucle 'each' pour générer des classes .bg-[couleur] qui définissent la couleur de fond en fonction des éléments de la liste.",
+    "correction": "$couleurs: rouge, vert, bleu;\n\n@each $couleur in $couleurs {\n  .bg-#{$couleur} {\n    background-color: $couleur;\n  }\n}"
+  },
+  "Exercice5": {
+    "description": "Créez une règle SCSS 'if' qui définit la couleur de fond d'un élément en fonction d'une variable booléenne '$actif' (true ou false). Si '$actif' est vrai, la couleur de fond doit être verte, sinon rouge.",
+    "correction": "$actif: true;\n\n.element {\n  @if $actif {\n    background-color: vert;\n  } @else {\n    background-color: rouge;\n  }\n}"
+  }
+}

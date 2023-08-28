@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Écrivez une fonction JavaScript qui effectue une copie profonde d'un objet simple et renvoie la copie.",
+    "code": "// Implémentez la copie profonde d'un objet simple ici.",
+    "correction": "function deepCopySimpleObject(obj) {\n  return JSON.parse(JSON.stringify(obj));\n}\n\nconst originalObject = { a: 1, b: { c: 2 } };\nconst deepCopiedObject = deepCopySimpleObject(originalObject);\nconsole.log(deepCopiedObject);"
+  },
+  "Exercice2": {
+    "description": "Écrivez une fonction JavaScript qui effectue une copie profonde d'un objet complexe (avec des sous-objets imbriqués) et renvoie la copie.",
+    "code": "// Implémentez la copie profonde d'un objet complexe ici.",
+    "correction": "function deepCopyComplexObject(obj) {\n  if (typeof obj !== 'object' || obj === null) {\n    return obj;\n  }\n\n  if (Array.isArray(obj)) {\n    return obj.map(deepCopyComplexObject);\n  }\n\n  const copiedObject = {};\n\n  for (const key in obj) {\n    if (obj.hasOwnProperty(key)) {\n      copiedObject[key] = deepCopyComplexObject(obj[key]);\n    }\n  }\n\n  return copiedObject;\n}\n\nconst originalObject = { a: 1, b: { c: [2, 3] } };\nconst deepCopiedObject = deepCopyComplexObject(originalObject);\nconsole.log(deepCopiedObject);"
+  },
+  "Exercice3": {
+    "description": "Écrivez une fonction JavaScript qui effectue une copie profonde d'un tableau (array) et renvoie la copie.",
+    "code": "// Implémentez la copie profonde d'un tableau ici.",
+    "correction": "function deepCopyArray(arr) {\n  return arr.map(deepCopyComplexObject);\n}\n\nconst originalArray = [{ a: 1 }, [2, 3]];\nconst deepCopiedArray = deepCopyArray(originalArray);\nconsole.log(deepCopiedArray);"
+  },
+  "Exercice4": {
+    "description": "Écrivez une fonction JavaScript qui effectue une copie profonde d'un objet contenant des fonctions et renvoie la copie.",
+    "code": "// Implémentez la copie profonde d'un objet avec des fonctions ici.",
+    "correction": "function deepCopyObjectWithFunctions(obj) {\n  if (typeof obj !== 'object' || obj === null) {\n    return obj;\n  }\n\n  if (Array.isArray(obj)) {\n    return obj.map(deepCopyObjectWithFunctions);\n  }\n\n  const copiedObject = {};\n\n  for (const key in obj) {\n    if (obj.hasOwnProperty(key)) {\n      if (typeof obj[key] === 'function') {\n        copiedObject[key] = obj[key]; // Ne copie pas les fonctions, conserve les références\n      } else {\n        copiedObject[key] = deepCopyObjectWithFunctions(obj[key]);\n      }\n    }\n  }\n\n  return copiedObject;\n}\n\nconst originalObject = { a: 1, b: { c: [2, 3] }, greet: function() { console.log('Hello'); } };\nconst deepCopiedObject = deepCopyObjectWithFunctions(originalObject);\nconsole.log(deepCopiedObject);"
+  }
+}

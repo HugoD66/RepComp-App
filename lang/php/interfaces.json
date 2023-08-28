@@ -1,0 +1,21 @@
+{
+  "general": "En PHP, une interface est un contrat qui définit un ensemble de méthodes qu'une classe doit implémenter. Les interfaces permettent d'établir un ensemble de règles que les classes doivent suivre, favorisant ainsi la normalisation et la flexibilité de la programmation orientée objet.",
+  "définition_d_interface": {
+    "description": "Pour définir une interface en PHP, utilisez le mot-clé `interface`, suivi du nom de l'interface. À l'intérieur de l'interface, vous déclarez les méthodes que les classes implémentant cette interface doivent fournir.",
+    "exemple": "Exemple de définition d'une interface en PHP :",
+    "code": "<pre>\ninterface GestionnaireDeFichier {\n    public function ouvrir();\n    public function lire();\n    public function écrire($contenu);\n    public function fermer();\n}\n</pre>"
+  },
+  "implémentation_d_interface": {
+    "description": "Une classe peut implémenter une ou plusieurs interfaces en utilisant le mot-clé `implements`. Une classe doit alors fournir des implémentations pour toutes les méthodes définies dans l'interface.",
+    "exemple": "Exemple d'implémentation d'une interface en PHP :",
+    "code": "<pre>\nclass GestionnaireDeFichierLocal implements GestionnaireDeFichier {\n    public function ouvrir() {\n        // Implémentation\n    }\n    public function lire() {\n        // Implémentation\n    }\n    public function écrire($contenu) {\n        // Implémentation\n    }\n    public function fermer() {\n        // Implémentation\n    }\n}\n</pre>"
+  },
+  "utilisation_d_interface": {
+    "description": "Les interfaces permettent de définir un contrat commun pour des classes différentes. Vous pouvez créer des objets en utilisant ces classes et les traiter de manière homogène, car elles ont la même interface.",
+    "exemple": "Exemple d'utilisation d'une interface en PHP :",
+    "code": "<pre>\nfunction gérerFichier(GestionnaireDeFichier $gestionnaire) {\n    $gestionnaire->ouvrir();\n    $contenu = $gestionnaire->lire();\n    // Traiter le contenu\n    $gestionnaire->fermer();\n}\n\n$fichierLocal = new GestionnaireDeFichierLocal();\ngérerFichier($fichierLocal);\n</pre>"
+  },
+  "avantages_des_interfaces": {
+    "description": "Les interfaces offrent de nombreux avantages, notamment la normalisation du code, la flexibilité, la possibilité d'implémenter plusieurs interfaces dans une classe, et la compatibilité avec d'autres classes qui suivent les mêmes contrats."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une interface 'Personne' avec les propriétés 'nom' (string) et 'age' (number). Ensuite, créez un objet de type 'Personne' et attribuez-lui des valeurs.",
+    "correction": "interface Personne {\n  nom: string;\n  age: number;\n}\n\nconst utilisateur: Personne = {\n  nom: 'John Doe',\n  age: 30\n};"
+  },
+  "Exercice2": {
+    "description": "Créez une interface 'Forme' avec une méthode 'aire' qui calcule l'aire de la forme. Ensuite, créez deux classes 'Cercle' et 'Rectangle' qui implémentent cette interface.",
+    "correction": "interface Forme {\n  aire(): number;\n}\n\nclass Cercle implements Forme {\n  constructor(private rayon: number) {}\n  aire(): number {\n    return Math.PI * this.rayon ** 2;\n  }\n}\n\nclass Rectangle implements Forme {\n  constructor(private longueur: number, private largeur: number) {}\n  aire(): number {\n    return this.longueur * this.largeur;\n  }\n}"
+  },
+  "Exercice3": {
+    "description": "Créez une interface 'Comparable' avec une méthode 'estPlusGrandQue' qui compare l'objet actuel avec un autre objet de même type. Ensuite, créez une classe 'Nombre' qui implémente cette interface et compare deux nombres.",
+    "correction": "interface Comparable<T> {\n  estPlusGrandQue(objet: T): boolean;\n}\n\nclass Nombre implements Comparable<Nombre> {\n  constructor(private valeur: number) {}\n  estPlusGrandQue(nombre: Nombre): boolean {\n    return this.valeur > nombre.valeur;\n  }\n}"
+  },
+  "Exercice4": {
+    "description": "Créez une interface 'Imprimable' avec une méthode 'imprimer' qui affiche un contenu. Ensuite, créez une classe 'Document' qui implémente cette interface et permet d'imprimer du texte.",
+    "correction": "interface Imprimable {\n  imprimer(): void;\n}\n\nclass Document implements Imprimable {\n  constructor(private contenu: string) {}\n  imprimer(): void {\n    console.log(this.contenu);\n  }\n}"
+  },
+  "Exercice5": {
+    "description": "Créez une interface 'Stockable' avec une méthode 'stocker' qui permet de stocker un objet. Ensuite, créez une classe 'Entrepot' qui implémente cette interface et stocke des produits.",
+    "correction": "interface Stockable<T> {\n  stocker(objet: T): void;\n}\n\nclass Entrepot<T> implements Stockable<T> {\n  private stock: T[] = [];\n  stocker(objet: T): void {\n    this.stock.push(objet);\n  }\n}"
+  }
+}

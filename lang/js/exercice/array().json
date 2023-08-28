@@ -1,0 +1,52 @@
+{
+  "Exercice1": {
+    "description": "Écrivez un programme JavaScript qui utilise la méthode `push()` pour ajouter un élément à la fin d'un tableau.",
+    "code": "// Utilisez la méthode 'push()' pour ajouter un élément à la fin du tableau.",
+    "correction": "const myArray = [1, 2, 3];\nmyArray.push(4);"
+  },
+  "Exercice2": {
+    "description": "Écrivez un programme JavaScript qui utilise la méthode `pop()` pour supprimer le dernier élément d'un tableau.",
+    "code": "// Utilisez la méthode 'pop()' pour supprimer le dernier élément du tableau.",
+    "correction": "const myArray = [1, 2, 3, 4];\nmyArray.pop();"
+  },
+  "Exercice3": {
+    "description": "Écrivez un programme JavaScript qui utilise la méthode `shift()` pour supprimer le premier élément d'un tableau.",
+    "code": "// Utilisez la méthode 'shift()' pour supprimer le premier élément du tableau.",
+    "correction": "const myArray = [1, 2, 3, 4];\nmyArray.shift();"
+  },
+  "Exercice4": {
+    "description": "Écrivez un programme JavaScript qui utilise la méthode `unshift()` pour ajouter un élément au début d'un tableau.",
+    "code": "// Utilisez la méthode 'unshift()' pour ajouter un élément au début du tableau.",
+    "correction": "const myArray = [2, 3, 4];\nmyArray.unshift(1);"
+  },
+  "Exercice5": {
+    "description": "Écrivez un programme JavaScript qui utilise la méthode `splice()` pour supprimer un élément spécifique d'un tableau.",
+    "code": "// Utilisez la méthode 'splice()' pour supprimer un élément spécifique du tableau.",
+    "correction": "const myArray = [1, 2, 3, 4, 5];\nmyArray.splice(2, 1);"
+  },
+  "Exercice6": {
+    "description": "Écrivez un programme JavaScript qui utilise la méthode `slice()` pour extraire une sous-liste d'éléments d'un tableau.",
+    "code": "// Utilisez la méthode 'slice()' pour extraire une sous-liste d'éléments du tableau.",
+    "correction": "const myArray = [1, 2, 3, 4, 5];\nconst subArray = myArray.slice(1, 4);"
+  },
+  "Exercice7": {
+    "description": "Écrivez un programme JavaScript qui utilise la méthode `concat()` pour fusionner deux tableaux en un seul.",
+    "code": "// Utilisez la méthode 'concat()' pour fusionner deux tableaux en un seul.",
+    "correction": "const array1 = [1, 2];\nconst array2 = [3, 4];\nconst mergedArray = array1.concat(array2);"
+  },
+  "Exercice8": {
+    "description": "Écrivez un programme JavaScript qui utilise la méthode `indexOf()` pour trouver l'index d'un élément spécifique dans un tableau.",
+    "code": "// Utilisez la méthode 'indexOf()' pour trouver l'index d'un élément spécifique dans le tableau.",
+    "correction": "const myArray = [10, 20, 30, 40, 50];\nconst index = myArray.indexOf(30);"
+  },
+  "Exercice9": {
+    "description": "Écrivez un programme JavaScript qui utilise la méthode `includes()` pour vérifier si un élément spécifique existe dans un tableau.",
+    "code": "// Utilisez la méthode 'includes()' pour vérifier si un élément spécifique existe dans le tableau.",
+    "correction": "const myArray = [10, 20, 30, 40, 50];\nconst exists = myArray.includes(30);"
+  },
+  "Exercice10": {
+    "description": "Écrivez un programme JavaScript qui utilise la méthode `forEach()` pour parcourir tous les éléments d'un tableau et les afficher dans la console.",
+    "code": "// Utilisez la méthode 'forEach()' pour parcourir et afficher chaque élément du tableau.",
+    "correction": "const myArray = [1, 2, 3, 4, 5];\nmyArray.forEach(function (element) {\n  console.log(element);\n});"
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cours dev</title>
+    <script src="app.js" type="module" defer></script>
+    <link rel="stylesheet" type="text/css" href="style/css/style.css" />
+</head>
+<body>
+<nav>
+    <button id="jsButton" class="button-lang"  data-lang="js">
+        <img src="picture/js-picture.png" alt="">
+    </button>
+    <button id="sqlButton" class="button-lang"  data-lang="sql">
+        <img src="picture/sql-picture.jpg" alt="">
+    </button>
+    <button id="cButton" class="button-lang"  data-lang="c">
+        <img src="picture/c-picture.png" alt="">
+    </button>
+    <button id="phpButton" class="button-lang"  data-lang="php">
+        <img src="picture/php-picture.jpg" alt="">
+    </button>
+    <button id="typescriptButton" class="button-lang"  data-lang="typescript">
+        <img src="picture/typescript.png" alt="">
+    </button>
+    <button id="scssButton" class="button-lang"  data-lang="scss">
+        <img src="picture/scss-picture.png" alt="">
+    </button>
+    <button id="angularButton" class="button-lang"  data-lang="angular">
+        <img src="picture/angular-picture.png" alt="">
+    </button>
+</nav>
+<div class="content">
+    <aside id="lateralNav" class="lateral-barre">
+    </aside>
+    <article>
+        <h1></h1>
+        <p class="general-panel"></p>
+        <template id="accordeonTemplate">
+            <button class="accordion"></button>
+            <div class="panel"></div>
+        </template>
+
+
+        <template id="exerciceTemplate">
+            <h2></h2>
+            <div class="exercice">
+                <p class="exercice"></p>
+                <button class="accordion" id="accordion1"></button>
+                <div class="panel" id ="panelEnnonce"></div>
+
+                <button class="accordion" id="accordion2"></button>
+                <div class="panel" id="panelCorrec"></div>
+
+            </div>
+        </template>
+    </article>
+</div>
+</body>
+</html>

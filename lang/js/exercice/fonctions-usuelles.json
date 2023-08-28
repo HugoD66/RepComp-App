@@ -1,0 +1,27 @@
+{
+  "Exercice1": {
+    "description": "Créez une fonction JavaScript qui génère un nombre aléatoire compris entre deux valeurs données, min (inclus) et max (exclus).",
+    "code": "",
+    "correction": "function getRandomNumber(min, max) {\n  return Math.floor(Math.random() * (max - min)) + min;\n}"
+  },
+  "Exercice2": {
+    "description": "Créez une fonction JavaScript qui calcule la factorielle d'un nombre donné.",
+    "code": "",
+    "correction": "function factorial(n) {\n  if (n === 0 || n === 1) {\n    return 1;\n  } else {\n    return n * factorial(n - 1);\n  }\n}"
+  },
+  "Exercice3": {
+    "description": "Créez une fonction JavaScript qui renverse une chaîne de caractères donnée.",
+    "code": "",
+    "correction": "function reverseString(str) {\n  return str.split('').reverse().join('');\n}"
+  },
+  "Exercice4": {
+    "description": "Créez une fonction JavaScript qui vérifie si une chaîne de caractères donnée est un palindrome (elle se lit de la même manière de gauche à droite et de droite à gauche).",
+    "code": "",
+    "correction": "function isPalindrome(str) {\n  const reversed = str.split('').reverse().join('');\n  return str === reversed;\n}"
+  },
+  "Exercice5": {
+    "description": "Créez une fonction JavaScript qui calcule la somme de tous les nombres premiers inférieurs ou égaux à un nombre donné.",
+    "code": "",
+    "correction": "function isPrime(num) {\n  if (num <= 1) return false;\n  if (num <= 3) return true;\n  if (num % 2 === 0 || num % 3 === 0) return false;\n  let i = 5;\n  while (i * i <= num) {\n    if (num % i === 0 || num % (i + 2) === 0) return false;\n    i += 6;\n  }\n  return true;\n}\n\nfunction sumPrimes(max) {\n  let sum = 0;\n  for (let i = 2; i <= max; i++) {\n    if (isPrime(i)) sum += i;\n  }\n  return sum;\n}"
+  }
+}

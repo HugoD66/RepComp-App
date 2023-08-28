@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une transaction SQL qui insère un nouvel utilisateur dans la table 'Utilisateurs' avec les colonnes 'ID', 'Nom' et 'Âge'. Assurez-vous que la transaction est correctement confirmée (commit) à la fin.",
+    "correction": "START TRANSACTION;\nINSERT INTO Utilisateurs (Nom, Age) VALUES ('John Doe', 30);\nCOMMIT;"
+  },
+  "Exercice2": {
+    "description": "Créez une transaction SQL qui met à jour l'âge de l'utilisateur dont le nom est 'Alice' pour le changer en 28 ans dans la table 'Utilisateurs'. Assurez-vous que la transaction est correctement confirmée (commit) à la fin.",
+    "correction": "START TRANSACTION;\nUPDATE Utilisateurs SET Age = 28 WHERE Nom = 'Alice';\nCOMMIT;"
+  },
+  "Exercice3": {
+    "description": "Créez une transaction SQL qui insère une nouvelle commande dans la table 'Commandes' avec les colonnes 'ID', 'Date' et 'Montant'. Assurez-vous que la transaction est correctement confirmée (commit) à la fin.",
+    "correction": "START TRANSACTION;\nINSERT INTO Commandes (Date, Montant) VALUES ('2023-08-01', 100.50);\nCOMMIT;"
+  },
+  "Exercice4": {
+    "description": "Créez une transaction SQL qui supprime tous les utilisateurs dont l'âge est inférieur à 25 ans dans la table 'Utilisateurs'. Assurez-vous que la transaction est correctement confirmée (commit) à la fin.",
+    "correction": "START TRANSACTION;\nDELETE FROM Utilisateurs WHERE Age < 25;\nCOMMIT;"
+  },
+  "Exercice5": {
+    "description": "Créez une transaction SQL qui insère un nouvel utilisateur dans la table 'Utilisateurs' avec les colonnes 'ID', 'Nom' et 'Âge'. Cependant, cette transaction doit être annulée (rollback) avant d'être confirmée (commit).",
+    "correction": "START TRANSACTION;\nINSERT INTO Utilisateurs (Nom, Age) VALUES ('Jane Smith', 22);\nROLLBACK;"
+  }
+}

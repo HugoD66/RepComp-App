@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Utilisez une sous-requête (subquery) pour obtenir la liste des produits qui ont un prix supérieur à la moyenne des prix de tous les produits.",
+    "correction": "SELECT Nom FROM Produits WHERE Prix > (SELECT AVG(Prix) FROM Produits);"
+  },
+  "Exercice2": {
+    "description": "Effectuez une jointure avec une table elle-même (auto-jointure) pour obtenir la liste des employés qui ont le même superviseur.",
+    "correction": "SELECT E1.Nom AS Employé1, E2.Nom AS Employé2 FROM Employés E1, Employés E2 WHERE E1.SuperviseurID = E2.SuperviseurID AND E1.ID < E2.ID;"
+  },
+  "Exercice3": {
+    "description": "Utilisez une jointure en étoile (star join) pour obtenir la liste des commandes avec les noms des clients, les noms des produits et les quantités commandées.",
+    "correction": "SELECT Commandes.ID AS Commande_ID, Clients.Nom AS Nom_Client, Produits.Nom AS Nom_Produit, DétailsCommande.Quantité FROM Commandes INNER JOIN Clients ON Commandes.ClientID = Clients.ID INNER JOIN DétailsCommande ON Commandes.ID = DétailsCommande.CommandeID INNER JOIN Produits ON DétailsCommande.ProduitID = Produits.ID;"
+  },
+  "Exercice4": {
+    "description": "Effectuez une jointure spatiale (spatial join) pour obtenir la liste des magasins qui se trouvent dans une zone spécifique définie par des coordonnées géographiques.",
+    "correction": "SELECT Magasins.Nom AS Nom_Magasin FROM Magasins, Zones WHERE ST_Within(Magasins.Coordonnées, Zones.Zone_Géographique);"
+  },
+  "Exercice5": {
+    "description": "Utilisez une jointure récursive (recursive join) pour obtenir la hiérarchie complète des catégories de produits, y compris les sous-catégories.",
+    "correction": "WITH RECURSIVE Catégories_CTE AS ( SELECT ID, Nom, CatégorieParentID FROM Catégories WHERE CatégorieParentID IS NULL UNION ALL SELECT C1.ID, C1.Nom, C1.CatégorieParentID FROM Catégories C1 INNER JOIN Catégories_CTE C2 ON C1.CatégorieParentID = C2.ID ) SELECT * FROM Catégories_CTE;"
+  }
+}

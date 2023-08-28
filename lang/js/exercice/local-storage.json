@@ -1,0 +1,18 @@
+
+{
+  "Exercice1": {
+    "description": "Créez une application JavaScript qui permet à l'utilisateur de saisir un nom dans un champ de texte et de sauvegarder ce nom dans le localStorage lorsqu'un bouton est cliqué. Affichez ensuite ce nom depuis le localStorage sur la page.",
+    "code": "",
+    "correction": "document.getElementById('saveButton').addEventListener('click', function () {\n  const name = document.getElementById('nameInput').value;\n  localStorage.setItem('userName', name);\n});\n\nconst storedName = localStorage.getItem('userName');\nif (storedName) {\n  document.getElementById('displayArea').textContent = `Nom enregistré : ${storedName}`;\n}"
+  },
+  "Exercice2": {
+    "description": "Créez une application JavaScript qui permet à l'utilisateur d'ajouter des tâches à une liste. Les tâches ajoutées doivent être sauvegardées dans le localStorage. Affichez la liste des tâches depuis le localStorage sur la page.",
+    "code": "",
+    "correction": "document.getElementById('addTaskButton').addEventListener('click', function () {\n  const task = document.getElementById('taskInput').value;\n  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];\n  tasks.push(task);\n  localStorage.setItem('tasks', JSON.stringify(tasks));\n  displayTasks();\n});\n\ndisplayTasks();\n\nfunction displayTasks() {\n  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];\n  const taskList = document.getElementById('taskList');\n  taskList.innerHTML = '';\n  tasks.forEach(task => {\n    const li = document.createElement('li');\n    li.textContent = task;\n    taskList.appendChild(li);\n  });\n}"
+  },
+  "Exercice3": {
+    "description": "Créez une application JavaScript qui permet à l'utilisateur de sauvegarder des préférences (par exemple, thème sombre ou clair) dans le localStorage. Appliquez ensuite les préférences sauvegardées à l'interface utilisateur.",
+    "code": "",
+    "correction": "document.getElementById('darkModeToggle').addEventListener('change', function () {\n  const darkMode = document.getElementById('darkModeToggle').checked;\n  localStorage.setItem('darkMode', darkMode);\n  applyTheme();\n});\n\napplyTheme();\n\nfunction applyTheme() {\n  const darkMode = JSON.parse(localStorage.getItem('darkMode')) || false;\n  if (darkMode) {\n    // Appliquer le thème sombre\n    document.body.classList.add('dark-theme');\n  } else {\n    // Appliquer le thème clair\n    document.body.classList.remove('dark-theme');\n  }\n}"
+  }
+}

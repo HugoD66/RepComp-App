@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une classe 'Personne' avec les propriétés 'nom' et 'âge'. Ajoutez un constructeur pour initialiser ces propriétés.",
+    "correction": "class Personne {\n  public $nom;\n  public $age;\n\n  public function __construct($nom, $age) {\n    $this->nom = $nom;\n    $this->age = $age;\n  }\n}"
+  },
+  "Exercice2": {
+    "description": "Créez une instance de la classe 'Personne' avec le nom 'John' et l'âge '30', puis affichez ces informations.",
+    "correction": "$john = new Personne('John', 30);\necho 'Nom : ' . $john->nom . '<br>';\necho 'Âge : ' . $john->age . '<br>';\n"
+  },
+  "Exercice3": {
+    "description": "Ajoutez une méthode 'presentation' à la classe 'Personne' qui retourne une chaîne de caractères formatée avec le nom et l'âge de la personne.",
+    "correction": "class Personne {\n  // ... (propriétés et constructeur ici)\n\n  public function presentation() {\n    return 'Je m'appelle ' . $this->nom . ' et j'ai ' . $this->age . ' ans.';\n  }\n}"
+  },
+  "Exercice4": {
+    "description": "Créez une sous-classe 'Etudiant' de la classe 'Personne' avec une nouvelle propriété 'matricule'.",
+    "correction": "class Etudiant extends Personne {\n  public $matricule;\n\n  public function __construct($nom, $age, $matricule) {\n    parent::__construct($nom, $age);\n    $this->matricule = $matricule;\n  }\n}"
+  },
+  "Exercice5": {
+    "description": "Créez une instance de la classe 'Etudiant' avec le nom 'Alice', l'âge '25', et le matricule 'E12345', puis affichez ses informations.",
+    "correction": "$alice = new Etudiant('Alice', 25, 'E12345');\necho 'Nom : ' . $alice->nom . '<br>';\necho 'Âge : ' . $alice->age . '<br>';\necho 'Matricule : ' . $alice->matricule . '<br>';\n"
+  }
+}

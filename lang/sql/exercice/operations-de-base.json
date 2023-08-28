@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Sélectionnez tous les enregistrements de la table 'Utilisateurs'.",
+    "correction": "SELECT * FROM Utilisateurs;"
+  },
+  "Exercice2": {
+    "description": "Sélectionnez les noms des produits avec un prix supérieur à 50.",
+    "correction": "SELECT Nom FROM Produits WHERE Prix > 50;"
+  },
+  "Exercice3": {
+    "description": "Comptez combien d'enregistrements il y a dans la table 'Commandes'.",
+    "correction": "SELECT COUNT(*) AS Total_Commandes FROM Commandes;"
+  },
+  "Exercice4": {
+    "description": "Sélectionnez les noms des produits triés par ordre alphabétique.",
+    "correction": "SELECT Nom FROM Produits ORDER BY Nom ASC;"
+  },
+  "Exercice5": {
+    "description": "Calculez la somme totale des prix de tous les produits.",
+    "correction": "SELECT SUM(Prix) AS Somme_Prix FROM Produits;"
+  }
+}

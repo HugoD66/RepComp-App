@@ -1,0 +1,34 @@
+{
+  "general": "Les types en TypeScript permettent de déclarer le type de données d'une variable, d'un paramètre de fonction ou de la valeur de retour d'une fonction. Cela aide à détecter les erreurs de typage au moment de la compilation et à améliorer la maintenance du code.",
+
+  "types_de_base": {
+    "description": "TypeScript propose des types de base tels que `number` (nombre), `string` (chaîne de caractères), `boolean` (booléen), `null` (valeur nulle) et `undefined` (valeur non définie).",
+    "exemple": "Exemple de types de base en TypeScript :",
+    "code": "let age: number = 30;\nlet nom: string = 'John';\nlet estActif: boolean = true;"
+  },
+
+  "tableaux_et_tuples": {
+    "description": "Vous pouvez déclarer des tableaux en TypeScript en spécifiant le type des éléments qu'ils contiennent. TypeScript prend également en charge les tuples, qui sont des tableaux de taille fixe avec des types spécifiques pour chaque élément.",
+    "exemple": "Exemple de tableaux et de tuples en TypeScript :",
+    "code": "let nombres: number[] = [1, 2, 3];\nlet coordonnées: [number, number] = [3, 4];"
+  },
+
+  "énumérations": {
+    "description": "Les énumérations sont un moyen de définir un ensemble nommé de constantes entières. Elles sont utiles pour créer un ensemble limité de valeurs possibles.",
+    "exemple": "Exemple d'énumération en TypeScript :",
+    "code": "enum JoursSemaine {\n    Lundi,\n    Mardi,\n    Mercredi,\n    Jeudi,\n    Vendredi,\n    Samedi,\n    Dimanche\n}\nlet jour: JoursSemaine = JoursSemaine.Mercredi;"
+  },
+
+  "any_et_inconnu": {
+    "description": "Les types `any` et `unknown` permettent de traiter des valeurs de manière plus souple, mais ils présentent des différences. `any` permet de désactiver la vérification de type, tandis que `unknown` nécessite une vérification de type explicite.",
+    "exemple": "Exemple d'utilisation de `any` et `unknown` en TypeScript :",
+    "code": "let donnees: any = 'Bonjour';\nlet inconnu: unknown = 42;\n\nlet longueurChaine: number = (donnees as string).length;\nif (typeof inconnu === 'number') {\n    let double: number = inconnu * 2;\n}"
+  },
+
+  "types_personnalisés": {
+    "description": "En TypeScript, vous pouvez créer vos propres types personnalisés à l'aide du mot-clé `type` ou en définissant une interface. Cela permet de créer des structures de données complexes.",
+    "exemple": "Exemple de types personnalisés en TypeScript :",
+    "code": "type Coordonnées = {\n    x: number;\n    y: number;\n};\n\ninterface Personne {\n    nom: string;\n    age: number;\n}"
+  }
+}
+

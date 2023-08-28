@@ -1,0 +1,27 @@
+{
+  "Exercice1": {
+    "description": "Déclarez une variable 'nom' et attribuez-lui votre prénom. Affichez ensuite la valeur de 'nom' dans la console.",
+    "code": "",
+    "correction": "const name = 'John';\nconsole.log(name);"
+  },
+  "Exercice2": {
+    "description": "Déclarez une variable 'age' et attribuez-lui votre âge. Affichez ensuite la valeur de 'age' dans la console.",
+    "code": "",
+    "correction": "const age = 30;\nconsole.log(age);"
+  },
+  "Exercice3": {
+    "description": "Déclarez une variable 'estEtudiant' et attribuez-lui 'true' si vous êtes étudiant, sinon attribuez 'false'. Affichez ensuite la valeur de 'estEtudiant' dans la console.",
+    "code": "",
+    "correction": "const isStudent = true;\nconsole.log(isStudent);"
+  },
+  "Exercice4": {
+    "description": "Déclarez une variable 'ville' et attribuez-lui le nom de votre ville. Affichez ensuite la valeur de 'ville' dans la console.",
+    "code": "",
+    "correction": "const city = 'Paris';\nconsole.log(city);"
+  },
+  "Exercice5": {
+    "description": "Déclarez une variable 'listeCourses' et attribuez-lui une liste de trois articles que vous aimeriez acheter. Affichez ensuite la valeur de 'listeCourses' dans la console.",
+    "code": "",
+    "correction": "const shoppingList = ['pommes', 'pain', 'lait'];\nconsole.log(shoppingList);"
+  }
+}

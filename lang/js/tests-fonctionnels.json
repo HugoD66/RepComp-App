@@ -1,0 +1,25 @@
+{
+  "general": "Les tests fonctionnels sont une partie essentielle du développement logiciel. Ils permettent de s'assurer que votre application fonctionne correctement du point de vue de l'utilisateur en testant ses fonctionnalités de manière automatisée. Dans cette section, nous explorerons les principes de base des tests fonctionnels en JavaScript.",
+  "definition": {
+    "description": "Un test fonctionnel est une procédure automatisée qui vérifie si une fonction ou une partie de votre application remplit correctement sa fonctionnalité prévue. Ces tests évaluent le comportement global de l'application plutôt que des composants individuels."
+  },
+  "pourquoi_tester": {
+    "description": "Les tests fonctionnels sont importants pour plusieurs raisons : ils garantissent que votre application fonctionne correctement, ils réduisent les bogues et les erreurs, ils facilitent la maintenance du code et ils améliorent la qualité globale du produit."
+  },
+  "outils_communs": {
+    "description": "Il existe de nombreux outils et frameworks de test fonctionnel en JavaScript. Parmi les plus couramment utilisés, on trouve Jest, Mocha, Jasmine, et Puppeteer. Ces outils offrent des fonctionnalités telles que la mise en place d'environnements de test, l'exécution de tests, l'assertion des résultats, et la génération de rapports."
+  },
+  "ecriture_tests": {
+    "description": "Pour écrire des tests fonctionnels en JavaScript, vous devez définir des scénarios de test qui simulent les interactions de l'utilisateur avec votre application. Cela peut inclure le clic sur des boutons, la saisie de texte, la navigation entre les pages, etc."
+  },
+  "assertions": {
+    "description": "Les assertions sont des déclarations qui vérifient si une condition est vraie. Dans les tests fonctionnels, les assertions sont utilisées pour vérifier que le comportement de l'application correspond aux attentes. Par exemple, vous pouvez vérifier qu'un élément HTML est affiché ou que le texte d'une page correspond à une valeur attendue."
+  },
+  "automatisation": {
+    "description": "L'automatisation des tests fonctionnels permet d'exécuter régulièrement les tests pour s'assurer que les nouvelles modifications du code n'ont pas introduit de régressions. Cela peut être intégré dans un processus d'intégration continue (CI) pour une détection précoce des problèmes."
+  },
+  "exemple": {
+    "description": "Voici un exemple simple de test fonctionnel en utilisant le framework Jest. Ce test vérifie qu'un formulaire d'inscription fonctionne correctement en simulant la saisie de données et le clic sur le bouton d'inscription.",
+    "code": "test('Test d'inscription', async () => {\n  // Simuler la saisie de données\n  const inputNom = document.querySelector('#nom');\n  inputNom.value = 'John Doe';\n  const inputEmail = document.querySelector('#email');\n  inputEmail.value = 'john.doe@example.com';\n  const boutonInscription = document.querySelector('#inscription');\n\n  // Simuler le clic sur le bouton d'inscription\n  boutonInscription.click();\n\n  // Attendre que l'inscription soit traitée (par exemple, redirection)\n  await page.waitForNavigation();\n\n  // Vérifier que l'utilisateur est redirigé vers la page de confirmation\n  expect(page.url()).toBe('https://exemple.com/confirmation');\n});\n"
+  }
+}

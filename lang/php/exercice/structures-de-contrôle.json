@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Écrivez un programme PHP qui affiche tous les nombres pairs de 1 à 20 en utilisant une boucle 'for'.",
+    "correction": "for ($i = 2; $i <= 20; $i += 2) {\n  echo $i . ' ';\n}"
+  },
+  "Exercice2": {
+    "description": "Écrivez un programme PHP qui affiche tous les nombres impairs de 1 à 30 en utilisant une boucle 'while'.",
+    "correction": "$i = 1;\nwhile ($i <= 30) {\n  echo $i . ' ';\n  $i += 2;\n}"
+  },
+  "Exercice3": {
+    "description": "Écrivez un programme PHP qui calcule la somme des entiers de 1 à 100 en utilisant une boucle 'do...while'.",
+    "correction": "$sum = 0;\n$i = 1;\ndo {\n  $sum += $i;\n  $i++;\n} while ($i <= 100);\necho $sum;"
+  },
+  "Exercice4": {
+    "description": "Écrivez un programme PHP qui affiche les éléments d'un tableau associatif 'personne' contenant 'nom' et 'âge'. Utilisez une structure de contrôle 'if' pour afficher 'majeur' si l'âge est supérieur ou égal à 18, sinon affichez 'mineur'.",
+    "correction": "$personne = ['nom' => 'John', 'âge' => 25];\nif ($personne['âge'] >= 18) {\n  echo 'majeur';\n} else {\n  echo 'mineur';\n}"
+  },
+  "Exercice5": {
+    "description": "Écrivez un programme PHP qui vérifie si un nombre donné est pair ou impair. Utilisez une structure de contrôle 'if' pour afficher 'pair' ou 'impair' en conséquence.",
+    "correction": "$nombre = 7;\nif ($nombre % 2 == 0) {\n  echo 'pair';\n} else {\n  echo 'impair';\n}"
+  }
+}

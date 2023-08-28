@@ -1,0 +1,27 @@
+{
+  "general": "Les timers en JavaScript sont des mécanismes permettant de planifier l'exécution de code à un moment donné dans le futur ou à intervalles réguliers. Ils sont utilisés pour gérer des tâches asynchrones et des animations, ainsi que pour déclencher des événements périodiques.",
+  "setTimeout": {
+    "description": "La fonction `setTimeout()` permet d'exécuter une fonction ou un morceau de code après un délai spécifié, mesuré en millisecondes.",
+    "code": "setTimeout(() => {\n  console.log('Ce message apparaîtra après 2 secondes.');\n}, 2000);\n"
+  },
+  "setInterval": {
+    "description": "La fonction `setInterval()` permet d'exécuter une fonction à intervalles réguliers, spécifiés en millisecondes. Elle continuera d'être appelée jusqu'à ce qu'elle soit explicitement annulée.",
+    "code": "let compteur = 0;\nconst intervalId = setInterval(() => {\n  compteur++;\n  console.log(`Compteur : ${compteur}`);\n  if (compteur >= 5) {\n    clearInterval(intervalId); // Arrête l'intervalle après 5 appels\n  }\n}, 1000);\n"
+  },
+  "clearTimeout_clearInterval": {
+    "description": "Les fonctions `clearTimeout()` et `clearInterval()` permettent d'annuler respectivement un timer créé avec `setTimeout()` ou `setInterval()` en utilisant l'ID du timer.",
+    "code": "const timeoutId = setTimeout(() => {\n  console.log('Ce message ne sera jamais affiché.');\n}, 5000);\nclearTimeout(timeoutId); // Annule le setTimeout avant son exécution\n"
+  },
+  "requestAnimationFrame": {
+    "description": "La fonction `requestAnimationFrame()` est utilisée pour planifier l'exécution d'une fonction de rendu juste avant le prochain rafraîchissement de l'écran. Elle est couramment utilisée pour des animations fluides.",
+    "code": "function animer() {\n  // Code d'animation\n  requestAnimationFrame(animer); // Appel récursif pour la prochaine frame\n}\nanimer();\n"
+  },
+  "utilisation_typique": {
+    "description": "Les timers sont couramment utilisés pour des animations, des mises à jour périodiques de l'interface utilisateur, des requêtes AJAX à intervalles réguliers, des délais avant l'exécution de certaines tâches, etc.",
+    "code": "function faireQuelqueChose() {\n  // Code à exécuter\n}\n\n// Exécution après un délai\nsetTimeout(faireQuelqueChose, 3000);\n\n// Exécution périodique\nsetInterval(faireQuelqueChose, 1000);\n"
+  },
+  "meilleures_pratiques": {
+    "description": "Pour éviter les problèmes de performance, il est recommandé d'utiliser `requestAnimationFrame()` pour les animations, d'utiliser `clearTimeout()` et `clearInterval()` pour éviter les fuites mémoire, et de faire preuve de prudence avec les délais très courts qui peuvent provoquer des blocages du navigateur.",
+    "code": "function animation() {\n  // Code d'animation\n  requestAnimationFrame(animation);\n}\n\nconst animationId = requestAnimationFrame(animation);\n\n// Arrêter l'animation\ncancelAnimationFrame(animationId);\n"
+  }
+}

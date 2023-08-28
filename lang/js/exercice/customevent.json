@@ -1,0 +1,27 @@
+{
+  "Exercice1": {
+    "description": "Écrivez un script JavaScript qui crée un événement personnalisé nommé 'monEvenement' avec un détail 'message' contenant la chaîne 'Hello, world!'.",
+    "code": "// Créez un événement personnalisé 'monEvenement' avec un détail 'message' ici.",
+    "correction": "const event = new CustomEvent('monEvenement', { detail: 'Hello, world!' });"
+  },
+  "Exercice2": {
+    "description": "Écrivez un script qui écoute l'événement 'monEvenement' et affiche le détail 'message' dans la console lorsque l'événement se déclenche.",
+    "code": "// Écoutez l'événement 'monEvenement' et affichez le détail 'message' dans la console ici.",
+    "correction": "document.addEventListener('monEvenement', (event) => {\n  console.log(event.detail);\n});"
+  },
+  "Exercice3": {
+    "description": "Écrivez un script qui déclenche l'événement 'monEvenement' avec un détail 'message' différent, par exemple 'Custom events are cool!'.",
+    "code": "// Déclenchez l'événement 'monEvenement' avec un détail 'message' différent ici.",
+    "correction": "const event = new CustomEvent('monEvenement', { detail: 'Custom events are cool!' });\ndocument.dispatchEvent(event);"
+  },
+  "Exercice4": {
+    "description": "Écrivez un script qui crée un bouton HTML. Lorsque ce bouton est cliqué, déclenchez l'événement 'monEvenement' avec un détail 'message' personnalisé.",
+    "code": "// Créez un bouton HTML et déclenchez 'monEvenement' avec un détail personnalisé lors du clic ici.",
+    "correction": "<button id='myButton'>Cliquez-moi</button>\n<script>\n  const button = document.getElementById('myButton');\n  button.addEventListener('click', () => {\n    const event = new CustomEvent('monEvenement', { detail: 'Bouton cliqué!' });\n    document.dispatchEvent(event);\n  });\n</script>"
+  },
+  "Exercice5": {
+    "description": "Écrivez un script qui utilise un `CustomEvent` pour simuler un système de messagerie où plusieurs composants écoutent et réagissent aux messages. Créez plusieurs événements personnalisés pour différents types de messages.",
+    "code": "// Créez un système de messagerie avec plusieurs événements personnalisés ici.",
+    "correction": "const message1Event = new CustomEvent('message1', { detail: 'Message important' });\nconst message2Event = new CustomEvent('message2', { detail: 'Message d'erreur' });\n\n// Écoutez les événements et réagissez en conséquence.\ndocument.addEventListener('message1', (event) => {\n  console.log('Message 1 :', event.detail);\n});\ndocument.addEventListener('message2', (event) => {\n  console.error('Message 2 :', event.detail);\n});\n\ndocument.dispatchEvent(message1Event);\ndocument.dispatchEvent(message2Event);"
+  }
+}

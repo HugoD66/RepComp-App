@@ -1,0 +1,27 @@
+{
+  "Exercice1": {
+    "description": "Créez un script JavaScript qui affiche la date et l'heure actuelles dans la console.",
+    "code": "// Affichez la date et l'heure actuelles ici.",
+    "correction": "const currentDate = new Date();\nconsole.log(currentDate);"
+  },
+  "Exercice2": {
+    "description": "Écrivez un script qui affiche la date au format 'jour/mois/année' dans la console.",
+    "code": "// Affichez la date au format 'jour/mois/année' ici.",
+    "correction": "const currentDate = new Date();\nconst day = currentDate.getDate();\nconst month = currentDate.getMonth() + 1; // Les mois commencent à 0\nconst year = currentDate.getFullYear();\nconsole.log(`${day}/${month}/${year}`);"
+  },
+  "Exercice3": {
+    "description": "Écrivez un script qui affiche le nom du jour de la semaine correspondant à la date actuelle dans la console.",
+    "code": "// Affichez le nom du jour de la semaine ici.",
+    "correction": "const currentDate = new Date();\nconst daysOfWeek = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];\nconst dayOfWeek = daysOfWeek[currentDate.getDay()];\nconsole.log(dayOfWeek);"
+  },
+  "Exercice4": {
+    "description": "Écrivez un script qui calcule l'âge d'une personne en fonction de sa date de naissance et l'affiche dans la console.",
+    "code": "// Calculez l'âge en fonction de la date de naissance ici.",
+    "correction": "const birthDate = new Date('1990-01-01'); // Remplacez par la date de naissance\nconst currentDate = new Date();\nconst ageInMilliseconds = currentDate - birthDate;\nconst ageInSeconds = ageInMilliseconds / 1000;\nconst ageInMinutes = ageInSeconds / 60;\nconst ageInHours = ageInMinutes / 60;\nconst ageInDays = ageInHours / 24;\nconst ageInYears = ageInDays / 365.25; // Prend en compte les années bissextiles\nconsole.log(Math.floor(ageInYears));"
+  },
+  "Exercice5": {
+    "description": "Écrivez un script qui affiche la date et l'heure actuelles dans un format personnalisé, par exemple 'dd/mm/aaaa, hh:mm:ss'.",
+    "code": "// Affichez la date et l'heure actuelles dans un format personnalisé ici.",
+    "correction": "const currentDate = new Date();\nconst day = currentDate.getDate();\nconst month = currentDate.getMonth() + 1;\nconst year = currentDate.getFullYear();\nconst hours = currentDate.getHours();\nconst minutes = currentDate.getMinutes();\nconst seconds = currentDate.getSeconds();\nconsole.log(`${day}/${month}/${year}, ${hours}:${minutes}:${seconds}`);"
+  }
+}

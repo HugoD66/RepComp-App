@@ -1,0 +1,37 @@
+{
+  "introduction": {
+    "description": "Les fonctions sont des blocs de code réutilisables qui effectuent une tâche spécifique. En PHP, les fonctions sont essentielles pour organiser et structurer votre code. PHP propose de nombreuses fonctions intégrées, et vous pouvez également créer vos propres fonctions personnalisées.",
+    "exemple": "Exemple de déclaration de fonction en PHP :",
+    "code": "<pre>function direBonjour() {\n    echo 'Bonjour, monde !';\n}</pre>"
+  },
+  "déclaration_de_fonctions": {
+    "description": "En PHP, vous pouvez déclarer une fonction en utilisant le mot-clé `function`, suivi du nom de la fonction, de parenthèses contenant les paramètres, et d'un bloc de code entre des accolades.",
+    "exemple": "Exemple de fonction avec des paramètres en PHP :",
+    "code": "<pre>function additionner($a, $b) {\n    return $a + $b;\n}\n\necho additionner(5, 3); // Affiche 8</pre>"
+  },
+  "paramètres_de_fonction": {
+    "description": "Les fonctions peuvent accepter des paramètres, qui sont des valeurs fournies à la fonction pour effectuer des calculs ou des opérations. Vous pouvez définir des paramètres dans les parenthèses lors de la déclaration de la fonction.",
+    "exemple": "Exemple de fonction avec des paramètres en PHP :",
+    "code": "<pre>function additionner($a, $b) {\n    return $a + $b;\n}\n\necho additionner(5, 3); // Affiche 8</pre>"
+  },
+  "valeur_de_retour": {
+    "description": "Une fonction en PHP peut renvoyer une valeur en utilisant l'instruction `return`. Cette valeur peut être utilisée ailleurs dans votre code.",
+    "exemple": "Exemple de fonction avec valeur de retour en PHP :",
+    "code": "<pre>function multiplier($a, $b) {\n    return $a * $b;\n}\n\n$resultat = multiplier(4, 7);\necho $resultat; // Affiche 28</pre>"
+  },
+  "fonctions_intégrées": {
+    "description": "PHP propose de nombreuses fonctions intégrées qui peuvent être utilisées sans avoir à les définir vous-même. Ces fonctions couvrent divers domaines tels que les chaînes de caractères, les tableaux, les dates, les fichiers, etc.",
+    "exemple": "Exemple d'utilisation d'une fonction intégrée en PHP :",
+    "code": "<pre>$longueur = strlen('Hello, world!');\necho $longueur; // Affiche 13</pre>"
+  },
+  "fonctions_personnalisées": {
+    "description": "Vous pouvez créer vos propres fonctions personnalisées en PHP pour encapsuler des fonctionnalités spécifiques et les réutiliser dans votre code. Cela permet d'améliorer la lisibilité et la maintenabilité de votre code.",
+    "exemple": "Exemple de déclaration d'une fonction personnalisée en PHP :",
+    "code": "<pre>function direBonjour($nom) {\n    echo 'Bonjour, ' . $nom . '!';\n}\n\ndireBonjour('Alice'); // Affiche 'Bonjour, Alice!'</pre>"
+  },
+  "portée_des_variables": {
+    "description": "La portée des variables dans une fonction peut être différente de celle des variables définies en dehors de la fonction. Vous pouvez utiliser les mots-clés `global` ou `static` pour spécifier la portée des variables.",
+    "exemple": "Exemple de variables globales et statiques en PHP :",
+    "code": "<pre>$x = 5;\n\nfunction maFonction() {\n    global $x;\n    $y = 10;\n    static $z = 0;\n    $z++;\n\n    echo 'x = ' . $x . ', y = ' . $y . ', z = ' . $z;\n}\n\nmaFonction(); // Affiche 'x = 5, y = 10, z = 1'\nmaFonction(); // Affiche 'x = 5, y = 10, z = 2'</pre>"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "general": "Le passage d'un modèle UML à une base de données relationnelle SQL est une étape importante dans le développement de bases de données. Il permet de transformer les concepts de haut niveau en structures relationnelles qui peuvent être stockées et manipulées dans un système de gestion de base de données (SGBD) relationnel.",
+
+  "entites_et_tables": {
+    "description": "Les entités UML correspondent généralement aux tables dans une base de données SQL. Chaque entité est transformée en une table contenant des colonnes pour ses attributs.",
+    "exemple": "Entité UML 'Client' => Table SQL 'Clients'"
+  },
+
+  "attributs_et_colonnes": {
+    "description": "Les attributs UML sont convertis en colonnes dans les tables SQL. Chaque attribut devient une colonne portant le même nom dans la table correspondante.",
+    "exemple": "Attribut UML 'Nom' => Colonne SQL 'Nom'"
+  },
+
+  "relations_et_cles_etrangeres": {
+    "description": "Les associations UML sont transformées en relations entre les tables SQL. Les clés étrangères sont utilisées pour représenter ces relations en reliant une table à une autre.",
+    "exemple": "Association UML 'Commande' => Clé étrangère 'ID_Client' dans la table 'Commandes'"
+  },
+
+  "cardinalites_et_integrite_referentielle": {
+    "description": "Les cardinalités dans les associations UML déterminent les contraintes d'intégrité référentielle dans SQL. Elles indiquent combien d'entités d'un côté de l'association peuvent être liées à combien d'entités de l'autre côté.",
+    "exemple": "Cardinalité 'Un à Plusieurs' => Clé étrangère dans 'Plusieurs' faisant référence à la table 'Un'"
+  },
+
+  "heritage_et_polymorphisme": {
+    "description": "La modélisation de l'héritage et du polymorphisme en UML peut être gérée de différentes manières en SQL, notamment en utilisant des tables séparées pour chaque sous-classe ou en utilisant une seule table avec un champ de type.",
+    "exemple": "Héritage d'UML => Soit une table par sous-classe SQL ou une colonne 'Type' pour identifier la classe"
+  }
+}

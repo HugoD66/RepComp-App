@@ -1,0 +1,35 @@
+{
+  "general": "Le sucre syntaxique en JavaScript désigne les fonctionnalités qui simplifient la syntaxe du langage tout en conservant la même fonctionnalité. Il vise à rendre le code plus lisible et plus expressif.",
+  "arrow_functions": {
+    "description": "Les fonctions fléchées, ou arrow functions, sont une syntaxe plus concise pour définir des fonctions anonymes.",
+    "code": "const addition = (a, b) => a + b;\n"
+  },
+  "template_literals": {
+    "description": "Les templates littéraux permettent de créer des chaînes de caractères multi-lignes et d'incorporer des variables directement dans le texte.",
+    "code": "const nom = 'Alice';\nconst message = `Bonjour, ${nom}!`;\n"
+  },
+  "destructuring_assignment": {
+    "description": "La désignation par déstructuration permet d'extraire des valeurs d'objets ou de tableaux et de les assigner à des variables en une seule instruction.",
+    "code": "const { nom, age } = utilisateur;\nconst [premierElement] = tableau;\n"
+  },
+  "default_parameters": {
+    "description": "Les paramètres par défaut permettent de spécifier des valeurs par défaut pour les arguments de fonction qui ne sont pas fournis lors de l'appel.",
+    "code": "function saluer(nom = 'Invité') {\n  console.log(`Bonjour, ${nom}!`);\n}\n"
+  },
+  "spread_operator": {
+    "description": "L'opérateur de propagation permet de décomposer un objet ou un tableau pour les étendre dans un nouvel objet ou tableau.",
+    "code": "const tableau1 = [1, 2, 3];\nconst tableau2 = [...tableau1, 4, 5];\n"
+  },
+  "rest_parameters": {
+    "description": "Les paramètres rest permettent de capturer un nombre variable d'arguments dans une seule variable.",
+    "code": "function somme(...nombres) {\n  return nombres.reduce((total, nombre) => total + nombre, 0);\n}\n"
+  },
+  "object_literals": {
+    "description": "La syntaxe des objets littéraux permet de définir des objets de manière plus concise en omettant la répétition des noms de propriétés.",
+    "code": "const nom = 'Alice';\nconst age = 30;\nconst utilisateur = { nom, age };\n"
+  },
+  "computed_properties": {
+    "description": "Les propriétés calculées permettent de définir le nom des propriétés d'objet en utilisant des expressions.",
+    "code": "const nomPropriete = 'prenom';\nconst utilisateur = { [nomPropriete]: 'Alice' };\n"
+  }
+}

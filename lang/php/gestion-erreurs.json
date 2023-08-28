@@ -1,0 +1,18 @@
+{
+  "introduction": {
+    "description": "La gestion des erreurs en PHP consiste à gérer les situations exceptionnelles ou les erreurs qui peuvent survenir lors de l'exécution d'un script PHP. Une gestion efficace des erreurs améliore la stabilité et la fiabilité de vos applications.",
+    "exemple": null
+  },
+  "types_d_erreurs_en_php": {
+    "description": "Il existe principalement trois types d'erreurs en PHP :",
+    "exemple": "1. Les erreurs fatales : Elles provoquent l'arrêt immédiat de l'exécution du script. Par exemple, une erreur de syntaxe grave.\n2. Les avertissements (warnings) : Ils sont moins graves et ne provoquent pas l'arrêt du script. Par exemple, l'utilisation d'une variable non définie.\n3. Les exceptions : Elles sont gérées via les blocs `try` et `catch` et permettent de traiter des situations exceptionnelles de manière contrôlée."
+  },
+  "gestion_des_erreurs_standard": {
+    "description": "En PHP, vous pouvez configurer la gestion des erreurs en utilisant les fonctions suivantes :",
+    "exemple": "1. `error_reporting()`: Permet de définir le niveau de rapport d'erreurs.\n2. `display_errors()`: Contrôle l'affichage des erreurs à l'écran.\n3. `log_errors()`: Active ou désactive la journalisation des erreurs dans un fichier journal.\n\"4. `set_error_handler()`: Permet de définir une fonction de gestion personnalisée des erreurs."
+  },
+  "gestion_des_exceptions_en_php": {
+    "description": "PHP prend également en charge la gestion des exceptions, qui offre un moyen plus structuré de gérer les erreurs. Les exceptions sont levées à l'aide de l'instruction `throw` et capturées avec un bloc `try...catch`.",
+    "exemple": "Exemple de gestion des exceptions en PHP :"
+  }
+}

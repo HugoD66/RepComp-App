@@ -1,0 +1,33 @@
+{
+  "general": "Les types d'objets en TypeScript permettent de définir la structure des objets, y compris les propriétés qu'ils doivent avoir et les types de ces propriétés. Cela permet de garantir la cohérence des données et de détecter les erreurs de type à la compilation.",
+
+  "déclaration_d_objets": {
+    "description": "Pour déclarer un type d'objet en TypeScript, vous pouvez utiliser l'interface ou le type. Les interfaces sont principalement utilisées pour définir des contrats de structure, tandis que les types peuvent être des alias de types existants ou des types plus complexes.",
+    "exemple": "Exemple de déclaration d'interface en TypeScript :",
+    "code": "interface Personne {\n    nom: string;\n    âge: number;\n}\n\nlet utilisateur: Personne = { nom: 'Alice', âge: 30 };"
+  },
+
+  "propriétés_optionnelles": {
+    "description": "Vous pouvez rendre certaines propriétés d'un type d'objet optionnelles en les marquant avec le symbole `?`. Cela signifie que ces propriétés peuvent être absentes lors de la création d'objets de ce type.",
+    "exemple": "Exemple de propriété optionnelle en TypeScript :",
+    "code": "interface Voiture {\n    marque: string;\n    modèle?: string;\n}\n\nlet maVoiture: Voiture = { marque: 'Toyota' };"
+  },
+
+  "propriétés_en lecture_seule": {
+    "description": "Les propriétés en lecture seule (readonly properties) sont des propriétés dont la valeur ne peut pas être modifiée après l'initialisation de l'objet. Cela garantit l'immutabilité de ces propriétés.",
+    "exemple": "Exemple de propriété en lecture seule en TypeScript :",
+    "code": "interface Point {\n    readonly x: number;\n    readonly y: number;\n}\n\nlet point: Point = { x: 10, y: 20 };\n// point.x = 30; // Erreur : La propriété 'x' est en lecture seule."
+  },
+
+  "types_d objets_anonymes": {
+    "description": "En plus de déclarer des types d'objets nommés, TypeScript prend en charge les types d'objets anonymes. Ils sont utiles pour définir des structures temporaires sans avoir besoin de créer une interface ou un type nommé.",
+    "exemple": "Exemple de type d'objet anonyme en TypeScript :",
+    "code": "let coordonnées: { x: number; y: number } = { x: 10, y: 20 };"
+  },
+
+  "types_de_fonctions_d objets": {
+    "description": "Les types d'objets peuvent également être utilisés pour définir la structure des fonctions, y compris les paramètres et le type de retour. Cela facilite la spécification des contrats de fonction.",
+    "exemple": "Exemple de type de fonction d'objet en TypeScript :",
+    "code": "type Calcul = (x: number, y: number) => number;\n\nlet addition: Calcul = (a, b) => a + b;"
+  }
+}

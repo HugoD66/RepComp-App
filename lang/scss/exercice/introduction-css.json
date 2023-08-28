@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une règle CSS pour sélectionner tous les paragraphes ('<p>') et définissez la couleur du texte sur rouge.",
+    "correction": "p {\n  color: red;\n}"
+  },
+  "Exercice2": {
+    "description": "Sélectionnez tous les éléments avec la classe 'important' et définissez la couleur de fond sur jaune.",
+    "correction": ".important {\n  background-color: yellow;\n}"
+  },
+  "Exercice3": {
+    "description": "Ciblez tous les liens ('<a>') à l'intérieur d'une liste non ordonnée ('<ul>') et supprimez la décoration des liens (soulignement).",
+    "correction": "ul a {\n  text-decoration: none;\n}"
+  },
+  "Exercice4": {
+    "description": "Sélectionnez les éléments de classe 'header' à l'intérieur d'une div d'identifiant 'container' et définissez la police en gras.",
+    "correction": "#container .header {\n  font-weight: bold;\n}"
+  },
+  "Exercice5": {
+    "description": "Ciblez tous les éléments 'h1', 'h2' et 'h3' et définissez la marge inférieure ('margin-bottom') à 20 pixels.",
+    "correction": "h1, h2, h3 {\n  margin-bottom: 20px;\n}"
+  }
+}

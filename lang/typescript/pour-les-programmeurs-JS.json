@@ -1,0 +1,28 @@
+{
+  "general": "Cette partie du cours s'adresse aux programmeurs JavaScript qui souhaitent découvrir TypeScript. Nous allons expliquer les principaux concepts de TypeScript et montrer comment les utiliser dans vos projets JavaScript existants.",
+  "qu_est_ce_que_typescript": {
+    "description": "TypeScript est un sur-ensemble de JavaScript qui ajoute des fonctionnalités de typage statique au langage. Cela permet de détecter les erreurs potentielles à la compilation plutôt qu'à l'exécution.",
+    "exemple": "Les avantages de TypeScript incluent :\nDétection précoce des erreurs\nMeilleure prise en charge de l'IDE\nMeilleure maintenance du code à grande échelle"
+  },
+  "installation_et_configuration": {
+    "description": "Découvrez comment installer TypeScript et configurer votre projet pour l'utiliser.",
+    "exemple": "Exemple d'installation de TypeScript :",
+    "code": "npm install -g typescript"
+  },
+  "déclaration_de_variables": {
+    "description": "Apprenez à déclarer des variables en TypeScript en utilisant les mots-clés `let` et `const`.",
+    "exemple": "Exemple de déclaration de variable en TypeScript :",
+    "code": "let age: number = 30;"
+  },
+  "types_de_base": {
+    "description": "Découvrez les types de base disponibles en TypeScript, tels que `number`, `string`, `boolean`, `null` et `undefined`.",
+    "exemple": "Exemple de types de base en TypeScript :",
+    "code": "let nom: string = 'John';"
+  },
+  "compatibilité_avec_javascript": {
+    "description": "TypeScript est compatible avec JavaScript existant. Apprenez comment utiliser du code JavaScript dans un projet TypeScript.",
+    "exemple": "Exemple d'utilisation de code JavaScript dans TypeScript :",
+    "code": "let resultat = 2 + 3; // Utilisation de JavaScript standard"
+  }
+}
+

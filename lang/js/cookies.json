@@ -1,0 +1,40 @@
+{
+  "general": "Les cookies sont de petits fichiers de données stockés dans le navigateur d'un utilisateur. Ils sont largement utilisés pour stocker des informations temporaires telles que des préférences utilisateur, des identifiants de session, et d'autres données pertinentes pour une expérience web personnalisée.",
+
+  "creation_cookie": {
+    "description": "Pour créer un cookie en JavaScript, vous utilisez la propriété `document.cookie`. Vous attribuez une chaîne de caractères contenant le nom et la valeur du cookie, ainsi que d'autres options comme la date d'expiration.",
+    "code": "document.cookie = 'nom=John; expires=Fri, 31 Dec 2023 23:59:59 GMT';\n"
+  },
+
+  "recuperation_cookie": {
+    "description": "Pour récupérer des cookies en JavaScript, vous pouvez accéder à `document.cookie`, qui renverra une chaîne de caractères contenant tous les cookies pour la page courante. Vous devrez ensuite analyser cette chaîne pour extraire des valeurs spécifiques.",
+    "code": "const tousLesCookies = document.cookie;\nconsole.log(tousLesCookies); // 'nom=John; autre_cookie=valeur'\n"
+  },
+
+  "modification_cookie": {
+    "description": "Pour modifier un cookie existant, vous devez créer un nouveau cookie avec le même nom et la nouvelle valeur, puis spécifier la même date d'expiration si nécessaire. Cela écrasera l'ancien cookie.",
+    "code": "document.cookie = 'nom=NouvelleValeur; expires=Fri, 31 Dec 2023 23:59:59 GMT';\n"
+  },
+
+  "suppression_cookie": {
+    "description": "Pour supprimer un cookie, vous pouvez définir sa date d'expiration dans le passé, ce qui entraînera son expiration immédiate.",
+    "code": "document.cookie = 'nom=; expires=Thu, 01 Jan 1970 00:00:00 GMT'; // Suppression du cookie 'nom'\n"
+  },
+
+  "options_cookie": {
+    "description": "Les cookies peuvent également avoir des options telles que la date d'expiration, le domaine et le chemin. Ces options permettent de contrôler la portée et la durée de vie du cookie.",
+    "code": "document.cookie = 'nom=John; expires=Fri, 31 Dec 2023 23:59:59 GMT; path=/; domain=example.com';\n"
+  },
+
+  "limites_cookies": {
+    "description": "Les cookies ont des limites de stockage (généralement quelques kilooctets par domaine). Ils ne sont pas adaptés pour stocker de grandes quantités de données. De plus, les cookies sont envoyés avec chaque requête HTTP, ce qui peut affecter les performances du site web."
+  },
+
+  "securite_cookies": {
+    "description": "Les cookies peuvent contenir des informations sensibles, il est donc essentiel de les sécuriser. Vous pouvez définir l'attribut 'secure' pour limiter l'envoi de cookies uniquement sur des connexions sécurisées (HTTPS). De plus, l'attribut 'HttpOnly' peut être utilisé pour empêcher l'accès aux cookies par JavaScript, renforçant ainsi la sécurité."
+  },
+
+  "utilisations_cookies": {
+    "description": "Les cookies sont couramment utilisés pour gérer l'authentification, stocker des préférences utilisateur, suivre l'activité des visiteurs et personnaliser l'expérience utilisateur. Ils sont une composante essentielle de nombreuses applications web."
+  }
+}

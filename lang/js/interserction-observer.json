@@ -1,0 +1,37 @@
+{
+  "general": "L'Intersection Observer est une API JavaScript qui permet de suivre les changements dans l'intersection d'un élément avec un conteneur, tel que la fenêtre du navigateur. Cela permet de détecter quand un élément devient visible ou sort de la vue de l'utilisateur, ce qui est utile pour implémenter des fonctionnalités basées sur le défilement, telles que le chargement paresseux d'images ou la détection d'événements lorsqu'un élément apparaît à l'écran.",
+
+  "creation_observer": {
+    "description": "Pour créer un observateur d'intersection, vous devez instancier la classe `IntersectionObserver` en fournissant une fonction de rappel (callback) et des options pour spécifier comment vous souhaitez observer les intersections.",
+    "code": "const observer = new IntersectionObserver(callback, options);\n"
+  },
+
+  "observer_callback": {
+    "description": "La fonction de rappel (callback) est exécutée chaque fois qu'une intersection est détectée selon les critères spécifiés. Elle reçoit une liste d'entrées d'intersection qui contiennent des informations sur les éléments observés et leur état d'intersection.",
+    "code": "function callback(entries, observer) {\n  entries.forEach(entry => {\n    if (entry.isIntersecting) {\n      // L'élément est en cours d'intersection\n    } else {\n      // L'élément n'est pas en cours d'intersection\n    }\n  });\n}\n"
+  },
+
+  "options_observer": {
+    "description": "Les options de l'observateur définissent comment les intersections doivent être suivies. Vous pouvez spécifier des seuils (thresholds) pour déterminer à quel point un élément doit être visible avant de déclencher l'intersection, ainsi que d'autres options telles que `root` (l'élément conteneur) et `rootMargin` (la marge autour de l'élément conteneur).",
+    "code": "const options = {\n  root: null, // Par défaut, la fenêtre du navigateur est utilisée comme conteneur\n  rootMargin: '0px', // Marge autour du conteneur\n  threshold: 0.5 // 50% de l'élément doit être visible\n};\n"
+  },
+
+  "observation_element": {
+    "description": "Pour observer un élément spécifique, vous devez appeler la méthode `observe()` de l'observateur et lui passer l'élément cible que vous souhaitez observer.",
+    "code": "const targetElement = document.querySelector('.element-a-observer');\nobserver.observe(targetElement);\n"
+  },
+
+  "arret_observation": {
+    "description": "Pour arrêter l'observation d'un élément, vous pouvez utiliser la méthode `unobserve()` de l'observateur en lui passant l'élément cible.",
+    "code": "observer.unobserve(targetElement);\n"
+  },
+
+  "disconnect_observer": {
+    "description": "Pour arrêter complètement l'observateur et cesser de suivre toutes les intersections, vous pouvez utiliser la méthode `disconnect()`.",
+    "code": "observer.disconnect();\n"
+  },
+
+  "utilisations_intersection_observer": {
+    "description": "L'Intersection Observer est couramment utilisé pour implémenter des fonctionnalités telles que le chargement paresseux d'images, la détection d'apparition d'éléments lors du défilement, le suivi d'événements basés sur l'apparition d'éléments à l'écran, et bien plus encore. Il améliore les performances des sites web en permettant de charger du contenu de manière efficace."
+  }
+}

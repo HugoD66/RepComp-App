@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Effectuez une jointure interne (INNER JOIN) entre les tables 'Commandes' et 'Clients' pour obtenir la liste des commandes avec les noms des clients correspondants.",
+    "correction": "SELECT Commandes.*, Clients.Nom AS Nom_Client FROM Commandes INNER JOIN Clients ON Commandes.ClientID = Clients.ID;"
+  },
+  "Exercice2": {
+    "description": "Effectuez une jointure gauche (LEFT JOIN) entre les tables 'Employés' et 'Projets' pour obtenir la liste des employés avec les projets auxquels ils participent (le cas échéant).",
+    "correction": "SELECT Employés.Nom AS Nom_Employé, Projets.Nom AS Nom_Projet FROM Employés LEFT JOIN Projets ON Employés.ID = Projets.EmployéID;"
+  },
+  "Exercice3": {
+    "description": "Effectuez une jointure droite (RIGHT JOIN) entre les tables 'Fournisseurs' et 'Produits' pour obtenir la liste des fournisseurs avec les produits qu'ils fournissent (le cas échéant).",
+    "correction": "SELECT Fournisseurs.Nom AS Nom_Fournisseur, Produits.Nom AS Nom_Produit FROM Fournisseurs RIGHT JOIN Produits ON Fournisseurs.ID = Produits.FournisseurID;"
+  },
+  "Exercice4": {
+    "description": "Effectuez une jointure complète (FULL OUTER JOIN) entre les tables 'Clients' et 'Commandes' pour obtenir la liste de tous les clients et de toutes les commandes, avec les commandes correspondantes aux clients (le cas échéant).",
+    "correction": "SELECT Clients.Nom AS Nom_Client, Commandes.ID AS Commande_ID FROM Clients FULL OUTER JOIN Commandes ON Clients.ID = Commandes.ClientID;"
+  },
+  "Exercice5": {
+    "description": "Effectuez une jointure autonome (SELF JOIN) sur la table 'Employés' pour obtenir la hiérarchie des superviseurs et de leurs subordonnés.",
+    "correction": "SELECT E1.Nom AS Superviseur, E2.Nom AS Subordonné FROM Employés E1 LEFT JOIN Employés E2 ON E1.ID = E2.SuperviseurID;"
+  }
+}

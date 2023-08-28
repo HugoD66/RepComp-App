@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une fonction 'estNombre' qui prend un argument et retourne vrai si cet argument est de type 'number', sinon retourne faux.",
+    "correction": "function estNombre(arg: any): arg is number {\n  return typeof arg === 'number';\n}"
+  },
+  "Exercice2": {
+    "description": "Créez une fonction 'estChaineNonVide' qui prend une chaîne de caractères en argument et retourne vrai si la chaîne n'est ni nulle ni vide, sinon retourne faux.",
+    "correction": "function estChaineNonVide(chaine: string | null | undefined): chaine is string {\n  return typeof chaine === 'string' && chaine.trim() !== '';\n}"
+  },
+  "Exercice3": {
+    "description": "Créez une fonction 'estObjetAvecPropriété' qui prend un objet et une clé en argument, et retourne vrai si l'objet a la clé spécifiée, sinon retourne faux.",
+    "correction": "function estObjetAvecPropriété(objet: any, clé: string | symbol): objet is Record<string | symbol, any> {\n  return clé in objet;\n}"
+  },
+  "Exercice4": {
+    "description": "Créez une fonction 'estTableauNonVide' qui prend un tableau en argument et retourne vrai si le tableau n'est pas nul et a au moins un élément, sinon retourne faux.",
+    "correction": "function estTableauNonVide<T>(tableau: T[] | null | undefined): tableau is T[] {\n  return Array.isArray(tableau) && tableau.length > 0;\n}"
+  },
+  "Exercice5": {
+    "description": "Créez une fonction 'estFichierImage' qui prend une chaîne de caractères en argument et retourne vrai si la chaîne se termine par l'une des extensions d'image courantes (par exemple, '.jpg', '.png', '.gif'), sinon retourne faux.",
+    "correction": "function estFichierImage(chaine: string): chaine is string {\n  const extensionsImages = ['.jpg', '.jpeg', '.png', '.gif'];\n  const extension = chaine.toLowerCase().trim();\n  return extensionsImages.some(ext => extension.endsWith(ext));\n}"
+  }
+}

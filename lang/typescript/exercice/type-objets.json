@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez un type 'Personne' qui représente une personne avec des propriétés 'nom' (une chaîne de caractères) et 'age' (un nombre).",
+    "correction": "type Personne = { nom: string, age: number };"
+  },
+  "Exercice2": {
+    "description": "Créez une fonction 'obtenirCleObjet' qui prend un objet et retourne toutes les clés de cet objet sous forme d'un tableau de chaînes de caractères.",
+    "correction": "function obtenirCleObjet(objet: object): string[] {\n  return Object.keys(objet);\n}"
+  },
+  "Exercice3": {
+    "description": "Créez une fonction 'ajouterPropriété' qui prend un objet, une clé (une chaîne de caractères) et une valeur (n'importe quelle valeur), et retourne un nouvel objet avec la propriété ajoutée.",
+    "correction": "function ajouterPropriété(objet: object, clé: string, valeur: any): object {\n  return { ...objet, [clé]: valeur };\n}"
+  },
+  "Exercice4": {
+    "description": "Créez une fonction 'filtrerObjet' qui prend un objet et un tableau de clés (chaînes de caractères) et retourne un nouvel objet contenant uniquement les propriétés correspondant aux clés du tableau.",
+    "correction": "function filtrerObjet(objet: object, cles: string[]): object {\n  return cles.reduce((resultat, cle) => ({ ...resultat, [cle]: objet[cle] }), {});\n}"
+  },
+  "Exercice5": {
+    "description": "Créez une fonction 'estObjetVide' qui prend un objet en argument et retourne vrai si l'objet n'a aucune propriété, sinon retourne faux.",
+    "correction": "function estObjetVide(objet: object): boolean {\n  return Object.keys(objet).length === 0;\n}"
+  }
+}

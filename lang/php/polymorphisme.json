@@ -1,0 +1,18 @@
+{
+  "general": "Le polymorphisme est l'un des concepts clés de la programmation orientée objet (POO) en PHP. Il permet à plusieurs objets de réagir différemment aux mêmes méthodes en fonction de leur type ou de leur classe parente.",
+  "polymorphisme_de_méthodes": {
+    "description": "En PHP, le polymorphisme des méthodes permet à plusieurs classes d'implémenter une méthode avec le même nom, mais comportant des fonctionnalités spécifiques à chaque classe. Cela favorise la flexibilité et la réutilisation du code.",
+    "exemple": "Exemple de polymorphisme de méthodes en PHP :",
+    "code": "<pre>\nclass Animal {\n    public function parler() {\n        // Code de base\n    }\n}\nclass Chien extends Animal {\n    public function parler() {\n        echo 'Woof!';\n    }\n}\nclass Chat extends Animal {\n    public function parler() {\n        echo 'Miaou!';\n    }\n}\n$animaux = [new Chien(), new Chat()];\nforeach ($animaux as $animal) {\n    $animal->parler();\n}\n</pre>"
+  },
+  "polymorphisme_d'interfaces": {
+    "description": "Les interfaces en PHP permettent de définir un ensemble de méthodes que les classes doivent implémenter. Cela facilite le polymorphisme, car plusieurs classes peuvent implémenter la même interface avec leurs propres fonctionnalités.",
+    "exemple": "Exemple de polymorphisme d'interfaces en PHP :",
+    "code": "<pre>\ninterface Forme {\n    public function calculerAire();\n}\nclass Rectangle implements Forme {\n    private $largeur;\n    private $hauteur;\n    public function __construct($largeur, $hauteur) {\n        $this->largeur = $largeur;\n        $this->hauteur = $hauteur;\n    }\n    public function calculerAire() {\n        return $this->largeur * $this->hauteur;\n    }\n}\nclass Cercle implements Forme {\n    private $rayon;\n    public function __construct($rayon) {\n        $this->rayon = $rayon;\n    }\n    public function calculerAire() {\n        return 3.14 * $this->rayon * $this->rayon;\n    }\n}\n$formes = [new Rectangle(5, 3), new Cercle(4)];\nforeach ($formes as $forme) {\n    echo 'Aire : ' . $forme->calculerAire() . '\\n';\n}\n</pre>"
+  },
+  "polymorphisme_de_classes_abstraites": {
+    "description": "Les classes abstraites en PHP sont des classes qui ne peuvent pas être instanciées directement, mais qui peuvent servir de base pour d'autres classes. Le polymorphisme peut être obtenu en définissant des méthodes abstraites dans la classe parente.",
+    "exemple": "Exemple de polymorphisme de classes abstraites en PHP :",
+    "code": "<pre>\nabstract class Figure {\n    abstract public function calculerAire();\n}\nclass Rectangle extends Figure {\n    private $largeur;\n    private $hauteur;\n    public function __construct($largeur, $hauteur) {\n        $this->largeur = $largeur;\n        $this->hauteur = $hauteur;\n    }\n    public function calculerAire() {\n        return $this->largeur * $this->hauteur;\n    }\n}\nclass Cercle extends Figure {\n    private $rayon;\n    public function __construct($rayon) {\n        $this->rayon = $rayon;\n    }\n    public function calculerAire() {\n        return 3.14 * $this->rayon * $this->rayon;\n    }\n}\n$formes = [new Rectangle(5, 3), new Cercle(4)];\nforeach ($formes as $forme) {\n    echo 'Aire : ' . $forme->calculerAire() . '\\n';\n}\n</pre>"
+  }
+}

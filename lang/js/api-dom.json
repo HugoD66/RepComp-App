@@ -1,0 +1,38 @@
+{
+  "general": "L'API DOM (Document Object Model) en JavaScript est une interface de programmation qui permet de manipuler la structure et le contenu des documents HTML et XML. Elle permet aux développeurs d'accéder aux éléments HTML, de les modifier, de les supprimer ou d'ajouter de nouveaux éléments, le tout de manière dynamique.",
+
+  "acces_elements": {
+    "description": "Pour accéder aux éléments HTML, vous pouvez utiliser des méthodes telles que `getElementById`, `getElementsByClassName`, `getElementsByTagName`, ou encore `querySelector` et `querySelectorAll`. Ces méthodes renvoient des références vers les éléments HTML que vous pouvez manipuler.",
+    "code": "const monParagraphe = document.getElementById('monParagraphe');\nmonParagraphe.textContent = 'Nouveau contenu';\n"
+  },
+
+  "modification_contenu": {
+    "description": "Vous pouvez modifier le contenu d'un élément HTML en utilisant des propriétés telles que `textContent`, `innerHTML` ou `innerText`. Vous pouvez également ajouter ou supprimer des éléments enfants à l'intérieur d'un élément.",
+    "code": "const monDiv = document.createElement('div');\nmonDiv.textContent = 'Nouveau contenu de la div';\ndocument.body.appendChild(monDiv);\n"
+  },
+
+  "modification_styles_classes": {
+    "description": "L'API DOM permet de modifier les styles CSS d'un élément en utilisant la propriété `style`. Vous pouvez également ajouter, supprimer ou basculer des classes CSS sur un élément avec les méthodes `classList`.",
+    "code": "const monElement = document.getElementById('monElement');\nmonElement.style.backgroundColor = 'blue';\nmonElement.classList.add('nouvelle-classe');\n"
+  },
+
+  "evenements": {
+    "description": "Vous pouvez ajouter des gestionnaires d'événements à des éléments HTML pour répondre aux interactions des utilisateurs. Les événements courants incluent `click`, `mouseover`, `keydown`, etc.",
+    "code": "const monBouton = document.getElementById('monBouton');\nmonBouton.addEventListener('click', () => {\n  alert('Le bouton a été cliqué !');\n});\n"
+  },
+
+  "creation_elements": {
+    "description": "L'API DOM permet de créer de nouveaux éléments HTML en utilisant des méthodes telles que `createElement`. Vous pouvez ensuite configurer ces éléments, les ajouter à la page et les manipuler comme vous le souhaitez.",
+    "code": "const nouveauParagraphe = document.createElement('p');\nnouveauParagraphe.textContent = 'Nouveau paragraphe créé avec JavaScript';\ndocument.body.appendChild(nouveauParagraphe);\n"
+  },
+
+  "suppression_elements": {
+    "description": "Vous pouvez supprimer des éléments HTML en utilisant la méthode `remove()` ou en accédant à leur parent avec la méthode `parentNode` et en utilisant `removeChild()`.\n",
+    "code": "const elementASupprimer = document.getElementById('elementASupprimer');\nelementASupprimer.remove();"
+  },
+
+  "traverser_elements": {
+    "description": "Vous pouvez parcourir et traverser la structure du DOM en utilisant des méthodes telles que `parentNode`, `childNodes`, `nextSibling`, `previousSibling`, etc. Cela permet de naviguer entre les éléments.",
+    "code": "const monElement = document.getElementById('monElement');\nconst parent = monElement.parentNode;\nconst premierEnfant = parent.firstChild;\nconst frereSuivant = monElement.nextSibling;\n"
+  }
+}

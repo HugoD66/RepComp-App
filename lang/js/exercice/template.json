@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une fonction nommée 'genererMessage' qui prend en paramètre un prénom et retourne un message de salutation personnalisé sous forme de chaîne de caractères.",
+    "correction": "function genererMessage(prenom) {\n  return `Hello, ${prenom}!`;\n}"
+  },
+  "Exercice2": {
+    "description": "Créez une fonction nommée 'creerListe' qui prend en paramètre un tableau de noms et retourne une liste HTML non ordonnée (<ul>) contenant chaque nom dans un élément de liste (<li>).",
+    "correction": "function creerListe(noms) {\n  let liste = '<ul>';\n  for (const nom of noms) {\n    liste += `<li>${nom}</li>`;\n  }\n  liste += '</ul>';\n  return liste;\n}"
+  },
+  "Exercice3": {
+    "description": "Créez une fonction nommée 'creerTableau' qui prend en paramètre un tableau de personnes (objets) contenant des propriétés 'nom' et 'age', et retourne un tableau HTML (<table>) affichant chaque personne dans une ligne (<tr>) avec les colonnes 'Nom' et 'Âge'.",
+    "correction": "function creerTableau(personnes) {\n  let tableau = '<table>';\n  tableau += '<tr><th>Nom</th><th>Âge</th></tr>';\n  for (const personne of personnes) {\n    tableau += `<tr><td>${personne.nom}</td><td>${personne.age}</td></tr>`;\n  }\n  tableau += '</table>';\n  return tableau;\n}"
+  },
+  "Exercice4": {
+    "description": "Créez une fonction nommée 'afficherDetails' qui prend en paramètre un objet contenant des détails (par exemple, nom, email, téléphone) et retourne une chaîne de caractères formatée affichant ces détails.",
+    "correction": "function afficherDetails(details) {\n  let message = 'Détails :';\n  for (const cle in details) {\n    message += `\n${cle}: ${details[cle]}`;\n  }\n  return message;\n}"
+  },
+  "Exercice5": {
+    "description": "Créez une fonction nommée 'genererPage' qui prend en paramètres un titre, un contenu HTML et un nom de classe CSS, et retourne une page HTML complète avec ces éléments insérés.",
+    "correction": "function genererPage(titre, contenu, classeCSS) {\n  return `<html><head><title>${titre}</title></head><body class='${classeCSS}'>${contenu}</body></html>`;\n}"
+  }
+}

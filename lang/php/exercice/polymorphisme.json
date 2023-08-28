@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une classe abstraite 'Forme' avec une méthode abstraite 'aire()'. Ensuite, créez des classes 'Rectangle' et 'Cercle' qui héritent de 'Forme' et implémentez la méthode 'aire()' pour calculer l'aire de chaque forme. Créez ensuite un tableau d'objets 'Forme' contenant des rectangles et des cercles, et calculez et affichez leur aire.",
+    "correction": "abstract class Forme {\n  abstract public function aire();\n}\n\nclass Rectangle extends Forme {\n  public $longueur;\n  public $largeur;\n\n  public function aire() {\n    return $this->longueur * $this->largeur;\n  }\n}\n\nclass Cercle extends Forme {\n  public $rayon;\n\n  public function aire() {\n    return 3.14159 * $this->rayon * $this->rayon;\n  }\n}\n\n$formes = [\n  new Rectangle(),\n  new Cercle()\n];\n\nforeach ($formes as $forme) {\n  echo 'Aire : ' . $forme->aire() . '<br>';\n}"
+  },
+  "Exercice2": {
+    "description": "Créez une classe abstraite 'Animal' avec une méthode abstraite 'crier()'. Ensuite, créez des classes 'Chien' et 'Chat' qui héritent de 'Animal' et implémentez la méthode 'crier()' pour chaque animal. Créez ensuite un tableau d'objets 'Animal' contenant des chiens et des chats, et appelez leur méthode 'crier()'.",
+    "correction": "abstract class Animal {\n  abstract public function crier();\n}\n\nclass Chien extends Animal {\n  public function crier() {\n    return 'Woof!';\n  }\n}\n\nclass Chat extends Animal {\n  public function crier() {\n    return 'Meow!';\n  }\n}\n\n$animaux = [\n  new Chien(),\n  new Chat()\n];\n\nforeach ($animaux as $animal) {\n  echo $animal->crier() . '<br>';\n}"
+  },
+  "Exercice3": {
+    "description": "Créez une classe abstraite 'Véhicule' avec une méthode abstraite 'vitesseMax()'. Ensuite, créez des classes 'Voiture' et 'Moto' qui héritent de 'Véhicule' et implémentez la méthode 'vitesseMax()' pour chaque véhicule. Créez ensuite un tableau d'objets 'Véhicule' contenant des voitures et des motos, et appelez leur méthode 'vitesseMax()'.",
+    "correction": "abstract class Véhicule {\n  abstract public function vitesseMax();\n}\n\nclass Voiture extends Véhicule {\n  public function vitesseMax() {\n    return '180 km/h';\n  }\n}\n\nclass Moto extends Véhicule {\n  public function vitesseMax() {\n    return '220 km/h';\n  }\n}\n\n$véhicules = [\n  new Voiture(),\n  new Moto()\n];\n\nforeach ($véhicules as $véhicule) {\n  echo 'Vitesse maximale : ' . $véhicule->vitesseMax() . '<br>';\n}"
+  },
+  "Exercice4": {
+    "description": "Créez une classe abstraite 'Fruit' avec une méthode abstraite 'couleur()'. Ensuite, créez des classes 'Pomme' et 'Banane' qui héritent de 'Fruit' et implémentez la méthode 'couleur()' pour chaque fruit. Créez ensuite un tableau d'objets 'Fruit' contenant des pommes et des bananes, et appelez leur méthode 'couleur()'.",
+    "correction": "abstract class Fruit {\n  abstract public function couleur();\n}\n\nclass Pomme extends Fruit {\n  public function couleur() {\n    return 'Rouge';\n  }\n}\n\nclass Banane extends Fruit {\n  public function couleur() {\n    return 'Jaune';\n  }\n}\n\n$fruits = [\n  new Pomme(),\n  new Banane()\n];\n\nforeach ($fruits as $fruit) {\n  echo 'Couleur : ' . $fruit->couleur() . '<br>';\n}"
+  },
+  "Exercice5": {
+    "description": "Créez une classe abstraite 'InstrumentMusical' avec une méthode abstraite 'jouer()'. Ensuite, créez des classes 'Guitare' et 'Piano' qui héritent de 'InstrumentMusical' et implémentez la méthode 'jouer()' pour chaque instrument. Créez ensuite un tableau d'objets 'InstrumentMusical' contenant des guitares et des pianos, et appelez leur méthode 'jouer()'.",
+    "correction": "abstract class InstrumentMusical {\n  abstract public function jouer();\n}\n\nclass Guitare extends InstrumentMusical {\n  public function jouer() {\n    return 'Son de guitare';\n  }\n}\n\nclass Piano extends InstrumentMusical {\n  public function jouer() {\n    return 'Son de piano';\n  }\n}\n\n$instruments = [\n  new Guitare(),\n  new Piano()\n];\n\nforeach ($instruments as $instrument) {\n  echo 'Son : ' . $instrument->jouer() . '<br>';\n}"
+  }
+}

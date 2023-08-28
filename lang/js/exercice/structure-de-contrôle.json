@@ -1,0 +1,53 @@
+{
+  "Exercice1": {
+    "description": "Écrivez un programme JavaScript qui affiche 'Bonjour, le monde !' dans la console.",
+    "code": "",
+    "correction": "console.log('Hello, world!');"
+  },
+  "Exercice2": {
+    "description": "Écrivez un programme JavaScript qui affiche les nombres de 1 à 10 dans la console.",
+    "code": "",
+    "correction": "for (let i = 1; i <= 10; i++) {\n  console.log(i);\n}"
+  },
+  "Exercice3": {
+    "description": "Écrivez un programme JavaScript qui calcule la somme des nombres de 1 à 100.",
+    "code": "",
+    "correction": "let sum = 0;\nfor (let i = 1; i <= 100; i++) {\n  sum += i;\n}\nconsole.log(sum);"
+  },
+  "Exercice4": {
+    "description": "Écrivez un programme JavaScript qui vérifie si un nombre est pair ou impair.",
+    "code": "",
+    "correction": "function isEvenOrOdd(number) {\n  if (number % 2 === 0) {\n    return 'even';\n  } else {\n    return 'odd';\n  }\n}\nconsole.log(isEvenOrOdd(7));"
+  },
+  "Exercice5": {
+    "description": "Écrivez un programme JavaScript qui trouve l'élément le plus grand dans un tableau de nombres.",
+    "code": "",
+    "correction": "function findLargestElement(array) {\n  let largest = array[0];\n  for (let i = 1; i < array.length; i++) {\n    if (array[i] > largest) {\n      largest = array[i];\n    }\n  }\n  return largest;\n}\nconst numbers = [5, 12, 3, 8, 21];\nconsole.log(findLargestElement(numbers));"
+  },
+  "Exercice6": {
+    "description": "Écrivez un programme JavaScript qui calcule le factoriel d'un nombre.",
+    "code": "",
+    "correction": "function factorial(n) {\n  if (n === 0) {\n    return 1;\n  } else {\n    return n * factorial(n - 1);\n  }\n}\nconsole.log(factorial(5));"
+  },
+  "Exercice7": {
+    "description": "Écrivez un programme JavaScript qui vérifie si une chaîne de caractères est un palindrome.",
+    "code": "",
+    "correction": "function isPalindrome(string) {\n  const reversedString = string.split('').reverse().join('');\n  return string === reversedString;\n}\nconsole.log(isPalindrome('radar'));"
+  },
+  "Exercice8": {
+    "description": "Écrivez un programme JavaScript qui génère les n premiers nombres premiers.",
+    "code": "",
+    "correction": "function isPrimeNumber(number) {\n  if (number <= 1) {\n    return false;\n  }\n  for (let i = 2; i <= Math.sqrt(number); i++) {\n    if (number % i === 0) {\n      return false;\n    }\n  }\n  return true;\n}\nfunction generateFirstNPrimeNumbers(n) {\n  const primeNumbers = [];\n  let number = 2;\n  while (primeNumbers.length < n) {\n    if (isPrimeNumber(number)) {\n      primeNumbers.push(number);\n    }\n    number++;\n  }\n  return primeNumbers;\n}\nconsole.log(generateFirstNPrimeNumbers(10));"
+  },
+  "Exercice9": {
+    "description": "Écrivez un programme JavaScript qui trie un tableau de nombres par ordre croissant.",
+    "code": "",
+    "correction": "function sortAscending(array) {\n  return array.sort((a, b) => a - b);\n}\nconst numbers = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5];\nconsole.log(sortAscending(numbers));"
+  },
+  "Exercice10": {
+    "description": "Écrivez un programme JavaScript qui implémente le jeu du pendu (hangman game).",
+    "code": "",
+    "correction": ""
+  }
+}
+

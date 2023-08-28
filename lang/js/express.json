@@ -1,0 +1,35 @@
+{
+  "general": "Express.js est un framework web minimaliste et flexible pour Node.js. Il facilite la création d'applications web robustes et performantes en fournissant une infrastructure solide pour gérer les routes, les middlewares et les requêtes HTTP.",
+  "installation": {
+    "description": "Pour utiliser Express.js, vous devez d'abord l'installer via npm (Node Package Manager) en exécutant la commande suivante dans le terminal :",
+    "code": "npm install express\n"
+  },
+  "configuration": {
+    "description": "Après l'installation, vous pouvez commencer par importer Express dans votre application Node.js :",
+    "code": "const express = require('express');\nconst app = express();\n"
+  },
+  "routes": {
+    "description": "Les routes sont utilisées pour définir les points d'entrée de votre application. Chaque route correspond à une URL et à une méthode HTTP spécifique (GET, POST, etc.). Voici comment définir une route de base :",
+    "code": "app.get('/', (req, res) => {\n  res.send('Bienvenue sur la page d'accueil!');\n});\n"
+  },
+  "middlewares": {
+    "description": "Les middlewares sont des fonctions exécutées avant d'atteindre les routes. Ils sont utiles pour effectuer des opérations communes telles que l'authentification, la validation des données, etc. Voici un exemple de middleware :",
+    "code": "function logMiddleware(req, res, next) {\n  console.log('Requête reçue à :', new Date());\n  next();\n}\n\napp.use(logMiddleware);\n"
+  },
+  "params": {
+    "description": "Les paramètres de route permettent de capturer des valeurs dynamiques dans l'URL. Ils sont précédés d'un double point dans la définition de la route. Voici comment les utiliser :",
+    "code": "app.get('/utilisateurs/:id', (req, res) => {\n  const userId = req.params.id;\n  res.send('Affichage de l'utilisateur avec l'ID ' + userId);\n});\n"
+  },
+  "middlewares_avances": {
+    "description": "Les middlewares avancés peuvent être utilisés pour des tâches spécifiques, comme la gestion des erreurs, la compression, etc. Express.js offre des middlewares intégrés et la possibilité d'en créer de nouveaux. Voici un exemple d'utilisation de middleware tiers (compression) :",
+    "code": "const compression = require('compression');\n\napp.use(compression());\n"
+  },
+  "gestion_erreurs": {
+    "description": "La gestion des erreurs est essentielle dans une application. Express permet de gérer les erreurs avec des middlewares spéciaux. Voici comment créer un middleware de gestion d'erreurs :",
+    "code": "app.use((err, req, res, next) => {\n  console.error(err.stack);\n  res.status(500).send('Quelque chose s'est mal passé!');\n});\n"
+  },
+  "ecoute": {
+    "description": "Enfin, pour démarrer votre serveur Express.js, utilisez la méthode `listen` :",
+    "code": "const port = 3000;\napp.listen(port, () => {\n  console.log('Serveur Express.js en cours d'écoute sur le port ' + port);\n});\n"
+  }
+}

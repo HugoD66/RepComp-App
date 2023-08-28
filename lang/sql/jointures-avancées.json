@@ -1,0 +1,23 @@
+{
+  "general": "Les jointures avancées en SQL permettent de combiner des données provenant de plusieurs tables de manière plus complexe que les jointures simples. Elles sont utiles lorsque vous devez extraire des informations spécifiques ou effectuer des opérations avancées sur les données.",
+  "jointure_croisee": {
+    "description": "Une jointure croisée (CROSS JOIN) combine chaque ligne de la première table avec chaque ligne de la deuxième table. Elle génère un produit cartésien des deux tables, ce qui peut donner un grand nombre de résultats.",
+    "code": "SELECT * FROM table1 CROSS JOIN table2;"
+  },
+  "auto-jointure": {
+    "description": "Une auto-jointure est une jointure où une table est jointe à elle-même. Cela peut être utile lorsque vous avez des données hiérarchiques stockées dans une seule table.",
+    "code": "SELECT e1.nom, e2.nom AS manager FROM employes e1 JOIN employes e2 ON e1.manager_id = e2.id;"
+  },
+  "jointure_naturelle": {
+    "description": "Une jointure naturelle (NATURAL JOIN) combine les lignes de deux tables ayant des colonnes portant le même nom. Elle est basée sur les noms de colonnes plutôt que sur des conditions explicites.",
+    "code": "SELECT * FROM clients NATURAL JOIN commandes;"
+  },
+  "jointure_externes": {
+    "description": "Les jointures externes (LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN) incluent les lignes correspondantes de l'une ou l'autre table, ainsi que les lignes qui ne correspondent à aucune entrée dans l'autre table.",
+    "code": "SELECT * FROM clients LEFT JOIN commandes ON clients.id = commandes.client_id;"
+  },
+  "jointure_self": {
+    "description": "Une jointure avec soi-même est une jointure où une table est jointe à elle-même. Cela peut être utilisé pour établir des relations hiérarchiques ou pour suivre les chemins dans une structure de données.",
+    "code": "SELECT e.nom, e.manager_id, m.nom AS manager_nom FROM employes e LEFT JOIN employes m ON e.manager_id = m.id;"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une fonction `additionner` qui prend deux nombres en paramètres et retourne leur somme. Ensuite, écrivez un test unitaire pour vérifier que la fonction fonctionne correctement.",
+    "correction": "function additionner(a, b) {\n  return a + b;\n}"
+  },
+  "Exercice2": {
+    "description": "Créez une fonction `soustraire` qui prend deux nombres en paramètres et retourne leur différence. Écrivez ensuite un test unitaire pour vérifier que la fonction fonctionne correctement.",
+    "correction": "function soustraire(a, b) {\n  return a - b;\n}"
+  },
+  "Exercice3": {
+    "description": "Créez une fonction `multiplier` qui prend deux nombres en paramètres et retourne leur produit. Écrivez ensuite un test unitaire pour vérifier que la fonction fonctionne correctement.",
+    "correction": "function multiplier(a, b) {\n  return a * b;\n}"
+  },
+  "Exercice4": {
+    "description": "Créez une fonction `diviser` qui prend deux nombres en paramètres et retourne leur quotient. Écrivez ensuite un test unitaire pour vérifier que la fonction fonctionne correctement.",
+    "correction": "function diviser(a, b) {\n  if (b === 0) {\n    throw new Error('Division par zéro');\n  }\n  return a / b;\n}"
+  },
+  "Exercice5": {
+    "description": "Créez une fonction `calculer` qui prend deux nombres et une opération (addition, soustraction, multiplication ou division) en paramètres et retourne le résultat de l'opération. Écrivez ensuite un test unitaire pour vérifier que la fonction fonctionne correctement.",
+    "correction": "function calculer(a, b, operation) {\n  switch (operation) {\n    case 'addition':\n      return additionner(a, b);\n    case 'soustraction':\n      return soustraire(a, b);\n    case 'multiplication':\n      return multiplier(a, b);\n    case 'division':\n      return diviser(a, b);\n    default:\n      throw new Error('Opération non valide');\n  }\n}"
+  }
+}

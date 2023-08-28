@@ -1,0 +1,48 @@
+{
+  "general": "Les fonctions de tableau sont des méthodes intégrées en JavaScript qui permettent de manipuler et de transformer des tableaux de manière efficace. Elles sont largement utilisées pour effectuer des opérations sur les éléments d'un tableau sans utiliser de boucles for.",
+
+  "map": {
+    "description": "La méthode `map()` crée un nouveau tableau en appliquant une fonction à chaque élément du tableau source. Cette fonction permet de transformer chaque élément et de retourner un tableau résultant.",
+    "code": "const nombres = [1, 2, 3, 4, 5];\nconst carres = nombres.map((nombre) => nombre * nombre);\n// carres contient maintenant [1, 4, 9, 16, 25]\n"
+  },
+
+  "filter": {
+    "description": "La méthode `filter()` crée un nouveau tableau en filtrant les éléments du tableau source en fonction d'une condition définie dans une fonction. Les éléments qui satisfont la condition sont inclus dans le nouveau tableau.",
+    "code": "const nombres = [1, 2, 3, 4, 5];\nconst pairs = nombres.filter((nombre) => nombre % 2 === 0);\n// pairs contient maintenant [2, 4]\n"
+  },
+
+  "reduce": {
+    "description": "La méthode `reduce()` permet de réduire un tableau à une seule valeur en appliquant une fonction cumulatrice sur chaque élément du tableau. Cette fonction accumule un résultat à partir des éléments du tableau.",
+    "code": "const nombres = [1, 2, 3, 4, 5];\nconst somme = nombres.reduce((accumulateur, nombre) => accumulateur + nombre, 0);\n// somme contient maintenant 15\n"
+  },
+
+  "forEach": {
+    "description": "La méthode `forEach()` itère sur chaque élément du tableau source et exécute une fonction pour chaque élément. Cette méthode est utilisée pour effectuer des actions sur chaque élément sans créer de nouveau tableau.",
+    "code": "const fruits = ['pomme', 'banane', 'orange'];\nfruits.forEach((fruit) => console.log(fruit));\n// Affiche chaque fruit dans la console\n"
+  },
+
+  "find": {
+    "description": "La méthode `find()` renvoie le premier élément du tableau qui satisfait une condition donnée dans une fonction. Elle est utile lorsque vous souhaitez trouver un élément spécifique dans un tableau.",
+    "code": "const nombres = [1, 2, 3, 4, 5];\nconst resultat = nombres.find((nombre) => nombre > 3);\n// resultat contient maintenant 4\n"
+  },
+
+  "some": {
+    "description": "La méthode `some()` vérifie si au moins un élément du tableau satisfait une condition donnée dans une fonction. Elle renvoie `true` si la condition est satisfaite pour au moins un élément, sinon `false`.",
+    "code": "const nombres = [1, 2, 3, 4, 5];\nconst contientPair = nombres.some((nombre) => nombre % 2 === 0);\n// contientPair est true car il y a des nombres pairs dans le tableau\n"
+  },
+
+  "every": {
+    "description": "La méthode `every()` vérifie si tous les éléments du tableau satisfont une condition donnée dans une fonction. Elle renvoie `true` si la condition est satisfaite pour tous les éléments, sinon `false`.",
+    "code": "const nombres = [2, 4, 6, 8, 10];\nconst tousPairs = nombres.every((nombre) => nombre % 2 === 0);\n// tousPairs est true car tous les nombres sont pairs\n"
+  },
+
+  "sort": {
+    "description": "La méthode `sort()` trie les éléments d'un tableau en place et renvoie le tableau trié. Par défaut, la méthode trie les éléments en les convertissant en chaînes de caractères et en les comparant selon leur valeur Unicode.",
+    "code": "const fruits = ['banane', 'pomme', 'orange'];\nfruits.sort();\n// fruits est maintenant ['banane', 'orange', 'pomme']\n"
+  },
+
+  "reverse": {
+    "description": "La méthode `reverse()` inverse l'ordre des éléments dans un tableau en place. Le premier élément devient le dernier, et ainsi de suite.",
+    "code": "const nombres = [1, 2, 3, 4, 5];\nnombres.reverse();\n// nombres est maintenant [5, 4, 3, 2, 1]\n"
+  }
+}

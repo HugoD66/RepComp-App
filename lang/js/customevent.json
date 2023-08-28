@@ -1,0 +1,33 @@
+{
+  "general": "Les Custom Events (Événements personnalisés) sont un mécanisme puissant en JavaScript qui permet aux développeurs de créer, déclencher et écouter des événements personnalisés. Ils sont utiles pour la communication entre différentes parties de votre application, notamment les composants ou les modules, sans dépendre uniquement des événements DOM standards.",
+
+  "creation_custom_event": {
+    "description": "Pour créer un Custom Event, vous devez utiliser la classe `CustomEvent`. Vous pouvez personnaliser cet événement en lui attribuant un nom (type), des données supplémentaires, et des options.",
+    "code": "const monEvenement = new CustomEvent('mon-evenement', {\n  detail: { donnees: 'supplementaires' },\n  bubbles: true,\n  cancelable: true\n});\n"
+  },
+
+  "declenchement_custom_event": {
+    "description": "Pour déclencher un Custom Event, vous pouvez utiliser la méthode `dispatchEvent` sur l'élément cible. Vous pouvez également lui passer l'événement personnalisé que vous avez créé.",
+    "code": "const elementCible = document.getElementById('mon-element');\nelementCible.dispatchEvent(monEvenement);\n"
+  },
+
+  "ecoute_custom_event": {
+    "description": "Pour écouter un Custom Event, vous devez utiliser la méthode `addEventListener` sur l'élément que vous souhaitez écouter. Vous spécifiez le nom de l'événement personnalisé que vous avez créé et une fonction de rappel (callback) qui sera exécutée lorsque l'événement est déclenché.",
+    "code": "elementCible.addEventListener('mon-evenement', (event) => {\n  console.log('Événement personnalisé déclenché :', event.detail.donnees);\n});\n"
+  },
+
+  "donnees_custom_event": {
+    "description": "Les Custom Events peuvent transporter des données supplémentaires sous forme de l'objet `detail`. Vous pouvez y stocker n'importe quelle information que vous souhaitez passer à votre gestionnaire d'événements personnalisé.",
+    "code": "const monEvenement = new CustomEvent('mon-evenement', {\n  detail: { message: 'Données supplémentaires' }\n});\n"
+  },
+
+  "annulation_custom_event": {
+    "description": "Vous pouvez également configurer un Custom Event pour qu'il soit annulable en définissant l'option `cancelable` à `true`. Cela permet à votre gestionnaire d'événements de décider si l'événement doit être annulé ou non.",
+    "code": "elementCible.addEventListener('mon-evenement', (event) => {\n  if (event.cancelable) {\n    event.preventDefault(); // Annule l'événement\n    console.log('Événement annulé.');\n  }\n});\n"
+  },
+
+  "utilisations_custom_event": {
+    "description": "Les Custom Events sont utiles dans de nombreux cas, notamment pour la communication entre composants, la mise en œuvre de modèles de conception tels que l'observateur (Observer), la création de plugins réutilisables, et bien plus encore.",
+    "code": "elementCible.dispatchEvent(monEvenement); // Déclenche l'événement\n\nelementCible.addEventListener('mon-evenement', (event) => {\n  console.log('Événement personnalisé déclenché :', event.detail.message);\n}); // Écoute l'événement\n"
+  }
+}

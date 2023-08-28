@@ -1,0 +1,27 @@
+{
+  "Exercice1": {
+    "description": "Déclarez un type 'Personne' avec les propriétés 'nom' (string) et 'âge' (number). Ensuite, déclarez une variable de type 'Personne' avec des valeurs factices.",
+    "code": "// Votre code TypeScript ici",
+    "correction": "type Personne = {\n  nom: string;\n  âge: number;\n};\n\nconst personne: Personne = {\n  nom: 'John Doe',\n  âge: 30\n};"
+  },
+  "Exercice2": {
+    "description": "Déclarez un type 'Point' avec les propriétés 'x' (number) et 'y' (number). Ensuite, déclarez une fonction 'distance' qui prend deux paramètres de type 'Point' et retourne la distance euclidienne entre les deux points.",
+    "code": "// Votre code TypeScript ici",
+    "correction": "type Point = {\n  x: number;\n  y: number;\n};\n\nfunction distance(point1: Point, point2: Point): number {\n  const dx = point1.x - point2.x;\n  const dy = point1.y - point2.y;\n  return Math.sqrt(dx * dx + dy * dy);\n}"
+  },
+  "Exercice3": {
+    "description": "Déclarez un type générique 'Boîte' avec une propriété 'contenu' de type générique. Ensuite, déclarez une variable de type 'Boîte' avec un tableau de nombres comme contenu.",
+    "code": "// Votre code TypeScript ici",
+    "correction": "type Boîte<T> = {\n  contenu: T;\n};\n\nconst boîteDeNombres: Boîte<number[]> = {\n  contenu: [1, 2, 3]\n};"
+  },
+  "Exercice4": {
+    "description": "Déclarez un type 'Fruit' avec une propriété 'nom' (string) et une méthode 'manger' qui retourne une chaîne de caractères. Ensuite, déclarez une classe 'Pomme' qui implémente le type 'Fruit'. La méthode 'manger' de la classe 'Pomme' devrait retourner 'Croquez la pomme !'",
+    "code": "// Votre code TypeScript ici",
+    "correction": "type Fruit = {\n  nom: string;\n  manger(): string;\n};\n\nclass Pomme implements Fruit {\n  nom = 'pomme';\n  manger(): string {\n    return 'Croquez la pomme !';\n  }\n}"
+  },
+  "Exercice5": {
+    "description": "Déclarez un type 'Personne' avec les propriétés 'nom' (string) et 'âge' (number). Ensuite, déclarez un tableau de 'Personne' avec au moins deux éléments. Utilisez la méthode 'map' pour créer un nouveau tableau de chaînes de caractères contenant les noms des personnes.",
+    "code": "// Votre code TypeScript ici",
+    "correction": "type Personne = {\n  nom: string;\n  âge: number;\n};\n\nconst personnes: Personne[] = [\n  { nom: 'Alice', âge: 25 },\n  { nom: 'Bob', âge: 30 }\n];\n\nconst noms: string[] = personnes.map(personne => personne.nom);"
+  }
+}

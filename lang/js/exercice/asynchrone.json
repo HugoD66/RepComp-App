@@ -1,0 +1,27 @@
+{
+  "Exercice1": {
+    "description": "Écrivez un programme JavaScript qui effectue une requête asynchrone pour récupérer des données à partir d'une URL en utilisant les Promises et la méthode `fetch()`. Affichez les données dans la console.",
+    "code": "// Utilisez 'fetch()' et les Promises pour récupérer et afficher les données.",
+    "correction": "fetch('https://api.example.com/data')\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error(error));"
+  },
+  "Exercice2": {
+    "description": "Écrivez un programme JavaScript qui effectue une série de requêtes asynchrones en utilisant `async/await`. Affichez les résultats de ces requêtes dans la console.",
+    "code": "// Utilisez 'async/await' pour effectuer des requêtes asynchrones en série.",
+    "correction": "async function fetchData() {\n  try {\n    const response1 = await fetch('https://api.example.com/data1');\n    const data1 = await response1.json();\n\n    const response2 = await fetch('https://api.example.com/data2');\n    const data2 = await response2.json();\n\n    console.log(data1, data2);\n  } catch (error) {\n    console.error(error);\n  }\n}\n\nfetchData();"
+  },
+  "Exercice3": {
+    "description": "Écrivez un programme JavaScript qui effectue plusieurs requêtes asynchrones en parallèle à l'aide de `Promise.all()`. Affichez les résultats dans la console.",
+    "code": "// Utilisez 'Promise.all()' pour effectuer des requêtes asynchrones en parallèle.",
+    "correction": "const urls = ['https://api.example.com/data1', 'https://api.example.com/data2'];\n\nPromise.all(urls.map(url => fetch(url).then(response => response.json())))\n  .then(dataArray => console.log(dataArray))\n  .catch(error => console.error(error));"
+  },
+  "Exercice4": {
+    "description": "Écrivez un programme JavaScript qui gère les erreurs lors d'une requête asynchrone en utilisant les Promises et `try/catch`. Affichez les erreurs dans la console.",
+    "code": "// Utilisez 'try/catch' pour gérer les erreurs lors de requêtes asynchrones.",
+    "correction": "async function fetchData() {\n  try {\n    const response = await fetch('https://api.example.com/data');\n    if (!response.ok) {\n      throw new Error('La requête a échoué');\n    }\n    const data = await response.json();\n    console.log(data);\n  } catch (error) {\n    console.error(error);\n  }\n}\n\nfetchData();"
+  },
+  "Exercice5": {
+    "description": "Écrivez un programme JavaScript qui simule un délai de chargement en utilisant `setTimeout()` dans une fonction asynchrone. Affichez un message après le délai.",
+    "code": "// Utilisez 'setTimeout()' dans une fonction asynchrone pour simuler un délai de chargement.",
+    "correction": "async function simulateLoading() {\n  console.log('Chargement en cours...');\n  await new Promise(resolve => setTimeout(resolve, 2000));\n  console.log('Chargement terminé.');\n}\n\nsimulateLoading();"
+  }
+}

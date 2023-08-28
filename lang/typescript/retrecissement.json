@@ -1,0 +1,33 @@
+{
+  "general": "Le rétrécissement de types en TypeScript fait référence au processus de spécification d'un type plus spécifique à partir d'un type plus général. Cela permet d'accéder à des fonctionnalités spécifiques à un type, d'effectuer des opérations en toute sécurité et de bénéficier de l'inférence de type dans TypeScript.",
+
+  "type_assertions": {
+    "description": "Les assertions de type (type assertions) permettent de forcer un type sur une valeur, même si TypeScript ne peut pas inférer le type correct. Elles sont utiles lorsque vous connaissez le type réel de la valeur.",
+    "exemple": "Exemple d'assertion de type en TypeScript :",
+    "code": "let chaineInconnue: any = 'Bonjour';\nlet longueur: number = (chaineInconnue as string).length;"
+  },
+
+  "instanceof": {
+    "description": "L'opérateur `instanceof` permet de vérifier si un objet est une instance d'une classe ou d'un constructeur spécifique. Cela est utile pour effectuer des opérations conditionnelles basées sur le type d'objet.",
+    "exemple": "Exemple d'utilisation de `instanceof` en TypeScript :",
+    "code": "class Animal {}\nclass Chien extends Animal {}\n\nlet monChien: Animal = new Chien();\nif (monChien instanceof Chien) {\n    console.log('C'est un chien.');\n}"
+  },
+
+  "utilisation_des_gardiens": {
+    "description": "Les gardiens (guards) sont des fonctions de vérification de type qui permettent de restreindre le type d'une variable dans un bloc de code. Ils sont couramment utilisés avec les structures `if` et `switch`.",
+    "exemple": "Exemple d'utilisation de gardiens en TypeScript :",
+    "code": "function afficherMessage(message: string | number) {\n    if (typeof message === 'string') {\n        console.log(message.toUpperCase());\n    } else if (typeof message === 'number') {\n        console.log('Nombre : ' + message);\n    }\n}"
+  },
+
+  "utilisation_de_predicate": {
+    "description": "Les prédicats (predicates) sont des fonctions qui renvoient `true` ou `false` en fonction du type d'une valeur. Ils sont utilisés pour effectuer des vérifications de type personnalisées.",
+    "exemple": "Exemple d'utilisation de prédicats en TypeScript :",
+    "code": "function estChaine(valeur: any): valeur is string {\n    return typeof valeur === 'string';\n}\n\nlet x: any = 'Bonjour';\nif (estChaine(x)) {\n    console.log(x.toUpperCase());\n}"
+  },
+
+  "utilisation_de_type": {
+    "description": "L'utilisation de types personnalisés ou de types prédéfinis permet de restreindre automatiquement le type d'une variable. Cela garantit que vous n'accédez qu'aux propriétés et méthodes spécifiques à ce type.",
+    "exemple": "Exemple d'utilisation de types en TypeScript :",
+    "code": "type Point = {\n    x: number;\n    y: number;\n};\n\nlet point: Point = { x: 10, y: 20 };\nconsole.log(point.x + point.y);"
+  }
+}

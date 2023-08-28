@@ -1,0 +1,27 @@
+{
+  "Exercice1": {
+    "description": "Créez un fichier de module TypeScript 'math.ts' contenant une fonction 'addition' qui prend deux nombres en paramètres et retourne leur somme. Ensuite, importez cette fonction dans un fichier 'app.ts' et utilisez-la pour effectuer une addition.",
+    "code": "// math.ts\n// Votre code TypeScript ici\n\n// app.ts\n// Votre code TypeScript ici",
+    "correction": "// math.ts\nexport function addition(a: number, b: number): number {\n  return a + b;\n}\n\n// app.ts\nimport { addition } from './math';\n\nconst resultat = addition(5, 3);\nconsole.log(resultat); // Devrait afficher 8"
+  },
+  "Exercice2": {
+    "description": "Créez un fichier de module TypeScript 'conversion.ts' contenant une fonction 'poucesEnCentimetres' qui prend une longueur en pouces en paramètre et la convertit en centimètres (1 pouce = 2.54 centimètres). Ensuite, importez cette fonction dans un fichier 'app.ts' et utilisez-la pour effectuer une conversion.",
+    "code": "// conversion.ts\n// Votre code TypeScript ici\n\n// app.ts\n// Votre code TypeScript ici",
+    "correction": "// conversion.ts\nexport function poucesEnCentimetres(pouces: number): number {\n  return pouces * 2.54;\n}\n\n// app.ts\nimport { poucesEnCentimetres } from './conversion';\n\nconst longueurEnPouces = 5;\nconst longueurEnCentimetres = poucesEnCentimetres(longueurEnPouces);\nconsole.log(longueurEnCentimetres); // Devrait afficher 12.7"
+  },
+  "Exercice3": {
+    "description": "Créez un fichier de module TypeScript 'utilitaires.ts' contenant une classe 'Calculatrice' avec des méthodes pour l'addition, la soustraction, la multiplication et la division. Ensuite, importez cette classe dans un fichier 'app.ts' et effectuez des opérations de calcul.",
+    "code": "// utilitaires.ts\n// Votre code TypeScript ici\n\n// app.ts\n// Votre code TypeScript ici",
+    "correction": "// utilitaires.ts\nexport class Calculatrice {\n  addition(a: number, b: number): number {\n    return a + b;\n  }\n\n  soustraction(a: number, b: number): number {\n    return a - b;\n  }\n\n  multiplication(a: number, b: number): number {\n    return a * b;\n  }\n\n  division(a: number, b: number): number {\n    if (b === 0) {\n      throw new Error('Division par zéro');\n    }\n    return a / b;\n  }\n}\n\n// app.ts\nimport { Calculatrice } from './utilitaires';\n\nconst calculatrice = new Calculatrice();\nconst somme = calculatrice.addition(5, 3);\nconst difference = calculatrice.soustraction(7, 2);\nconst produit = calculatrice.multiplication(4, 6);\nconst quotient = calculatrice.division(9, 3);\nconsole.log(somme, difference, produit, quotient);"
+  },
+  "Exercice4": {
+    "description": "Créez un fichier de module TypeScript 'config.ts' contenant un objet de configuration avec des paramètres tels que la couleur, la taille, etc. Ensuite, importez cet objet dans un fichier 'app.ts' et utilisez ces paramètres pour personnaliser l'apparence de votre application.",
+    "code": "// config.ts\n// Votre code TypeScript ici\n\n// app.ts\n// Votre code TypeScript ici",
+    "correction": "// config.ts\nexport const configuration = {\n  couleurPrincipale: 'bleu',\n  taillePolice: '14px',\n  themeSombre: false\n};\n\n// app.ts\nimport { configuration } from './config';\n\ndocument.body.style.backgroundColor = configuration.couleurPrincipale;\ndocument.body.style.fontSize = configuration.taillePolice;\nif (configuration.themeSombre) {\n  // Activer le thème sombre\n}"
+  },
+  "Exercice5": {
+    "description": "Créez un fichier de module TypeScript 'validation.ts' contenant une fonction 'validerEmail' qui prend une chaîne de caractères en paramètre et retourne 'true' si elle correspond à un email valide (utilisez une expression régulière pour la validation). Ensuite, importez cette fonction dans un fichier 'app.ts' et utilisez-la pour valider des adresses email.",
+    "code": "// validation.ts\n// Votre code TypeScript ici\n\n// app.ts\n// Votre code TypeScript ici",
+    "correction": "// validation.ts\nexport function validerEmail(email: string): boolean {\n  const regex = /^[A-Za-z0-9+_.-]+@(.+)$/;\n  return regex.test(email);\n}\n\n// app.ts\nimport { validerEmail } from './validation';\n\nconst emailValide = validerEmail('test@example.com');\nconst emailInvalide = validerEmail('test');\nconsole.log(emailValide, emailInvalide); // Devrait afficher true false"
+  }
+}

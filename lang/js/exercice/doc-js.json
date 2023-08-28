@@ -1,0 +1,27 @@
+{
+  "Exercice1": {
+    "description": "Rendez-vous sur le site de la documentation JavaScript (MDN) et trouvez la page d'accueil. Collez le lien ici.",
+    "code": "// Lien vers la page d'accueil de la documentation JavaScript (MDN)",
+    "correction": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+  },
+  "Exercice2": {
+    "description": "Recherchez la documentation pour la fonction `parseInt()` dans MDN. Collez le lien vers la page de documentation ici.",
+    "code": "// Lien vers la documentation de la fonction `parseInt()`",
+    "correction": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt"
+  },
+  "Exercice3": {
+    "description": "Trouvez la documentation pour les boucles `for...of` en JavaScript. Collez le lien vers la page de documentation ici.",
+    "code": "// Lien vers la documentation des boucles `for...of`",
+    "correction": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of"
+  },
+  "Exercice4": {
+    "description": "Recherchez la documentation pour la méthode `Array.prototype.map()` en JavaScript. Collez le lien vers la page de documentation ici.",
+    "code": "// Lien vers la documentation de la méthode `Array.prototype.map()`",
+    "correction": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
+  },
+  "Exercice5": {
+    "description": "Trouvez la documentation pour les événements DOM en JavaScript. Collez le lien vers la page de documentation ici.",
+    "code": "// Lien vers la documentation des événements DOM en JavaScript",
+    "correction": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Events"
+  }
+}

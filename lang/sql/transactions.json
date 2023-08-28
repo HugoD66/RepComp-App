@@ -1,0 +1,23 @@
+{
+  "general": "Les transactions en SQL permettent d'effectuer un groupe d'instructions SQL de manière atomique, c'est-à-dire que toutes les instructions doivent être exécutées avec succès, sinon aucune modification n'est apportée à la base de données. Les transactions garantissent la cohérence des données et la préservation de l'intégrité dans des situations complexes.",
+  "debut_de_transaction": {
+    "description": "Pour commencer une transaction, vous pouvez utiliser la commande SQL BEGIN ou START TRANSACTION, suivie de toutes les instructions que vous souhaitez inclure dans la transaction.",
+    "code": "BEGIN;\nINSERT INTO clients (nom, email) VALUES ('Alice', 'alice@email.com');\nUPDATE comptes SET solde = solde - 100 WHERE client_id = 1;"
+  },
+  "validation": {
+    "description": "Une transaction peut être validée en utilisant la commande COMMIT. Cela appliquera toutes les modifications de la transaction à la base de données.",
+    "code": "COMMIT;"
+  },
+  "annulation": {
+    "description": "Si vous souhaitez annuler une transaction en cours, vous pouvez utiliser la commande ROLLBACK. Cela annulera toutes les modifications apportées par la transaction et restaurera l'état précédent de la base de données.",
+    "code": "ROLLBACK;"
+  },
+  "sauvegarde_points": {
+    "description": "Vous pouvez également enregistrer des points de sauvegarde au sein d'une transaction en utilisant la commande SAVEPOINT. Cela vous permet de revenir à un point particulier de la transaction en cas d'erreur, plutôt que de tout annuler.",
+    "code": "SAVEPOINT point1;\n-- Instructions SQL\nROLLBACK TO point1; -- Revenir au point1 en cas d'erreur"
+  },
+  "verrouillage_optimiste": {
+    "description": "Le verrouillage optimiste est une approche qui consiste à autoriser plusieurs transactions en même temps, mais à vérifier si une autre transaction a modifié les données avant de valider la transaction. Si des conflits sont détectés, la transaction échoue.",
+    "code": "BEGIN;\n-- Sélectionnez des données\n-- Effectuez des calculs\n-- Vérifiez si les données n'ont pas été modifiées par une autre transaction\nCOMMIT;"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Déclarez une variable de type 'string' nommée 'prenom' et affectez-lui une chaîne de caractères.",
+    "correction": "let prenom: string = 'John';"
+  },
+  "Exercice2": {
+    "description": "Déclarez une variable de type 'number' nommée 'age' et affectez-lui un nombre entier.",
+    "correction": "let age: number = 30;"
+  },
+  "Exercice3": {
+    "description": "Déclarez un tableau de chaînes de caractères nommé 'noms' et initialisez-le avec plusieurs noms.",
+    "correction": "let noms: string[] = ['Alice', 'Bob', 'Charlie'];"
+  },
+  "Exercice4": {
+    "description": "Créez une fonction nommée 'addition' qui prend deux paramètres de type 'number' et renvoie leur somme.",
+    "correction": "function addition(a: number, b: number): number {\n  return a + b;\n}"
+  },
+  "Exercice5": {
+    "description": "Déclarez un type 'Personne' en TypeScript avec des propriétés 'nom' (string) et 'age' (number). Ensuite, créez une instance de 'Personne' avec des valeurs.",
+    "correction": "type Person = {\n  nom: string;\n  age: number;\n};\n\nconst personne: Person = {\n  nom: 'Alice',\n  age: 25,\n};"
+  }
+}

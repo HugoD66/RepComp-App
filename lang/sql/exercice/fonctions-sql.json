@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une fonction SQL nommée 'CalculerAge' qui prend en entrée l'année de naissance d'un utilisateur et retourne son âge actuel.",
+    "correction": "CREATE FUNCTION CalculerAge(@AnneeNaissance INT)\nRETURNS INT\nBEGIN\n  DECLARE @Age INT;\n  SET @Age = YEAR(GETDATE()) - @AnneeNaissance;\n  RETURN @Age;\nEND;"
+  },
+  "Exercice2": {
+    "description": "Utilisez la fonction 'CalculerAge' pour obtenir l'âge d'un utilisateur dont l'année de naissance est 1990.",
+    "correction": "DECLARE @AgeUtilisateur INT;\nSET @AgeUtilisateur = dbo.CalculerAge(1990);\nSELECT @AgeUtilisateur AS 'Age de l'utilisateur';"
+  },
+  "Exercice3": {
+    "description": "Créez une fonction SQL nommée 'ConcatenerPrenomNom' qui prend en entrée le prénom et le nom d'un utilisateur et retourne le prénom et le nom concaténés en une seule chaîne de caractères.",
+    "correction": "CREATE FUNCTION ConcatenerPrenomNom(@Prenom VARCHAR(255), @Nom VARCHAR(255))\nRETURNS VARCHAR(512)\nBEGIN\n  DECLARE @NomComplet VARCHAR(512);\n  SET @NomComplet = @Prenom + ' ' + @Nom;\n  RETURN @NomComplet;\nEND;"
+  },
+  "Exercice4": {
+    "description": "Utilisez la fonction 'ConcatenerPrenomNom' pour obtenir le nom complet d'un utilisateur avec le prénom 'John' et le nom 'Doe'.",
+    "correction": "DECLARE @NomUtilisateur VARCHAR(512);\nSET @NomUtilisateur = dbo.ConcatenerPrenomNom('John', 'Doe');\nSELECT @NomUtilisateur AS 'Nom complet de l'utilisateur';"
+  },
+  "Exercice5": {
+    "description": "Créez une fonction SQL nommée 'CalculerMoyenne' qui prend en entrée trois notes (nombre à virgule flottante) et retourne la moyenne de ces notes.",
+    "correction": "CREATE FUNCTION CalculerMoyenne(@Note1 FLOAT, @Note2 FLOAT, @Note3 FLOAT)\nRETURNS FLOAT\nBEGIN\n  DECLARE @Moyenne FLOAT;\n  SET @Moyenne = (@Note1 + @Note2 + @Note3) / 3.0;\n  RETURN @Moyenne;\nEND;"
+  }
+}

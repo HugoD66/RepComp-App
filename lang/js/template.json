@@ -1,0 +1,28 @@
+{
+  "general": "Les templates en JavaScript sont une façon puissante de générer dynamiquement du contenu HTML en utilisant des chaînes de caractères avec des espaces réservés pour les données. Ils sont utiles pour créer des vues réutilisables et générer du contenu dynamiquement côté client.",
+
+  "creation_template": {
+    "description": "Pour créer un template en JavaScript, vous pouvez utiliser les littéraux de modèle (template literals) en entourant le texte avec des backticks (`). Vous pouvez ensuite insérer des variables ou des expressions en utilisant la syntaxe `${}`.",
+    "code": "const nom = 'Alice';\nconst age = 30;\nconst template = `Bonjour, je m'appelle ${nom} et j'ai ${age} ans.`;\nconsole.log(template); // 'Bonjour, je m'appelle Alice et j'ai 30 ans.'\n"
+  },
+
+  "injection_html": {
+    "description": "Les templates permettent d'injecter du contenu HTML en toute sécurité. Vous pouvez insérer du HTML en utilisant la syntaxe `${}`, mais il sera automatiquement échappé pour prévenir les attaques XSS (cross-site scripting).",
+    "code": "const message = '<script>alert(\"Attaque XSS\")</script>';\nconst template = `Message : ${message}`;\nconsole.log(template); // 'Message : &lt;script&gt;alert(\"Attaque XSS\")&lt;/script&gt;'\n"
+  },
+
+  "boucles_et_conditions": {
+    "description": "Les templates en JavaScript permettent également d'utiliser des boucles et des conditions pour générer dynamiquement du contenu basé sur des données.",
+    "code": "const articles = [{ titre: 'Article 1' }, { titre: 'Article 2' }];\nconst listeArticles = `<ul>\n${articles.map(article => `<li>${article.titre}</li>`).join('')}\n</ul>`;\nconsole.log(listeArticles);\n"
+  },
+
+  "fonctions_template": {
+    "description": "Vous pouvez encapsuler des templates dans des fonctions pour générer du contenu réutilisable. Cela facilite la création de composants réactifs dans vos applications web.",
+    "code": "function genererCarte(nom, description) {\n  return `<div class='carte'>\n    <p>${nom}</p>\n    <p>${description}</p>\n  </div>`;\n}\n\nconst maCarte = genererCarte('Produit A', 'Description du produit A');\nconsole.log(maCarte);\n"
+  },
+
+  "utilisation_avancee": {
+    "description": "Les templates en JavaScript sont utilisés dans de nombreuses bibliothèques et frameworks, tels que React, Vue.js et Angular, pour générer dynamiquement des composants et des vues.",
+    "code": "const utilisateurs = ['Alice', 'Bob', 'Charlie'];\nconst listeUtilisateurs = `<ul>\n${utilisateurs.map(utilisateur => `<li>${utilisateur}</li>`).join('')}\n</ul>`;\nconsole.log(listeUtilisateurs);\n"
+  }
+}

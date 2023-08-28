@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez un cookie en PHP avec le nom 'utilisateur' et la valeur 'JohnDoe'.",
+    "correction": "setcookie('utilisateur', 'JohnDoe', time() + 3600, '/');"
+  },
+  "Exercice2": {
+    "description": "Récupérez la valeur du cookie 'utilisateur' en PHP et affichez-la.",
+    "correction": "$utilisateur = isset($_COOKIE['utilisateur']) ? $_COOKIE['utilisateur'] : 'Aucun utilisateur';\necho $utilisateur;"
+  },
+  "Exercice3": {
+    "description": "Modifiez la valeur du cookie 'utilisateur' en PHP pour la changer en 'JaneDoe'.",
+    "correction": "setcookie('utilisateur', 'JaneDoe', time() + 3600, '/');"
+  },
+  "Exercice4": {
+    "description": "Définissez la date d'expiration du cookie 'utilisateur' en PHP pour le supprimer.",
+    "correction": "setcookie('utilisateur', '', time() - 3600, '/');"
+  },
+  "Exercice5": {
+    "description": "Vérifiez si un cookie nommé 'panier' existe en PHP. Si oui, affichez son contenu, sinon affichez 'Panier vide'.",
+    "correction": "if (isset($_COOKIE['panier'])) {\n  echo $_COOKIE['panier'];\n} else {\n  echo 'Panier vide';\n}"
+  }
+}

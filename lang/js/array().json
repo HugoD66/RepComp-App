@@ -1,0 +1,27 @@
+{
+  "general": "Le constructeur Array() est l'une des principales façons de créer des tableaux en JavaScript. Les tableaux sont des structures de données essentielles qui permettent de stocker et de manipuler des collections de données de manière efficace.",
+  "creation": {
+    "description": "Pour créer un tableau en utilisant le constructeur Array(), vous pouvez utiliser l'une des deux syntaxes suivantes : 1) Créer un tableau vide avec `const monTableau1 = new Array();` ou 2) Créer un tableau avec des éléments initiaux avec `const monTableau2 = new Array(element1, element2, ...);`",
+    "code": "const fruits = new Array('pomme', 'banane', 'orange');\nconst nombres = new Array(1, 2, 3, 4, 5);\n"
+  },
+  "acces_modification": {
+    "description": "Vous pouvez accéder aux propriétés d'un objet en utilisant la notation point ou la notation crochet. Pour modifier la valeur d'une propriété, utilisez la même notation.",
+    "code": "const monObjet = { nom: 'John', age: 30 };\nconst nom = monObjet.nom; // Accéder avec la notation point\nconst age = monObjet['age']; // Accéder avec la notation crochet\nmonObjet.age = 31; // Modifier la valeur de la propriété\n"
+  },
+  "methodes": {
+    "description": "Les méthodes d'objet sont des fonctions stockées en tant que propriétés d'un objet. Elles peuvent être utilisées pour effectuer des actions sur l'objet ou ses propriétés.",
+    "code": "const monObjet = {\n    nom: 'John',\n    saluer: function() {\n        console.log('Bonjour, je m\\'appelle ' + this.nom);\n    }\n};\nmonObjet.saluer(); // Appeler la méthode\n"
+  },
+  "portee": {
+    "description": "La portée des propriétés d'un objet détermine où elles sont accessibles. Les propriétés sont généralement locales à l'objet et peuvent être accédées à l'aide de 'this'.",
+    "code": "const monObjet = {\n    nom: 'John',\n    afficherNom: function() {\n        console.log('Mon nom est ' + this.nom);\n    }\n};\nmonObjet.afficherNom(); // 'Mon nom est John'\n"
+  },
+  "heritage": {
+    "description": "L'héritage est un concept important en JavaScript. Vous pouvez créer des objets qui héritent des propriétés et des méthodes d'autres objets. Cela permet de réutiliser et d'étendre le comportement des objets.",
+    "code": "function Animal(nom) {\n    this.nom = nom;\n}\n\nAnimal.prototype.manger = function() {\n    console.log(this.nom + ' mange de la nourriture.');\n};\n\nfunction Chien(nom, race) {\n    Animal.call(this, nom);\n    this.race = race;\n}\n\nChien.prototype = Object.create(Animal.prototype);\nChien.prototype.constructor = Chien;\nChien.prototype.aboyer = function() {\n    console.log(this.nom + ' aboie.');\n};\n\nconst monChien = new Chien('Max', 'Golden Retriever');\nmonChien.aboyer();\nmonChien.manger();\n"
+  },
+  "manipulation_avancee": {
+    "description": "Vous pouvez effectuer des manipulations avancées sur les objets, telles que la copie, la fusion, la sérialisation, la désérialisation, et bien plus encore. Ces opérations sont utiles pour la gestion avancée des données.",
+    "code": "// Copie d'un objet\nfunction copierObjet(objet) {\n    return JSON.parse(JSON.stringify(objet));\n}\n\nconst objetOriginal = { nom: 'Original' };\nconst objetCopie = copierObjet(objetOriginal);\n\n// Fusion de deux objets\nconst objet1 = { a: 1 };\nconst objet2 = { b: 2 };\nconst objetFusionne = { ...objet1, ...objet2 };\n\n// Sérialisation en JSON\nconst objetSerialise = JSON.stringify(objetOriginal);\n\n// Désérialisation depuis JSON\nconst objetDeserialise = JSON.parse(objetSerialise);\n"
+  }
+}

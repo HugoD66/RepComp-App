@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une fonction nommée 'ajouter' qui accepte deux paramètres (nombres) et retourne leur somme.",
+    "correction": "function add($a, $b) {\n  return $a + $b;\n}"
+  },
+  "Exercice2": {
+    "description": "Créez une fonction nommée 'calculerMoyenne' qui accepte un tableau de nombres en paramètre et retourne leur moyenne.",
+    "correction": "function calculateAverage($numbers) {\n  if (count($numbers) === 0) {\n    return 0; // Éviter une division par zéro\n  }\n  return array_sum($numbers) / count($numbers);\n}"
+  },
+  "Exercice3": {
+    "description": "Créez une fonction nommée 'longueurChaine' qui accepte une chaîne de caractères en paramètre et retourne sa longueur (le nombre de caractères).",
+    "correction": "function stringLength($str) {\n  return strlen($str);\n}"
+  },
+  "Exercice4": {
+    "description": "Créez une fonction nommée 'estPair' qui accepte un nombre en paramètre et retourne 'true' si le nombre est pair, sinon 'false'.",
+    "correction": "function isEven($number) {\n  return $number % 2 === 0;\n}"
+  },
+  "Exercice5": {
+    "description": "Créez une fonction nommée 'inverseChaine' qui accepte une chaîne de caractères en paramètre et retourne la chaîne inversée (par exemple, 'hello' devient 'olleh').",
+    "correction": "function reverseString($str) {\n  return strrev($str);\n}"
+  }
+}

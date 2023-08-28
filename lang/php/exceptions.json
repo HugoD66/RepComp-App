@@ -1,0 +1,27 @@
+{
+  "introduction": {
+    "description": "Les exceptions sont des événements inhabituels ou indésirables qui se produisent pendant l'exécution d'un programme. En PHP, les exceptions sont gérées à l'aide de mécanismes intégrés qui permettent de traiter les erreurs de manière élégante et de gérer les situations exceptionnelles.",
+    "exemple": "Exemple de code PHP générant une exception :",
+    "code": "<pre>function diviser($nombre, $diviseur) {\n    if ($diviseur == 0) {\n        throw new Exception('Division par zéro !');\n    }\n    return $nombre / $diviseur;\n}\n\ntry {\n    echo diviser(10, 0);\n} catch (Exception $e) {\n    echo 'Une exception a été attrapée : ' . $e->getMessage();\n}</pre>"
+  },
+  "qu_est_ce_qu_une_exception": {
+    "description": "Une exception est une erreur ou une condition exceptionnelle qui se produit pendant l'exécution du code. En PHP, une exception est une instance de la classe `Exception` ou de ses sous-classes. Les exceptions interrompent le flux normal du programme et permettent de gérer les erreurs de manière propre.",
+    "exemple": "Exemple de déclaration d'une exception personnalisée en PHP :",
+    "code": "<pre>class MonException extends Exception {\n    // Propriétés et méthodes personnalisées\n}\n\nclass MaClasse {\n    public function maMethode() {\n        throw new MonException('Une erreur personnalisée est survenue.');\n    }\n}</pre>"
+  },
+  "utilisation_des_exceptions": {
+    "description": "En PHP, les exceptions sont généralement générées à l'aide du mot-clé `throw` lorsque des erreurs se produisent. Les exceptions peuvent être attrapées (capturées) à l'aide de blocs `try...catch` qui permettent de gérer l'erreur de manière contrôlée.",
+    "exemple": "Exemple de gestion d'exception en PHP :",
+    "code": "<pre>function diviser($nombre, $diviseur) {\n    if ($diviseur == 0) {\n        throw new Exception('Division par zéro !');\n    }\n    return $nombre / $diviseur;\n}\n\ntry {\n    echo diviser(10, 0);\n} catch (Exception $e) {\n    echo 'Une exception a été attrapée : ' . $e->getMessage();\n}</pre>"
+  },
+  "les_exceptions_personnalisees": {
+    "description": "En plus des exceptions intégrées, vous pouvez créer des exceptions personnalisées en PHP. Cela vous permet de gérer des situations spécifiques de manière plus précise en utilisant des classes d'exception personnalisées.",
+    "exemple": "Exemple de gestion d'une exception personnalisée en PHP :",
+    "code": "<pre>class MonException extends Exception {\n    // Propriétés et méthodes personnalisées\n}\n\nclass MaClasse {\n    public function maMethode() {\n        throw new MonException('Une erreur personnalisée est survenue.');\n    }\n}\n\ntry {\n    $obj = new MaClasse();\n    $obj->maMethode();\n} catch (MonException $e) {\n    echo 'Une exception personnalisée a été attrapée : ' . $e->getMessage();\n}</pre>"
+  },
+  "bloc_finalement": {
+    "description": "En PHP, vous pouvez utiliser un bloc `finally` dans une structure `try...catch` pour spécifier des actions qui doivent être exécutées, que des exceptions soient levées ou non. Cela est utile pour le nettoyage des ressources ou d'autres tâches similaires.",
+    "exemple": "Exemple d'utilisation d'un bloc `finally` en PHP :",
+    "code": "<pre>try {\n    // Code susceptible de générer une exception\n} catch (Exception $e) {\n    // Gestion de l'exception\n} finally {\n    // Actions à exécuter quoi qu'il arrive\n}</pre>"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "Exercice1": {
+    "description": "Créez un timer qui affiche 'Bonjour' dans la console après 3 secondes.",
+    "code": "",
+    "correction": "setTimeout(function() {\n  console.log('Bonjour');\n}, 3000);"
+  },
+  "Exercice2": {
+    "description": "Créez un timer qui affiche les nombres de 1 à 5 dans la console, un nombre toutes les 2 secondes.",
+    "code": "",
+    "correction": "let count = 1;\nconst intervalId = setInterval(function() {\n  console.log(count);\n  count++;\n  if (count > 5) {\n    clearInterval(intervalId);\n  }\n}, 2000);"
+  },
+  "Exercice3": {
+    "description": "Créez un compte à rebours de 10 secondes qui affiche les secondes restantes dans la console à chaque seconde.",
+    "code": "// Votre code pour créer le compte à rebours ici",
+    "correction": "let seconds = 10;\nconst intervalId = setInterval(function() {\n  console.log(seconds);\n  seconds--;\n  if (seconds < 0) {\n    clearInterval(intervalId);\n  }\n}, 1000);"
+  },
+  "Exercice4": {
+    "description": "Créez un timer qui affiche 'Toutes les 5 secondes' dans la console, en boucle, avec une pause de 5 secondes entre chaque message.",
+    "code": "",
+    "correction": "function displayMessage() {\n  console.log('Toutes les 5 secondes');\n}\nsetInterval(displayMessage, 5000);"
+  },
+  "Exercice5": {
+    "description": "Créez un jeu de compte à rebours qui commence à 30 secondes et s'affiche dans une page web. Mettez à jour le compte à rebours chaque seconde et affichez 'Temps écoulé !' une fois le compte à rebours terminé.",
+    "code": "",
+    "correction": "<html>\n<head>\n  <title>Compte à rebours</title>\n</head>\n<body>\n  <div id='countdown'></div>\n  <script>\n    let seconds = 30;\n    const countdown = document.getElementById('countdown');\n    const intervalId = setInterval(function() {\n      countdown.innerHTML = seconds + ' secondes restantes';\n      seconds--;\n      if (seconds < 0) {\n        clearInterval(intervalId);\n        countdown.innerHTML = 'Temps écoulé !';\n      }\n    }, 1000);\n  </script>\n</body>\n</html>"
+  }
+}

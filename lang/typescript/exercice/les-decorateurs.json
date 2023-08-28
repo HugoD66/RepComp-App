@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez un décorateur nommé '@log' qui affiche le nom de la méthode qu'il décore à chaque appel de la méthode.",
+    "correction": "function log(target: any, key: string, descriptor: PropertyDescriptor) {\n  const originalMethod = descriptor.value;\n  descriptor.value = function (...args: any[]) {\n    console.log(`Appel de la méthode ${key}`);\n    return originalMethod.apply(this, args);\n  };\n  return descriptor;\n}\n\nclass Exemple {\n  @log\n  methode() {\n    // Corps de la méthode\n  }\n}"
+  },
+  "Exercice2": {
+    "description": "Créez un décorateur nommé '@measureTime' qui mesure le temps d'exécution d'une méthode et l'affiche en millisecondes.",
+    "correction": "function measureTime(target: any, key: string, descriptor: PropertyDescriptor) {\n  const originalMethod = descriptor.value;\n  descriptor.value = function (...args: any[]) {\n    const startTime = performance.now();\n    const result = originalMethod.apply(this, args);\n    const endTime = performance.now();\n    console.log(`La méthode ${key} a pris ${endTime - startTime} ms à s'exécuter`);\n    return result;\n  };\n  return descriptor;\n}\n\nclass Exemple {\n  @measureTime\n  methode() {\n    // Corps de la méthode\n  }\n}"
+  },
+  "Exercice3": {
+    "description": "Créez un décorateur nommé '@validate' qui vérifie si les arguments passés à une méthode sont valides selon certaines règles.",
+    "correction": "function validate(min: number, max: number) {\n  return function (target: any, key: string, descriptor: PropertyDescriptor) {\n    const originalMethod = descriptor.value;\n    descriptor.value = function (...args: any[]) {\n      for (const arg of args) {\n        if (typeof arg !== 'number' || arg < min || arg > max) {\n          throw new Error(`Arguments invalides pour la méthode ${key}`);\n        }\n      }\n      return originalMethod.apply(this, args);\n    };\n    return descriptor;\n  };\n}\n\nclass Exemple {\n  @validate(0, 100)\n  methode(age: number) {\n    // Corps de la méthode\n  }\n}"
+  },
+  "Exercice4": {
+    "description": "Créez un décorateur nommé '@singleton' qui transforme une classe en singleton, de sorte qu'une seule instance de la classe puisse être créée.",
+    "correction": "function singleton(target: any) {\n  let instance: any;\n  return function (...args: any[]) {\n    if (!instance) {\n      instance = new target(...args);\n    }\n    return instance;\n  };\n}\n\n@singleton\nclass SingletonClass {\n  // Propriétés et méthodes de la classe\n}"
+  },
+  "Exercice5": {
+    "description": "Créez un décorateur nommé '@deprecated' qui avertit l'utilisateur que la méthode décorée est obsolète et doit être évitée.",
+    "correction": "function deprecated(target: any, key: string, descriptor: PropertyDescriptor) {\n  const originalMethod = descriptor.value;\n  descriptor.value = function (...args: any[]) {\n    console.warn(`La méthode ${key} est obsolète et ne doit pas être utilisée.`);\n    return originalMethod.apply(this, args);\n  };\n  return descriptor;\n}\n\nclass Exemple {\n  @deprecated\n  methode() {\n    // Corps de la méthode\n  }\n}"
+  }
+}

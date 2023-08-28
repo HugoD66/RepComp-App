@@ -1,0 +1,27 @@
+{
+  "Exercice1": {
+    "description": "Créez une classe `Personne` avec les propriétés `nom` et `âge`. Ajoutez une méthode `presentation()` qui affiche le nom et l'âge de la personne.",
+    "code": "// Créez la classe Personne et la méthode presentation.",
+    "correction": "class Personne {\n  constructor(nom, age) {\n    this.nom = nom;\n    this.age = age;\n  }\n\n  presentation() {\n    console.log(`Je m'appelle ${this.nom} et j'ai ${this.age} ans.`);\n  }\n}\n\nconst personne = new Personne('Alice', 30);\npersonne.presentation();"
+  },
+  "Exercice2": {
+    "description": "Créez une classe `Animal` avec une propriété `nom`. Créez une classe `Chien` qui hérite de `Animal` et a une méthode `aboyer()` qui affiche 'Woof!'.",
+    "code": "// Créez les classes Animal et Chien avec la méthode aboyer.",
+    "correction": "class Animal {\n  constructor(nom) {\n    this.nom = nom;\n  }\n}\n\nclass Chien extends Animal {\n  aboyer() {\n    console.log('Woof!');\n  }\n}\n\nconst monChien = new Chien('Fido');\nmonChien.aboyer();"
+  },
+  "Exercice3": {
+    "description": "Créez une classe `Calculatrice` avec des méthodes pour effectuer des opérations mathématiques de base (addition, soustraction, multiplication, division).",
+    "code": "// Créez la classe Calculatrice avec les méthodes mathématiques.",
+    "correction": "class Calculatrice {\n  addition(a, b) {\n    return a + b;\n  }\n\n  soustraction(a, b) {\n    return a - b;\n  }\n\n  multiplication(a, b) {\n    return a * b;\n  }\n\n  division(a, b) {\n    if (b === 0) {\n      throw new Error('Division par zéro.');\n    }\n    return a / b;\n  }\n}\n\nconst calculatrice = new Calculatrice();\nconsole.log(calculatrice.addition(5, 3));"
+  },
+  "Exercice4": {
+    "description": "Créez une classe `Rectangle` avec des propriétés `longueur` et `largeur`. Ajoutez une méthode `aire()` qui calcule et renvoie l'aire du rectangle.",
+    "code": "// Créez la classe Rectangle avec la méthode aire.",
+    "correction": "class Rectangle {\n  constructor(longueur, largeur) {\n    this.longueur = longueur;\n    this.largeur = largeur;\n  }\n\n  aire() {\n    return this.longueur * this.largeur;\n  }\n}\n\nconst rectangle = new Rectangle(5, 4);\nconsole.log(rectangle.aire());"
+  },
+  "Exercice5": {
+    "description": "Créez une classe `Billet` pour représenter des billets de cinéma. Les billets ont une propriété `film` et une propriété `prix`. Créez un tableau de billets et calculez le coût total des billets.",
+    "code": "// Créez la classe Billet et calculez le coût total.",
+    "correction": "class Billet {\n  constructor(film, prix) {\n    this.film = film;\n    this.prix = prix;\n  }\n}\n\nconst billets = [\n  new Billet('Film1', 10),\n  new Billet('Film2', 12),\n  new Billet('Film3', 8)\n];\n\nconst coutTotal = billets.reduce((total, billet) => total + billet.prix, 0);\nconsole.log('Coût total des billets :', coutTotal);"
+  }
+}

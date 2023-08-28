@@ -1,0 +1,27 @@
+{
+  "Exercice1": {
+    "description": "Créez une application Node.js qui lit un fichier texte et affiche son contenu dans la console.",
+    "code": "",
+    "correction": "const fs = require('fs');\n\nfs.readFile('monfichier.txt', 'utf8', (err, data) => {\n  if (err) {\n    console.error(err);\n    return;\n  }\n  console.log(data);\n});"
+  },
+  "Exercice2": {
+    "description": "Créez un serveur HTTP Node.js qui gère les requêtes GET et renvoie une page HTML de base en réponse à toutes les requêtes.",
+    "code": "// Créez un serveur HTTP et renvoyez une page HTML de base",
+    "correction": "const http = require('http');\n\nconst server = http.createServer((req, res) => {\n  res.writeHead(200, { 'Content-Type': 'text/html' });\n  res.end('<html><body><h1>Hello, world!</h1></body></html>');\n});\n\nserver.listen(3000, () => {\n  console.log('Serveur Node.js en cours d'exécution sur le port 3000');\n});"
+  },
+  "Exercice3": {
+    "description": "Créez une application Node.js qui utilise l'API 'util.promisify' pour promettre la lecture du fichier texte et afficher son contenu dans la console.",
+    "code": "// Utilisez 'util.promisify' pour lire le fichier et afficher son contenu",
+    "correction": "const fs = require('fs');\nconst util = require('util');\nconst readFileAsync = util.promisify(fs.readFile);\n\nreadFileAsync('monfichier.txt', 'utf8')\n  .then(data => console.log(data))\n  .catch(err => console.error(err));"
+  },
+  "Exercice4": {
+    "description": "Créez une application Node.js qui effectue une requête HTTP GET vers une API publique (par exemple, 'https://jsonplaceholder.typicode.com/posts/1') et affiche la réponse dans la console.",
+    "code": "// Effectuez une requête HTTP GET vers une API et affichez la réponse",
+    "correction": "const https = require('https');\n\nhttps.get('https://jsonplaceholder.typicode.com/posts/1', (res) => {\n  let data = '';\n\n  res.on('data', (chunk) => {\n    data += chunk;\n  });\n\n  res.on('end', () => {\n    console.log(data);\n  });\n});"
+  },
+  "Exercice5": {
+    "description": "Créez une application Node.js qui utilise le module 'axios' pour effectuer une requête HTTP GET vers la même API publique et afficher la réponse dans la console.",
+    "code": "// Utilisez le module 'axios' pour effectuer une requête HTTP GET et afficher la réponse",
+    "correction": "const axios = require('axios');\n\naxios.get('https://jsonplaceholder.typicode.com/posts/1')\n  .then(response => {\n    console.log(response.data);\n  })\n  .catch(error => {\n    console.error(error);\n  });"
+  }
+}

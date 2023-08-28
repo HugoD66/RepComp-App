@@ -1,0 +1,27 @@
+{
+  "Exercice1": {
+    "description": "Installez npm sur votre machine et créez un nouveau projet npm vide avec un fichier 'package.json'.",
+    "code": "// Installez npm et créez un projet npm vide",
+    "correction": "Pour installer npm : https://www.npmjs.com/get-npm\nPour créer un projet npm vide :\n1. Créez un nouveau dossier pour votre projet.\n2. Exécutez 'npm init' dans le dossier et suivez les instructions pour générer un fichier 'package.json'."
+  },
+  "Exercice2": {
+    "description": "Ajoutez une dépendance externe à votre projet npm (par exemple, 'lodash') en utilisant 'npm install'.",
+    "code": "// Ajoutez une dépendance externe à votre projet",
+    "correction": "Exécutez 'npm install lodash' dans le dossier de votre projet pour ajouter 'lodash' en tant que dépendance dans votre 'package.json'."
+  },
+  "Exercice3": {
+    "description": "Installez une version spécifique d'une dépendance externe (par exemple, 'lodash@4.17.21') en utilisant 'npm install'.",
+    "code": "// Installez une version spécifique d'une dépendance externe",
+    "correction": "Exécutez 'npm install lodash@4.17.21' pour installer la version spécifique '4.17.21' de 'lodash'."
+  },
+  "Exercice4": {
+    "description": "Supprimez une dépendance externe de votre projet npm en utilisant 'npm uninstall'.",
+    "code": "// Supprimez une dépendance externe de votre projet",
+    "correction": "Exécutez 'npm uninstall lodash' pour supprimer la dépendance 'lodash' de votre projet."
+  },
+  "Exercice5": {
+    "description": "Listez toutes les dépendances de votre projet npm et enregistrez-les dans un fichier 'dependencies.txt'.",
+    "code": "// Liste des dépendances et enregistrez-les dans un fichier",
+    "correction": "Exécutez 'npm list --depth=0 > dependencies.txt' pour lister toutes les dépendances de votre projet sans détails et les enregistrer dans un fichier 'dependencies.txt'."
+  }
+}

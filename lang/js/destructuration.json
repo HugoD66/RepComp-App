@@ -1,0 +1,23 @@
+{
+  "general": "La désignation par déstructuration est une fonctionnalité puissante de JavaScript qui permet d'extraire des valeurs d'objets ou de tableaux de manière concise et de les assigner à des variables. Cela simplifie la manipulation de données complexes.",
+  "object_destructuring": {
+    "description": "La désignation par déstructuration d'objets permet d'extraire des valeurs à partir d'un objet en utilisant la syntaxe des accolades `{}`.",
+    "code": "const utilisateur = { nom: 'Alice', age: 30 };\nconst { nom, age } = utilisateur;\nconsole.log(nom); // 'Alice'\nconsole.log(age); // 30\n"
+  },
+  "array_destructuring": {
+    "description": "La désignation par déstructuration de tableaux permet d'extraire des valeurs d'un tableau en utilisant la syntaxe des crochets `[]`.",
+    "code": "const nombres = [1, 2, 3, 4, 5];\nconst [premier, deuxieme, ...reste] = nombres;\nconsole.log(premier); // 1\nconsole.log(deuxieme); // 2\nconsole.log(reste); // [3, 4, 5]\n"
+  },
+  "default_values": {
+    "description": "Vous pouvez également définir des valeurs par défaut pour les variables extraites au cas où la valeur extraite serait `undefined`.",
+    "code": "const { nom = 'Inconnu', age = 0 } = utilisateur;\nconsole.log(nom); // 'Alice'\nconsole.log(age); // 30\n"
+  },
+  "aliasing": {
+    "description": "Vous pouvez attribuer des noms d'alias aux variables extraites pour les renommer lors de l'extraction.",
+    "code": "const { nom: prenom, age: annee } = utilisateur;\nconsole.log(prenom); // 'Alice'\nconsole.log(annee); // 30\n"
+  },
+  "nested_destructuring": {
+    "description": "La désignation par déstructuration permet également d'extraire des valeurs d'objets imbriqués ou de tableaux multidimensionnels.",
+    "code": "const utilisateur = { nom: 'Alice', adresse: { ville: 'Paris', codePostal: '75001' } };\nconst { nom, adresse: { ville, codePostal } } = utilisateur;\nconsole.log(ville); // 'Paris'\nconsole.log(codePostal); // '75001'\n"
+  }
+}

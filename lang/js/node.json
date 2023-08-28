@@ -1,0 +1,39 @@
+{
+  "general": "Node.js est un environnement d'exécution JavaScript côté serveur, basé sur le moteur JavaScript V8 de Google. Il permet de développer des applications réseau rapides et évolutives.",
+  "installation": {
+    "description": "Pour installer Node.js, téléchargez le binaire correspondant à votre système d'exploitation sur le site officiel de Node.js (https://nodejs.org/). Une fois installé, vous pouvez vérifier la version de Node.js en utilisant la commande suivante dans le terminal :",
+    "code": "node -v\n"
+  },
+  "exécution": {
+    "description": "Pour exécuter un fichier JavaScript avec Node.js, utilisez la commande suivante :",
+    "code": "node nom_du_fichier.js\n"
+  },
+  "modules": {
+    "description": "Node.js utilise un système de modules pour organiser le code en fichiers réutilisables. Vous pouvez créer vos propres modules et les importer dans d'autres fichiers JavaScript. Voici comment exporter un module :",
+    "code": "module.exports = { maFonction };\n"
+  },
+  "gestion_paquets": {
+    "description": "npm (Node Package Manager) est l'outil principal pour gérer les dépendances et les paquets Node.js. Vous pouvez initialiser un projet Node.js avec le fichier `package.json` en utilisant la commande :",
+    "code": "npm init\n"
+  },
+  "installation_paquets": {
+    "description": "Pour installer un paquet Node.js, utilisez la commande suivante (par exemple, pour installer Express) :",
+    "code": "npm install express\n"
+  },
+  "utilisation_paquets": {
+    "description": "Une fois un paquet installé, vous pouvez l'importer et l'utiliser dans votre code JavaScript. Par exemple, pour utiliser Express, importez-le comme suit :",
+    "code": "const express = require('express');\n"
+  },
+  "gestion_asynchrone": {
+    "description": "Node.js est conçu pour gérer des opérations asynchrones de manière efficace. Il utilise des rappels (callbacks) et des promesses pour gérer l'asynchronicité. Voici un exemple d'utilisation d'un rappel :",
+    "code": "fs.readFile('fichier.txt', 'utf8', (err, data) => {\n  if (err) {\n    console.error('Erreur de lecture : ' + err);\n    return;\n  }\n  console.log('Contenu du fichier : ' + data);\n});\n"
+  },
+  "api_integree": {
+    "description": "Node.js intègre de nombreuses API pour des opérations système, des opérations réseau, des opérations de fichiers, etc. Vous pouvez utiliser ces API intégrées pour développer des applications robustes.",
+    "code": "const http = require('http');\nconst serveur = http.createServer((req, res) => {\n  res.writeHead(200, { 'Content-Type': 'text/plain' });\n  res.end('Bonjour, monde!');\n});\nserveur.listen(3000, '127.0.0.1', () => {\n  console.log('Le serveur écoute sur le port 3000');\n});\n"
+  },
+  "ecosysteme": {
+    "description": "L'écosystème de Node.js est riche en modules et en frameworks, ce qui facilite le développement d'applications diverses, des serveurs web aux outils en ligne de commande.",
+    "code": "Exemples de frameworks populaires : Express.js, Koa, Nest.js\nExemples de modules populaires : lodash, axios, moment\n"
+  }
+}

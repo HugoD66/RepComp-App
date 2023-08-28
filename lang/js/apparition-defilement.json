@@ -1,0 +1,26 @@
+{
+  "general": "La détection de l'apparition d'éléments au défilement est une technique courante en développement web pour charger des éléments, comme des images, du texte, ou d'autres contenus, au fur et à mesure que l'utilisateur fait défiler la page. Cela permet d'améliorer les performances en évitant de charger tous les éléments en même temps.",
+
+  "creation_listener": {
+    "description": "Pour détecter l'apparition d'éléments au défilement, vous pouvez utiliser un écouteur d'événements de défilement (scroll) sur l'élément conteneur, généralement la fenêtre du navigateur.",
+    "code": "window.addEventListener('scroll', () => {\n  // Code pour détecter l'apparition d'éléments\n});\n"
+  },
+
+  "detection_condition": {
+    "description": "À l'intérieur de l'écouteur d'événements de défilement, vous devez vérifier si l'élément que vous souhaitez détecter est visible dans la fenêtre visible de l'utilisateur. Cela peut être fait en vérifiant la position de l'élément par rapport à la fenêtre.",
+    "code": "const element = document.querySelector('.element-a-detecter');\nconst rect = element.getBoundingClientRect();\nif (rect.top < window.innerHeight) {\n  // L'élément est visible\n} else {\n  // L'élément n'est pas encore visible\n}\n"
+  },
+
+  "chargement_contenu": {
+    "description": "Une fois que vous avez détecté que l'élément est visible, vous pouvez charger son contenu en utilisant par exemple le chargement paresseux d'images ou en ajoutant dynamiquement du contenu HTML à la page.",
+    "code": "const image = new Image();\nimage.src = 'image.jpg';\nimage.onload = () => {\n  // Image chargée, ajoutez-la à la page\n  document.body.appendChild(image);\n};\n"
+  },
+
+  "optimisations": {
+    "description": "Pour améliorer les performances, il est important d'optimiser la détection de l'apparition d'éléments au défilement. Vous pouvez limiter la fréquence de détection en utilisant des délais ou en utilisant des bibliothèques spéciales conçues pour cette tâche."
+  },
+
+  "utilisations_apparition_defilement": {
+    "description": "La détection de l'apparition d'éléments au défilement est couramment utilisée pour charger des images, des vidéos, des publicités, des sections de contenu, ou pour activer des animations lorsqu'un élément apparaît à l'écran. C'est une technique essentielle pour optimiser les performances des sites web."
+  }
+}

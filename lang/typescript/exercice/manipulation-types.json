@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Déclarez un type 'Résultat' qui est une union de 'Succès' et 'Échec'. 'Succès' est un type avec une propriété 'valeur' de type générique, et 'Échec' est un type avec une propriété 'raison' de type chaîne de caractères.",
+    "correction": "type Succès<T> = {\n  tag: 'Succès';\n  valeur: T;\n};\n\ntype Échec = {\n  tag: 'Échec';\n  raison: string;\n};\n\ntype Résultat<T> = Succès<T> | Échec;"
+  },
+  "Exercice2": {
+    "description": "Déclarez un type générique 'Liste' qui prend un type 'T'. Ce type devrait avoir deux propriétés : 'tête', qui est le premier élément de la liste de type 'T' ou 'null' si la liste est vide, et 'reste', qui est le reste de la liste de type 'Liste<T>' ou 'null' si la liste est vide.",
+    "correction": "type Liste<T> = {\n  tête: T | null;\n  reste: Liste<T> | null;\n};"
+  },
+  "Exercice3": {
+    "description": "Déclarez un type 'Personne' avec les propriétés 'nom' (string) et 'âge' (number). Ensuite, déclarez un type 'EnsembleDePersonnes' qui est un tableau de 'Personne'.",
+    "correction": "type Personne = {\n  nom: string;\n  âge: number;\n};\n\ntype EnsembleDePersonnes = Personne[];"
+  },
+  "Exercice4": {
+    "description": "Déclarez un type générique 'TableauNonVide' qui prend un type 'T'. Ce type devrait avoir une propriété 'tête' de type 'T' et une propriété 'reste' de type 'T[]'.",
+    "correction": "type TableauNonVide<T> = {\n  tête: T;\n  reste: T[];\n};"
+  },
+  "Exercice5": {
+    "description": "Déclarez un type générique 'Filtre' qui prend un type 'T' et un prédicat de type '(élément: T) => boolean'. Ce type devrait avoir une propriété 'type' qui est 'T' et une propriété 'filtre' qui est le prédicat.",
+    "correction": "type Filtre<T> = {\n  type: T;\n  filtre(élément: T): boolean;\n};"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "general": "Les At-Rules (règles at) en SCSS sont des instructions spéciales utilisées pour définir des comportements particuliers dans vos feuilles de style. Elles commencent généralement par le symbole '@' suivi d'un nom et de paramètres le cas échéant.",
+  "avantages": {
+    "description": "Les At-Rules sont utiles pour de nombreuses raisons, notamment :",
+    "exemple": "Permettent d'organiser et de structurer votre code de manière plus claire et modulaire.\nFacilitent l'application de styles conditionnels, comme les médias queries.\nFacilitent l'importation de fichiers SCSS externes.\nPermettent de réutiliser des séquences de code ou des mixins."
+  },
+  "variables": {
+    "description": "Les At-Rules @import sont utilisées pour importer d'autres fichiers SCSS dans votre feuille de style principale. Cela permet de diviser votre code en fichiers plus petits et plus gérables.",
+    "example": "Exemple d'importation d'un fichier SCSS externe :",
+    "code": "@import 'variables';"
+  },
+  "media_queries": {
+    "description": "Les At-Rules @media vous permettent d'appliquer des styles conditionnellement en fonction des caractéristiques de l'appareil, telles que la largeur de l'écran. C'est utile pour rendre votre site réactif.",
+    "example": "Exemple d'une règle @media pour les écrans de taille moyenne :",
+    "code": "@media screen and (min-width: 768px) {\n  /* Styles pour les écrans de taille moyenne */\n}"
+  },
+  "control_directives": {
+    "description": "Les At-Rules de contrôle, telles que @if, @for et @each, vous permettent de créer des structures de contrôle dans vos feuilles de style SCSS. Cela peut être utile pour générer dynamiquement des styles ou appliquer des règles conditionnelles.",
+    "example": "Exemple d'utilisation de @for pour générer des styles pour plusieurs boutons :",
+    "code": "@for $i from 1 through 3 {\n  .button-#{$i} {\n    font-size: 16px + $i * 2;\n  }\n}"
+  },
+  "custom_directives": {
+    "description": "Les At-Rules personnalisées (ou directives) que vous définissez vous-même avec @mixin ou @function. Cela vous permet de créer des séquences de code réutilisables ou des fonctions personnalisées pour la manipulation des styles.",
+    "example": "Exemple de déclaration d'une directive personnalisée :",
+    "code": "@mixin button-styles {\n  background-color: #007bff;\n  color: white;\n}\n\n.button {\n  @include button-styles;\n}"
+  }
+}

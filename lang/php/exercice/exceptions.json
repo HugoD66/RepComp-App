@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une fonction 'diviser' qui accepte deux nombres en paramètres et renvoie le résultat de la division du premier par le deuxième. Gérez l'exception si le diviseur est zéro (Division par zéro).",
+    "correction": "function diviser($nombre, $diviseur) {\n  if ($diviseur === 0) {\n    throw new Exception('Division par zéro est interdite.');\n  }\n  return $nombre / $diviseur;\n}\n\ntry {\n  echo diviser(10, 0);\n} catch (Exception $e) {\n  echo 'Erreur : ' . $e->getMessage();\n}"
+  },
+  "Exercice2": {
+    "description": "Créez une fonction 'verifierAge' qui accepte l'âge d'une personne en paramètre. Si l'âge est inférieur à 18, déclenchez une exception (Trop jeune).",
+    "correction": "function verifierAge($age) {\n  if ($age < 18) {\n    throw new Exception('Trop jeune pour cette opération.');\n  }\n}\n\ntry {\n  verifierAge(15);\n} catch (Exception $e) {\n  echo 'Erreur : ' . $e->getMessage();\n}"
+  },
+  "Exercice3": {
+    "description": "Créez une fonction 'lireFichier' qui accepte le nom d'un fichier en paramètre. Si le fichier n'existe pas, déclenchez une exception (Fichier introuvable).",
+    "correction": "function lireFichier($nomFichier) {\n  if (!file_exists($nomFichier)) {\n    throw new Exception('Fichier introuvable.');\n  }\n  // Code pour lire le fichier ici\n}\n\ntry {\n  lireFichier('mon_fichier.txt');\n} catch (Exception $e) {\n  echo 'Erreur : ' . $e->getMessage();\n}"
+  },
+  "Exercice4": {
+    "description": "Créez une fonction 'connexionBDD' qui tente de se connecter à une base de données. Si la connexion échoue, déclenchez une exception (Connexion échouée).",
+    "correction": "function connexionBDD() {\n  $connexion = new PDO('mysql:host=localhost;dbname=ma_base', 'utilisateur', 'mot_de_passe');\n  if (!$connexion) {\n    throw new Exception('Connexion échouée.');\n  }\n}\n\ntry {\n  connexionBDD();\n} catch (Exception $e) {\n  echo 'Erreur : ' . $e->getMessage();\n}"
+  },
+  "Exercice5": {
+    "description": "Créez une fonction 'calculerMoyenne' qui accepte un tableau de nombres en paramètre. Si le tableau est vide, déclenchez une exception (Tableau vide).",
+    "correction": "function calculerMoyenne($nombres) {\n  if (empty($nombres)) {\n    throw new Exception('Tableau vide.');\n  }\n  // Code pour calculer la moyenne ici\n}\n\ntry {\n  $nombres = [10, 15, 20];\n  calculerMoyenne($nombres);\n} catch (Exception $e) {\n  echo 'Erreur : ' . $e->getMessage();\n}"
+  }
+}

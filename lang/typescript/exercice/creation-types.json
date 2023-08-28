@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Déclarez un type 'Personne' en TypeScript avec des propriétés 'nom' (string) et 'age' (number).",
+    "correction": "type Person = {\n  nom: string;\n  age: number;\n};"
+  },
+  "Exercice2": {
+    "description": "Créez un type 'Produit' en TypeScript avec des propriétés 'nom' (string) et 'prix' (number).",
+    "correction": "type Product = {\n  nom: string;\n  prix: number;\n};"
+  },
+  "Exercice3": {
+    "description": "Définissez un type 'ListeProduits' en TypeScript qui est un tableau de 'Produit' (utilisez le type que vous avez déclaré dans l'exercice précédent).",
+    "correction": "type ProductList = Product[];"
+  },
+  "Exercice4": {
+    "description": "Créez un type générique 'Boîte' en TypeScript qui peut contenir n'importe quel type de valeur.",
+    "correction": "type Box<T> = {\n  valeur: T;\n};"
+  },
+  "Exercice5": {
+    "description": "Déclarez un type 'FonctionCallback' en TypeScript pour représenter une fonction qui prend un 'nombre' (number) en entrée et renvoie un 'nombre' en sortie.",
+    "correction": "type CallbackFunction = (nombre: number) => number;"
+  }
+}

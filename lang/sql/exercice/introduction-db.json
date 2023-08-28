@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Qu'est-ce que SQL ? Expliquez en quelques mots ce qu'est SQL et son rôle dans la gestion de données.",
+    "correction": "SQL (Structured Query Language) est un langage de programmation utilisé pour gérer et manipuler des bases de données relationnelles. Il permet de créer, interroger, mettre à jour et supprimer des données dans une base de données."
+  },
+  "Exercice2": {
+    "description": "Quelle est la différence entre une base de données SQL relationnelle et une base de données NoSQL ?",
+    "correction": "Une base de données SQL relationnelle stocke des données dans des tables structurées avec des relations prédéfinies entre elles, tandis qu'une base de données NoSQL stocke des données de manière plus souple, souvent sous forme de documents, de paires clé-valeur ou de graphiques, sans schéma rigide."
+  },
+  "Exercice3": {
+    "description": "Quelles sont les principales opérations SQL ? Donnez une brève description de SELECT, INSERT, UPDATE et DELETE.",
+    "correction": "SELECT : Récupère des données de la base de données. INSERT : Ajoute de nouvelles données à la base de données. UPDATE : Modifie des données existantes dans la base de données. DELETE : Supprime des données de la base de données."
+  },
+  "Exercice4": {
+    "description": "Expliquez ce qu'est une clé primaire (primary key) dans une table SQL.",
+    "correction": "Une clé primaire (primary key) est une colonne ou un ensemble de colonnes qui identifie de manière unique chaque enregistrement dans une table. Elle garantit qu'aucune valeur en double n'est autorisée dans cette colonne, ce qui permet de rechercher et de mettre à jour facilement des enregistrements spécifiques."
+  },
+  "Exercice5": {
+    "description": "Qu'est-ce qu'une requête SQL préparée (prepared statement) et pourquoi est-elle importante en matière de sécurité ?",
+    "correction": "Une requête SQL préparée est une requête SQL dans laquelle les valeurs des paramètres ne sont pas directement intégrées dans la requête, mais sont fournies séparément. Cela protège contre les attaques par injection SQL en garantissant que les données de l'utilisateur ne sont pas exécutées en tant que code SQL malveillant."
+  }
+}

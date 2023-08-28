@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une table 'Utilisateurs' avec les colonnes 'ID' (clé primaire), 'Nom' et 'Âge' conformément au diagramme UML suivant : Utilisateurs(ID: int, Nom: varchar, Âge: int).",
+    "correction": "CREATE TABLE Utilisateurs (ID INT PRIMARY KEY, Nom VARCHAR(255), Age INT);"
+  },
+  "Exercice2": {
+    "description": "Créez une table 'Commandes' avec les colonnes 'ID' (clé primaire), 'Date' et 'Montant' conformément au diagramme UML suivant : Commandes(ID: int, Date: date, Montant: decimal).",
+    "correction": "CREATE TABLE Commandes (ID INT PRIMARY KEY, Date DATE, Montant DECIMAL(10, 2));"
+  },
+  "Exercice3": {
+    "description": "Créez une table 'Produits' avec les colonnes 'ID' (clé primaire), 'Nom', 'Prix' et 'Stock' conformément au diagramme UML suivant : Produits(ID: int, Nom: varchar, Prix: decimal, Stock: int).",
+    "correction": "CREATE TABLE Produits (ID INT PRIMARY KEY, Nom VARCHAR(255), Prix DECIMAL(10, 2), Stock INT);"
+  },
+  "Exercice4": {
+    "description": "Créez une table 'CommandeProduit' avec les colonnes 'ID_Commande' (clé étrangère vers 'Commandes'), 'ID_Produit' (clé étrangère vers 'Produits') et 'Quantité' conformément au diagramme UML suivant : CommandeProduit(ID_Commande: int, ID_Produit: int, Quantité: int).",
+    "correction": "CREATE TABLE CommandeProduit (ID_Commande INT, ID_Produit INT, Quantité INT, FOREIGN KEY (ID_Commande) REFERENCES Commandes(ID), FOREIGN KEY (ID_Produit) REFERENCES Produits(ID));"
+  },
+  "Exercice5": {
+    "description": "Créez une table 'UtilisateurCommande' avec les colonnes 'ID_Utilisateur' (clé étrangère vers 'Utilisateurs') et 'ID_Commande' (clé étrangère vers 'Commandes') conformément au diagramme UML suivant : UtilisateurCommande(ID_Utilisateur: int, ID_Commande: int).",
+    "correction": "CREATE TABLE UtilisateurCommande (ID_Utilisateur INT, ID_Commande INT, FOREIGN KEY (ID_Utilisateur) REFERENCES Utilisateurs(ID), FOREIGN KEY (ID_Commande) REFERENCES Commandes(ID));"
+  }
+}

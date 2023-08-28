@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Écrivez un programme PHP qui affiche 'Bonjour, monde!' à l'écran.",
+    "correction": "echo 'Bonjour, monde!';"
+  },
+  "Exercice2": {
+    "description": "Créez une variable en PHP appelée 'nom' et assignez-lui votre prénom. Ensuite, affichez 'Bonjour, [votre prénom]!' à l'écran en utilisant cette variable.",
+    "correction": "$nom = 'VotrePrenom';\necho 'Bonjour, ' . $nom . '!';"
+  },
+  "Exercice3": {
+    "description": "Écrivez un programme PHP qui calcule la somme des nombres de 1 à 10 et affiche le résultat à l'écran.",
+    "correction": "$somme = 0;\nfor ($i = 1; $i <= 10; $i++) {\n  $somme += $i;\n}\necho 'La somme est : ' . $somme;"
+  },
+  "Exercice4": {
+    "description": "Créez une variable en PHP appelée 'age' et assignez-lui votre âge. Ensuite, affichez 'Vous avez [votre âge] ans.' à l'écran en utilisant cette variable.",
+    "correction": "$age = 25; // Remplacez 25 par votre âge\necho 'Vous avez ' . $age . ' ans.';"
+  },
+  "Exercice5": {
+    "description": "Écrivez un programme PHP qui génère un nombre aléatoire entre 1 et 100 et l'affiche à l'écran.",
+    "correction": "$nombreAleatoire = rand(1, 100);\necho 'Nombre aléatoire : ' . $nombreAleatoire;"
+  }
+}

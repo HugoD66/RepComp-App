@@ -1,0 +1,27 @@
+{
+  "Exercice1": {
+    "description": "Écrivez une fonction en JavaScript qui prend un tableau de nombres comme argument et renvoie la somme de tous les nombres.",
+    "code": "",
+    "correction": "function sumArray(numbers) {\n  return numbers.reduce((sum, number) => sum + number, 0);\n}"
+  },
+  "Exercice2": {
+    "description": "Écrivez une fonction en JavaScript qui prend une chaîne de caractères comme argument et renvoie le nombre de voyelles qu'elle contient.",
+    "code": "",
+    "correction": "function countVowels(string) {\n  const vowels = 'aeiouAEIOU';\n  return string.split('').filter(char => vowels.includes(char)).length;\n}"
+  },
+  "Exercice3": {
+    "description": "Écrivez une fonction en JavaScript qui prend un tableau de chaînes de caractères comme argument et renvoie un tableau contenant uniquement les chaînes de caractères ayant une longueur supérieure à 5.",
+    "code": "",
+    "correction": "function filterLongStrings(strings) {\n  return strings.filter(str => str.length > 5);\n}"
+  },
+  "Exercice4": {
+    "description": "Écrivez une fonction en JavaScript qui prend un tableau d'objets avec des propriétés 'nom' et 'âge' et renvoie le nom de la personne la plus âgée.",
+    "code": "",
+    "correction": "function findOldestPerson(people) {\n  return people.reduce((oldest, person) => (oldest.age > person.age) ? oldest : person).name;\n}"
+  },
+  "Exercice5": {
+    "description": "Écrivez une fonction en JavaScript qui prend un nombre entier comme argument et renvoie le nombre de chiffres dans ce nombre.",
+    "code": "",
+    "correction": "function countDigits(number) {\n  return String(number).length;\n}"
+  }
+}

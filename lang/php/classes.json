@@ -1,0 +1,33 @@
+{
+  "general": "Les classes sont un concept fondamental de la programmation orientée objet (POO) en PHP. Elles permettent de créer des modèles pour les objets, regroupant à la fois des propriétés (variables) et des méthodes (fonctions) associées. Les classes sont un moyen puissant de structurer et d'organiser votre code PHP.",
+  "introduction": {
+    "description": "En PHP, les classes sont des structures fondamentales pour la programmation orientée objet (POO). Elles permettent de définir des modèles pour créer des objets, regroupant ainsi des propriétés et des méthodes associées.",
+    "exemple": "Exemple de déclaration de classe en PHP :",
+    "code": "<pre>class Voiture {\n    public $marque;\n    public $modele;\n    \n    public function demarrer() {\n        echo 'La voiture démarre !';\n    }\n}</pre>"
+  },
+  "declaration_de_classe": {
+    "description": "Pour déclarer une classe en PHP, vous utilisez le mot-clé `class`, suivi du nom de la classe. À l'intérieur de la classe, vous pouvez définir des propriétés (variables) et des méthodes (fonctions) qui définissent le comportement des objets créés à partir de cette classe.",
+    "exemple": "Exemple de déclaration de classe en PHP :",
+    "code": "<pre>class Voiture {\n    public $marque;\n    public $modele;\n    \n    public function demarrer() {\n        echo 'La voiture démarre !';\n    }\n}</pre>"
+  },
+  "instanciation_d_objets": {
+    "description": "Une fois que vous avez défini une classe, vous pouvez créer des objets à partir de cette classe. Cela s'appelle l'instanciation. Chaque objet créé à partir d'une classe a ses propres valeurs de propriétés, mais partage les mêmes méthodes définies dans la classe.",
+    "exemple": "Exemple d'instanciation d'objet en PHP :",
+    "code": "<pre>// Création d'un objet Voiture\n$maVoiture = new Voiture();\n\n// Accès aux propriétés et aux méthodes de l'objet\n$maVoiture->marque = 'Toyota';\n$maVoiture->modele = 'Camry';\n$maVoiture->demarrer(); // Affiche 'La voiture démarre !'</pre>"
+  },
+  "visibilite": {
+    "description": "En PHP, vous pouvez définir la visibilité des propriétés et des méthodes dans une classe. Les trois niveaux de visibilité courants sont `public`, `private` et `protected`. La visibilité détermine où vous pouvez accéder à ces éléments.",
+    "exemple": "Exemple de visibilité en PHP :",
+    "code": "<pre>class Exemple {\n    public $proprietePublique; // Accessible partout\n    private $proprietePrivee;   // Accessible uniquement dans cette classe\n    protected $proprieteProtegee; // Accessible dans cette classe et les classes dérivées\n}</pre>"
+  },
+  "constructeur": {
+    "description": "Un constructeur est une méthode spéciale dans une classe qui est automatiquement appelée lorsqu'un objet est instancié à partir de cette classe. Il est souvent utilisé pour effectuer des initialisations nécessaires à l'objet.",
+    "exemple": "Exemple de constructeur en PHP :",
+    "code": "<pre>class Voiture {\n    public $marque;\n    public $modele;\n\n    public function __construct($marque, $modele) {\n        $this->marque = $marque;\n        $this->modele = $modele;\n    }\n}</pre>"
+  },
+  "heritage": {
+    "description": "L'héritage est un concept clé de la POO en PHP. Il permet de créer de nouvelles classes (sous-classes) basées sur une classe existante (superclasse). Les sous-classes héritent des propriétés et méthodes de la superclasse et peuvent également en ajouter ou en modifier.",
+    "exemple": "Exemple d'héritage en PHP :",
+    "code": "<pre>class Animal {\n    public $nom;\n\n    public function parler() {\n        echo 'L'animal fait du bruit.';\n    }\n}\n\nclass Chien extends Animal {\n    public function parler() {\n        echo 'Le chien aboie.';\n    }\n}</pre>"
+  }
+}

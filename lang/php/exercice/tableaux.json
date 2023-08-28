@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez un tableau PHP contenant les jours de la semaine ('Lundi', 'Mardi', ...). Affichez chaque jour en utilisant une boucle 'foreach'.",
+    "correction": "$joursSemaine = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];\nforeach ($joursSemaine as $jour) {\n  echo $jour . '<br>';\n}"
+  },
+  "Exercice2": {
+    "description": "Créez un tableau PHP contenant 5 noms de fruits. Utilisez une boucle 'for' pour afficher chaque nom de fruit.",
+    "correction": "$fruits = ['Pomme', 'Banane', 'Orange', 'Fraise', 'Kiwi'];\nfor ($i = 0; $i < count($fruits); $i++) {\n  echo $fruits[$i] . '<br>';\n}"
+  },
+  "Exercice3": {
+    "description": "Créez un tableau PHP associatif contenant des informations sur une personne (nom, prénom, âge, email). Utilisez une boucle 'foreach' pour afficher chaque paire clé-valeur.",
+    "correction": "$personne = [\n  'nom' => 'Dupont',\n  'prénom' => 'Jean',\n  'âge' => 30,\n  'email' => 'jean.dupont@example.com'\n];\nforeach ($personne as $cle => $valeur) {\n  echo $cle . ': ' . $valeur . '<br>';\n}"
+  },
+  "Exercice4": {
+    "description": "Créez un tableau PHP de nombres entiers. Calculez la somme de ces nombres en utilisant une boucle 'for'.",
+    "correction": "$nombres = [1, 2, 3, 4, 5];\n$sum = 0;\nfor ($i = 0; $i < count($nombres); $i++) {\n  $sum += $nombres[$i];\n}\necho 'La somme est : ' . $sum;"
+  },
+  "Exercice5": {
+    "description": "Créez un tableau PHP de nombres aléatoires. Utilisez une boucle 'foreach' pour trouver le plus grand nombre dans le tableau.",
+    "correction": "$nombres = [14, 8, 22, 5, 17, 30];\n$plusGrand = $nombres[0];\nforeach ($nombres as $nombre) {\n  if ($nombre > $plusGrand) {\n    $plusGrand = $nombre;\n  }\n}\necho 'Le plus grand nombre est : ' . $plusGrand;"
+  }
+}

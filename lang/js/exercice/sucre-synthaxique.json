@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Utilisez la syntaxe de décomposition (destructuring) pour extraire les valeurs 'nom' et 'âge' de l'objet suivant : { nom: 'Alice', âge: 30 }.",
+    "correction": "const { nom, âge } = { nom: 'Alice', âge: 30 };"
+  },
+  "Exercice2": {
+    "description": "Utilisez la syntaxe de décomposition (destructuring) pour extraire les éléments 'a' et 'b' du tableau suivant : [1, 2].",
+    "correction": "const [a, b] = [1, 2];"
+  },
+  "Exercice3": {
+    "description": "Utilisez la syntaxe de décomposition (destructuring) pour extraire les valeurs 'x' et 'y' de l'objet suivant, en leur donnant des valeurs par défaut : { x: 10 }.",
+    "correction": "const { x = 0, y = 20 } = { x: 10 };"
+  },
+  "Exercice4": {
+    "description": "Utilisez la syntaxe de décomposition (destructuring) pour extraire le deuxième élément ('b') du tableau suivant : ['a', 'b', 'c'].",
+    "correction": "const [, secondElement] = ['a', 'b', 'c'];"
+  },
+  "Exercice5": {
+    "description": "Utilisez la syntaxe de décomposition (destructuring) pour extraire la première lettre de la chaîne de caractères suivante : 'JavaScript'.",
+    "correction": "const [firstLetter] = 'JavaScript';"
+  }
+}

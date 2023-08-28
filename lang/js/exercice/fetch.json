@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Écrivez un programme JavaScript qui utilise l'API Fetch pour effectuer une requête GET vers une URL et affiche les données de réponse dans la console.",
+    "correction": "fetch('https://jsonplaceholder.typicode.com/posts/1')\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error('Erreur :', error));"
+  },
+  "Exercice2": {
+    "description": "Écrivez un programme JavaScript qui utilise l'API Fetch pour effectuer une requête POST vers une URL avec des données et affiche les données de réponse dans la console.",
+    "correction": "const data = { title: 'Nouveau Post', body: 'Ceci est un nouveau post.' };\n\nfetch('https://jsonplaceholder.typicode.com/posts', {\n  method: 'POST',\n  headers: { 'Content-Type': 'application/json' },\n  body: JSON.stringify(data)\n})\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error('Erreur :', error));"
+  },
+  "Exercice3": {
+    "description": "Écrivez un programme JavaScript qui utilise l'API Fetch pour effectuer une requête GET vers une URL et gère les erreurs en affichant un message d'erreur dans la console.",
+    "correction": "fetch('https://jsonplaceholder.typicode.com/posts/99999')\n  .then(response => {\n    if (!response.ok) {\n      throw new Error('La réponse du réseau n\'était pas OK');\n    }\n    return response.json();\n  })\n  .then(data => console.log(data))\n  .catch(error => console.error('Erreur :', error.message));"
+  },
+  "Exercice4": {
+    "description": "Écrivez un programme JavaScript qui utilise l'API Fetch pour télécharger une image à partir d'une URL et l'affiche sur une page web.",
+    "correction": "fetch('https://via.placeholder.com/150')\n  .then(response => response.blob())\n  .then(blob => {\n    const imgUrl = URL.createObjectURL(blob);\n    const img = document.createElement('img');\n    img.src = imgUrl;\n    document.body.appendChild(img);\n  })\n  .catch(error => console.error('Erreur :', error));"
+  },
+  "Exercice5": {
+    "description": "Écrivez un programme JavaScript qui utilise l'API Fetch pour effectuer une requête PUT afin de mettre à jour des données sur un serveur.",
+    "correction": "const donnéesMisesAJour = { title: 'Post Mis à Jour' };\n\nfetch('https://jsonplaceholder.typicode.com/posts/1', {\n  method: 'PUT',\n  headers: { 'Content-Type': 'application/json' },\n  body: JSON.stringify(donnéesMisesAJour)\n})\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error('Erreur :', error));"
+  }
+}

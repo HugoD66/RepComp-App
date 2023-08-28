@@ -1,0 +1,28 @@
+{
+  "general": "En PHP, les objets sont des instances de classes. Ils permettent d'organiser et de structurer le code de manière orientée objet, favorisant la réutilisation et la maintenance du code.",
+  "définition_de_classes": {
+    "description": "Pour définir une classe en PHP, utilisez le mot-clé `class`, suivi du nom de la classe. À l'intérieur de la classe, vous déclarez les propriétés (variables) et les méthodes (fonctions) de la classe.",
+    "exemple": "Exemple de définition d'une classe en PHP :",
+    "code": "<pre>\nclass Voiture {\n    public $marque;\n    public $modèle;\n    public function démarrer() {\n        // Code de démarrage\n    }\n    public function arrêter() {\n        // Code d'arrêt\n    }\n}\n</pre>"
+  },
+  "création_d'objets": {
+    "description": "Pour créer un objet en PHP, utilisez le mot-clé `new`, suivi du nom de la classe. Vous pouvez ensuite accéder aux propriétés et méthodes de l'objet en utilisant l'opérateur `->`.",
+    "exemple": "Exemple de création et d'utilisation d'un objet en PHP :",
+    "code": "<pre>\n$maVoiture = new Voiture();\n$maVoiture->marque = 'Toyota';\n$maVoiture->modèle = 'Camry';\n$maVoiture->démarrer();\n</pre>"
+  },
+  "constructeurs_et_destructeurs": {
+    "description": "Les classes peuvent avoir des constructeurs et des destructeurs. Le constructeur est appelé lors de la création de l'objet et le destructeur lorsqu'il est détruit. Vous pouvez utiliser ces méthodes pour effectuer des initialisations et des nettoyages.",
+    "exemple": "Exemple d'utilisation du constructeur et du destructeur en PHP :",
+    "code": "<pre>\nclass Produit {\n    public $nom;\n    public function __construct($nom) {\n        $this->nom = $nom;\n        echo 'Produit créé.';\n    }\n    public function __destruct() {\n        echo 'Produit détruit.';\n    }\n}\n$monProduit = new Produit('Ordinateur');\nunset($monProduit);\n</pre>"
+  },
+  "encapsulation": {
+    "description": "L'encapsulation est un concept qui consiste à restreindre l'accès aux propriétés d'un objet. En PHP, vous pouvez définir la visibilité des propriétés (public, protected, private) pour contrôler leur accès depuis l'extérieur de la classe.",
+    "exemple": "Exemple d'encapsulation en PHP :",
+    "code": "<pre>\nclass CompteBancaire {\n    private $solde;\n    public function __construct($solde) {\n        $this->solde = $solde;\n    }\n    public function getSolde() {\n        return $this->solde;\n    }\n    public function déposer($montant) {\n        $this->solde += $montant;\n    }\n}\n$compte = new CompteBancaire(1000);\n$solde = $compte->getSolde();\n</pre>"
+  },
+  "héritage": {
+    "description": "L'héritage permet de créer de nouvelles classes en se basant sur des classes existantes. Une classe enfant peut hériter des propriétés et des méthodes de la classe parente, favorisant la réutilisation du code.",
+    "exemple": "Exemple d'héritage en PHP :",
+    "code": "<pre>\nclass Animal {\n    public $nom;\n    public function parler() {\n        // Code de base\n    }\n}\nclass Chien extends Animal {\n    public function parler() {\n        echo 'Woof!';\n    }\n}\n$monChien = new Chien();\n$monChien->nom = 'Rex';\n$monChien->parler();\n</pre>"
+  }
+}

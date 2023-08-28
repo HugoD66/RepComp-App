@@ -1,0 +1,39 @@
+{
+  "general": "La manipulation des types en TypeScript vous permet de créer, combiner et transformer des types pour répondre aux besoins spécifiques de votre application. Cela vous donne un contrôle précis sur les données que vous traitez.",
+
+  "alias_de_types": {
+    "description": "Les alias de types vous permettent de créer des noms personnalisés pour des types existants. Cela rend votre code plus lisible et facilite les modifications futures de types.",
+    "exemple": "Exemple d'alias de type en TypeScript :",
+    "code": "type ID = number;\nlet identifiant: ID = 123;"
+  },
+
+  "union_de_types": {
+    "description": "Les unions de types vous permettent de spécifier qu'une valeur peut avoir l'un des types donnés. Cela rend votre code plus flexible.",
+    "exemple": "Exemple d'union de types en TypeScript :",
+    "code": "let resultat: number | string = 42;\nresultat = 'quarante-deux';"
+  },
+
+  "intersection_de_types": {
+    "description": "Les intersections de types vous permettent de créer de nouveaux types en combinant plusieurs types existants. Cela peut être utile lorsque vous avez besoin de toutes les propriétés de plusieurs types.",
+    "exemple": "Exemple d'intersection de types en TypeScript :",
+    "code": "type A = { a: number };\ntype B = { b: string };\nlet ab: A & B = { a: 1, b: 'texte' };"
+  },
+
+  "types_génériques": {
+    "description": "Les types génériques vous permettent de créer des composants réutilisables en définissant des types de manière paramétrée. Ils sont couramment utilisés avec les fonctions et les classes.",
+    "exemple": "Exemple de type générique en TypeScript :",
+    "code": "function identite<T>(valeur: T): T {\n    return valeur;\n}\nlet nombre: number = identite(42);"
+  },
+
+  "type_infer": {
+    "description": "L'inférence de type est la capacité du compilateur TypeScript à déduire automatiquement le type d'une variable en fonction de sa valeur. Cela simplifie la déclaration de types.",
+    "exemple": "Exemple d'inférence de type en TypeScript :",
+    "code": "let texte = 'Bonjour'; // TypeScript infère que texte est de type string."
+  },
+
+  "types_conditionnels": {
+    "description": "Les types conditionnels vous permettent de créer des types en fonction de conditions. Vous pouvez ainsi définir des structures de types complexes.",
+    "exemple": "Exemple de type conditionnel en TypeScript :",
+    "code": "type EstNombre<T> = T extends number ? 'Oui' : 'Non';\nlet resultat: EstNombre<42> = 'Oui';"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une application Express.js simple avec une route ('/') qui renvoie un message de bienvenue ('Bienvenue sur notre site !'). Ensuite, écrivez un test d'intégration pour vérifier que la route renvoie le bon message.",
+    "correction": "const express = require('express');\nconst app = express();\n\napp.get('/', (req, res) => {\n  res.send('Bienvenue sur notre site !');\n});\n\nmodule.exports = app;"
+  },
+  "Exercice2": {
+    "description": "Créez une route Express ('/produits') qui renvoie une liste de produits (sous forme de tableau JSON). Écrivez un test d'intégration pour vérifier que la route renvoie la liste de produits correcte.",
+    "correction": "const express = require('express');\nconst app = express();\n\napp.get('/produits', (req, res) => {\n  const produits = [{ nom: 'Produit 1' }, { nom: 'Produit 2' }, { nom: 'Produit 3' }];\n  res.json(produits);\n});\n\nmodule.exports = app;"
+  },
+  "Exercice3": {
+    "description": "Créez une route Express ('/utilisateur/:id') qui renvoie les détails d'un utilisateur en fonction de son ID. Écrivez un test d'intégration pour vérifier que la route renvoie les détails de l'utilisateur correctement.",
+    "correction": "const express = require('express');\nconst app = express();\n\napp.get('/utilisateur/:id', (req, res) => {\n  const id = req.params.id;\n  // Récupérez les détails de l'utilisateur en fonction de l'ID\n  const utilisateur = { id: id, nom: 'John Doe' };\n  res.json(utilisateur);\n});\n\nmodule.exports = app;"
+  },
+  "Exercice4": {
+    "description": "Créez une route Express ('/produit/:id') qui renvoie les détails d'un produit en fonction de son ID. Écrivez un test d'intégration pour vérifier que la route renvoie les détails du produit correctement.",
+    "correction": "const express = require('express');\nconst app = express();\n\napp.get('/produit/:id', (req, res) => {\n  const id = req.params.id;\n  // Récupérez les détails du produit en fonction de l'ID\n  const produit = { id: id, nom: 'Produit 1', prix: 19.99 };\n  res.json(produit);\n});\n\nmodule.exports = app;"
+  },
+  "Exercice5": {
+    "description": "Créez une route Express ('/calcul/:operation/:nombre1/:nombre2') qui effectue une opération mathématique (addition, soustraction, multiplication ou division) en fonction des paramètres de l'URL. Écrivez un test d'intégration pour vérifier que la route effectue correctement l'opération.",
+    "correction": "const express = require('express');\nconst app = express();\n\napp.get('/calcul/:operation/:nombre1/:nombre2', (req, res) => {\n  const { operation, nombre1, nombre2 } = req.params;\n  let resultat;\n  switch (operation) {\n    case 'addition':\n      resultat = Number(nombre1) + Number(nombre2);\n      break;\n    case 'soustraction':\n      resultat = Number(nombre1) - Number(nombre2);\n      break;\n    case 'multiplication':\n      resultat = Number(nombre1) * Number(nombre2);\n      break;\n    case 'division':\n      resultat = Number(nombre1) / Number(nombre2);\n      break;\n    default:\n      resultat = 'Opération non valide';\n  }\n  res.send(`Résultat : ${resultat}`);\n});\n\nmodule.exports = app;"
+  }
+}

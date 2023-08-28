@@ -1,0 +1,39 @@
+{
+  "general": "Les génériques en TypeScript sont un moyen puissant de créer des composants réutilisables et flexibles en permettant aux types d'être paramétrés. Ils permettent d'écrire du code qui peut fonctionner avec différentes structures de données tout en maintenant la sécurité des types.",
+
+  "qu_est_ce_que_les_generiques": {
+    "description": "Les génériques permettent de créer des fonctions, des classes ou des interfaces dont le type exact est déterminé lors de leur utilisation. Ils fournissent une abstraction pour travailler avec des types inconnus ou variables.",
+    "exemple": "Exemple de fonction générique en TypeScript :",
+    "code": "function premierElement<T>(tableau: T[]): T {\n    return tableau[0];\n}"
+  },
+
+  "utilisation_des_generiques": {
+    "description": "Les génériques sont couramment utilisés pour créer des structures de données réutilisables, telles que des tableaux, des listes liées et des piles, ainsi que des fonctions qui travaillent avec différents types de données.",
+    "exemple": "Exemple d'utilisation d'un tableau générique en TypeScript :",
+    "code": "let nombres: number[] = [1, 2, 3, 4, 5];\nlet premierNombre: number = premierElement(nombres);"
+  },
+
+  "contraintes_de_generiques": {
+    "description": "Il est possible de définir des contraintes sur les génériques pour restreindre les types acceptés. Cela permet d'ajouter des méthodes spécifiques aux types génériques.",
+    "exemple": "Exemple de contrainte de générique en TypeScript :",
+    "code": "function longueur<T extends { length: number }>(objet: T): number {\n    return objet.length;\n}"
+  },
+
+  "génériques_avec_plusieurs_types": {
+    "description": "Les génériques peuvent également accepter plusieurs types. Cela permet de créer des fonctions et des classes flexibles qui peuvent travailler avec divers types.",
+    "exemple": "Exemple de générique avec plusieurs types en TypeScript :",
+    "code": "function fusionner<T, U>(a: T, b: U): T & U {\n    return { ...a, ...b };\n}"
+  },
+
+  "classes_generiques": {
+    "description": "Les classes peuvent également être génériques. Cela permet de créer des classes réutilisables qui fonctionnent avec différents types de données tout en maintenant la sécurité des types.",
+    "exemple": "Exemple de classe générique en TypeScript :",
+    "code": "class Boite<T> {\n    contenu: T;\n    constructor(contenu: T) {\n        this.contenu = contenu;\n    }\n}"
+  },
+
+  "interfaces_generiques": {
+    "description": "Les interfaces peuvent être génériques, ce qui permet de créer des interfaces flexibles pour les objets avec différentes formes et structures de données.",
+    "exemple": "Exemple d'interface générique en TypeScript :",
+    "code": "interface Paire<T, U> {\n    premier: T;\n    deuxième: U;\n}"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une application Express.js simple qui affiche 'Bonjour, le monde !' lorsque vous accédez à la page d'accueil ('/').",
+    "correction": "const express = require('express');\nconst app = express();\n\napp.get('/', (req, res) => {\n  res.send('Bonjour, le monde !');\n});\n\napp.listen(3000, () => {\n  console.log('Serveur Express en cours d'exécution sur le port 3000');\n});"
+  },
+  "Exercice2": {
+    "description": "Créez une application Express.js qui affiche une page HTML de votre choix lorsque vous accédez à la page d'accueil ('/').",
+    "correction": "const express = require('express');\nconst app = express();\n\napp.get('/', (req, res) => {\n  res.sendFile(__dirname + '/index.html');\n});\n\napp.listen(3000, () => {\n  console.log('Serveur Express en cours d'exécution sur le port 3000');\n});"
+  },
+  "Exercice3": {
+    "description": "Créez une application Express.js qui gère les paramètres d'URL pour afficher un message personnalisé lorsque vous accédez à '/salutation/[votre_nom]' (par exemple, '/salutation/John').",
+    "correction": "const express = require('express');\nconst app = express();\n\napp.get('/salutation/:nom', (req, res) => {\n  const nom = req.params.nom;\n  res.send(`Bonjour, ${nom} !`);\n});\n\napp.listen(3000, () => {\n  console.log('Serveur Express en cours d'exécution sur le port 3000');\n});"
+  },
+  "Exercice4": {
+    "description": "Créez une application Express.js qui utilise des routes pour afficher différentes pages HTML pour '/accueil' et '/contact'.",
+    "correction": "const express = require('express');\nconst app = express();\n\napp.get('/accueil', (req, res) => {\n  res.sendFile(__dirname + '/accueil.html');\n});\n\napp.get('/contact', (req, res) => {\n  res.sendFile(__dirname + '/contact.html');\n});\n\napp.listen(3000, () => {\n  console.log('Serveur Express en cours d'exécution sur le port 3000');\n});"
+  },
+  "Exercice5": {
+    "description": "Créez une application Express.js qui gère les erreurs 404 en affichant 'Page non trouvée' lorsque vous accédez à une URL non définie.",
+    "correction": "const express = require('express');\nconst app = express();\n\napp.get('/', (req, res) => {\n  res.send('Bonjour, le monde !');\n});\n\napp.use((req, res) => {\n  res.status(404).send('Page non trouvée');\n});\n\napp.listen(3000, () => {\n  console.log('Serveur Express en cours d'exécution sur le port 3000');\n});"
+  }
+}

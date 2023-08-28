@@ -1,0 +1,27 @@
+{
+  "general": "Les classes en JavaScript sont un mécanisme qui permet de créer des objets et de définir leur structure, leurs propriétés et leurs méthodes. Elles sont introduites dans ECMAScript 6 (ES6) et offrent un moyen plus structuré de créer et de gérer des objets.",
+  "creation": {
+    "description": "Pour créer une classe en JavaScript, utilisez le mot-clé `class`, suivi du nom de la classe. Vous pouvez également définir un constructeur pour initialiser les propriétés de l'objet lors de sa création.",
+    "code": "class Personne {\n  constructor(nom, age) {\n    this.nom = nom;\n    this.age = age;\n  }\n}\n"
+  },
+  "heritage": {
+    "description": "Les classes en JavaScript prennent en charge l'héritage, ce qui signifie qu'une classe peut hériter des propriétés et des méthodes d'une autre classe. Cela favorise la réutilisation du code.",
+    "code": "class Etudiant extends Personne {\n  constructor(nom, age, niveau) {\n    super(nom, age);\n    this.niveau = niveau;\n  }\n}\n"
+  },
+  "methode": {
+    "description": "Les méthodes sont des fonctions associées à une classe. Vous pouvez définir des méthodes qui effectuent des opérations spécifiques sur les objets de la classe.",
+    "code": "class Rectangle {\n  constructor(longueur, largeur) {\n    this.longueur = longueur;\n    this.largeur = largeur;\n  }\n  calculerAire() {\n    return this.longueur * this.largeur;\n  }\n}\n"
+  },
+  "acces_modification": {
+    "description": "Les classes permettent de définir des propriétés qui sont associées à chaque objet créé à partir de la classe. Vous pouvez accéder à ces propriétés et les modifier à l'aide de méthodes.",
+    "code": "class Compteur {\n  constructor() {\n    this.valeur = 0;\n  }\n  incrementer() {\n    this.valeur++;\n  }\n  decrementer() {\n    this.valeur--;\n  }\n}\n"
+  },
+  "getter_setter": {
+    "description": "Les classes en JavaScript prennent également en charge les méthodes `get` et `set`, qui permettent de contrôler l'accès en lecture et en écriture aux propriétés de l'objet.",
+    "code": "class Utilisateur {\n  constructor(nom) {\n    this._nom = nom;\n  }\n  get nom() {\n    return this._nom;\n  }\n  set nom(nouveauNom) {\n    if (nouveauNom.length > 0) {\n      this._nom = nouveauNom;\n    }\n  }\n}\n"
+  },
+  "utilisation": {
+    "description": "Les classes sont largement utilisées en JavaScript pour créer des objets avec une structure claire et des méthodes cohérentes. Elles sont essentielles pour la programmation orientée objet en JavaScript.",
+    "code": "const personne1 = new Personne('Alice', 30);\nconst etudiant1 = new Etudiant('Bob', 25, 'Licence');\nconsole.log(personne1.nom); // 'Alice'\nconsole.log(etudiant1.niveau); // 'Licence'\n"
+  }
+}

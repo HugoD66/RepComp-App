@@ -1,0 +1,44 @@
+{
+  "general": "Les bases de données relationnelles sont un modèle de gestion de données qui permet de stocker, organiser et gérer des données structurées sous forme de tables. Ce modèle repose sur des relations entre ces tables, ce qui facilite la gestion et la récupération de données cohérentes et liées.",
+
+  "tableaux_et_lignes": {
+    "description": "Dans une base de données relationnelle, les données sont organisées en tables, également appelées relations. Chaque table est constituée de lignes et de colonnes. Chaque ligne représente un enregistrement unique et chaque colonne représente un attribut ou un champ spécifique.",
+    "exemple": "Exemple de table : Utilisateurs\nColonnes : ID, Nom, Prénom, Âge"
+  },
+
+  "clés_primaires": {
+    "description": "Chaque table doit avoir une clé primaire, qui est un champ unique permettant d'identifier de manière univoque chaque enregistrement. La clé primaire garantit l'intégrité des données et permet de créer des relations entre les tables.",
+    "exemple": "Clé primaire : ID (identifiant unique pour chaque utilisateur)"
+  },
+
+  "relations_entre_tables": {
+    "description": "Les bases de données relationnelles reposent sur des relations entre les tables. Les clés primaires et étrangères sont utilisées pour établir ces relations. Une clé étrangère dans une table fait référence à la clé primaire d'une autre table, créant ainsi une liaison.",
+    "exemple": "Relation : Une commande (table Commandes) peut être liée à un utilisateur (table Utilisateurs) via la clé étrangère ID_Utilisateur."
+  },
+
+  "SQL_pour_interroger_les_donnees": {
+    "description": "SQL (Structured Query Language) est le langage standard utilisé pour interroger, mettre à jour et gérer les données dans une base de données relationnelle. Il permet de récupérer des données en fonction de critères spécifiques, de les trier, de les filtrer et de les regrouper.",
+    "exemple": "Exemple de requête SQL :",
+    "code": "SELECT Nom, Prénom FROM Utilisateurs WHERE Âge > 30;"
+  },
+
+  "intégrité_des_données": {
+    "description": "Les bases de données relationnelles sont conçues pour maintenir l'intégrité des données. Les contraintes d'intégrité, telles que les clés primaires, les clés étrangères et les règles de validation, garantissent que seules des données valides sont stockées dans la base de données.",
+    "exemple": "Contrainte : Une clé étrangère doit faire référence à une clé primaire existante dans une autre table."
+  },
+
+  "transactions": {
+    "description": "Les bases de données relationnelles prennent en charge les transactions, qui permettent d'effectuer un ensemble d'opérations comme une seule unité indivisible. Cela garantit la cohérence des données, même en cas d'erreurs ou de pannes.",
+    "exemple": "Transaction : Effectuer une commande enregistre la commande et déduit le stock des produits de manière atomique."
+  },
+
+  "indexation": {
+    "description": "Pour optimiser les performances des requêtes, les bases de données relationnelles utilisent des index. Les index sont des structures de données qui accélèrent la recherche de données en créant des copies triées des colonnes spécifiques.",
+    "exemple": "Index : Création d'un index sur la colonne Nom pour accélérer la recherche des utilisateurs par nom."
+  },
+
+  "systèmes_de_gestion_de_bases_de_donnees": {
+    "description": "Pour gérer efficacement les bases de données relationnelles, on utilise des systèmes de gestion de bases de données (SGBD) tels que MySQL, PostgreSQL, Oracle, SQL Server, etc. Ces SGBD offrent des fonctionnalités avancées de gestion, de sécurité et de sauvegarde des données.",
+    "exemple": "SGBD populaires : MySQL, PostgreSQL, Microsoft SQL Server, Oracle Database."
+  }
+}

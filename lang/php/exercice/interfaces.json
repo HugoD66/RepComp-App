@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une interface 'iForme' avec une méthode 'calculerAire'. Ensuite, créez une classe 'Cercle' qui implémente cette interface et qui a une propriété 'rayon'. Implémentez la méthode 'calculerAire' pour calculer l'aire du cercle.",
+    "correction": "interface iForme {\n  public function calculerAire();\n}\n\nclass Cercle implements iForme {\n  public $rayon;\n\n  public function __construct($rayon) {\n    $this->rayon = $rayon;\n  }\n\n  public function calculerAire() {\n    return pi() * pow($this->rayon, 2);\n  }\n}"
+  },
+  "Exercice2": {
+    "description": "Créez une interface 'iAnimal' avec des méthodes 'manger' et 'dormir'. Ensuite, créez une classe 'Chien' qui implémente cette interface. Implémentez les méthodes 'manger' et 'dormir' pour le chien.",
+    "correction": "interface iAnimal {\n  public function manger();\n  public function dormir();\n}\n\nclass Chien implements iAnimal {\n  public function manger() {\n    // Logique pour que le chien mange\n  }\n\n  public function dormir() {\n    // Logique pour que le chien dorme\n  }\n}"
+  },
+  "Exercice3": {
+    "description": "Créez une interface 'iAffichable' avec une méthode 'afficher'. Ensuite, créez une classe 'Message' qui implémente cette interface. La méthode 'afficher' devrait afficher un message.",
+    "correction": "interface iAffichable {\n  public function afficher();\n}\n\nclass Message implements iAffichable {\n  public function afficher() {\n    echo 'Ceci est un message.';\n  }\n}"
+  },
+  "Exercice4": {
+    "description": "Créez une interface 'iStockage' avec des méthodes 'sauvegarder' et 'charger'. Ensuite, créez une classe 'Fichier' qui implémente cette interface. Implémentez les méthodes pour sauvegarder et charger des données depuis un fichier.",
+    "correction": "interface iStockage {\n  public function sauvegarder($donnees);\n  public function charger();\n}\n\nclass Fichier implements iStockage {\n  public function sauvegarder($donnees) {\n    // Logique pour sauvegarder les données dans un fichier\n  }\n\n  public function charger() {\n    // Logique pour charger les données depuis un fichier\n  }\n}"
+  },
+  "Exercice5": {
+    "description": "Créez une interface 'iConnectable' avec une méthode 'connecter'. Ensuite, créez une classe 'BaseDeDonnées' qui implémente cette interface. La méthode 'connecter' devrait établir une connexion à une base de données.",
+    "correction": "interface iConnectable {\n  public function connecter();\n}\n\nclass BaseDeDonnees implements iConnectable {\n  public function connecter() {\n    // Logique pour établir une connexion à la base de données\n  }\n}"
+  }
+}

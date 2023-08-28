@@ -1,0 +1,35 @@
+{
+  "general": "Les variables en JavaScript sont utilisées pour stocker des données. JavaScript prend en charge plusieurs types de variables pour gérer différents types de données, tels que des nombres, des chaînes de caractères, des booléens, des objets, etc.",
+  "nombres": {
+    "description": "Les variables de type nombre sont utilisées pour stocker des valeurs numériques, qu'elles soient entières ou à virgule flottante.",
+    "code": "const age = 25;\nconst prix = 19.99;\n"
+  },
+  "chaines_de_caracteres": {
+    "description": "Les variables de type chaîne de caractères (string) sont utilisées pour stocker du texte. Elles sont délimitées par des guillemets simples ou doubles.",
+    "code": "const prenom = 'Alice';\nconst message = \"Bienvenue dans JavaScript\";\n"
+  },
+  "booléens": {
+    "description": "Les variables booléennes (booléens) sont utilisées pour représenter des valeurs de vérité, c'est-à-dire vrai (true) ou faux (false). Elles sont couramment utilisées dans les expressions conditionnelles.",
+    "code": "const estConnecte = true;\nconst aDesEnfants = false;\n"
+  },
+  "tableaux": {
+    "description": "Les variables de type tableau (array) sont utilisées pour stocker des collections ordonnées d'éléments. Les éléments d'un tableau peuvent être de différents types de données.",
+    "code": "const nombres = [1, 2, 3, 4, 5];\nconst fruits = ['pomme', 'banane', 'orange'];\n"
+  },
+  "objets": {
+    "description": "Les variables de type objet (object) sont utilisées pour stocker des données structurées sous forme de paires clé-valeur. Les clés sont des chaînes de caractères qui identifient chaque valeur.",
+    "code": "const personne = {\n  nom: 'Alice',\n  age: 30,\n  ville: 'Paris'\n};\n"
+  },
+  "null_et_undefined": {
+    "description": "Les variables peuvent également avoir les valeurs spéciales `null` (signifiant l'absence de valeur) ou `undefined` (signifiant que la variable existe mais n'a pas de valeur définie).",
+    "code": "let variableNulle = null;\nlet variableNonDefinie;\nconsole.log(variableNulle); // null\nconsole.log(variableNonDefinie); // undefined\n"
+  },
+  "typeof_operator": {
+    "description": "L'opérateur `typeof` permet de vérifier le type d'une variable ou d'une expression en renvoyant une chaîne de caractères correspondant au type.",
+    "code": "const age = 25;\nconsole.log(typeof age); // 'number'\nconst prenom = 'Alice';\nconsole.log(typeof prenom); // 'string'\nconst estConnecte = true;\nconsole.log(typeof estConnecte); // 'boolean'\n"
+  },
+  "conversion_de_type": {
+    "description": "JavaScript effectue automatiquement des conversions de type lorsque cela est nécessaire. Par exemple, vous pouvez convertir un nombre en chaîne de caractères à l'aide de la fonction `String()`.",
+    "code": "const nombre = 42;\nconst nombreEnTexte = String(nombre);\nconsole.log(nombreEnTexte); // '42'\n"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "general": "L'objet JavaScript 'Number' est un objet natif qui représente les valeurs numériques en JavaScript. Il est utilisé pour effectuer des opérations mathématiques, stocker des nombres et gérer des valeurs numériques dans un programme JavaScript.",
+  "creation": {
+    "description": "Vous pouvez créer un objet 'Number' de plusieurs manières : 1) En utilisant le constructeur 'Number()' avec le mot-clé 'new', par exemple, 'const num = new Number(42);', 2) En utilisant la notation littérale, par exemple, 'const num = 42;' (primitif), 3) En utilisant des méthodes statiques, par exemple, 'const num = Number.parseFloat('3.14');'.",
+    "code": "Exemple de création d'un objet 'Number' :\n\n```javascript\nconst num1 = new Number(42);\nconst num2 = 3.14;\nconst num3 = Number.parseFloat('123.45');\n```\n"
+  },
+  "propriétés": {
+    "description": "L'objet 'Number' possède plusieurs propriétés utiles, notamment : 1) 'Number.MAX_VALUE' qui représente la valeur maximale pouvant être représentée en JavaScript, 2) 'Number.MIN_VALUE' qui représente la valeur minimale positive, 3) 'Number.NaN' qui représente une valeur 'Not-a-Number', 4) 'Number.POSITIVE_INFINITY' qui représente l'infini positif, 5) 'Number.NEGATIVE_INFINITY' qui représente l'infini négatif.",
+    "code": "Exemple d'utilisation de certaines propriétés de l'objet 'Number' :\n\n```javascript\nconsole.log(Number.MAX_VALUE); // Affiche la valeur maximale\nconsole.log(Number.MIN_VALUE); // Affiche la valeur minimale positive\nconsole.log(Number.NaN); // Affiche NaN\nconsole.log(Number.POSITIVE_INFINITY); // Affiche l'infini positif\nconsole.log(Number.NEGATIVE_INFINITY); // Affiche l'infini négatif\n```\n"
+  },
+  "méthodes": {
+    "description": "L'objet 'Number' propose diverses méthodes pour effectuer des opérations numériques, notamment : 1) 'Number.isNaN()' pour vérifier si une valeur est NaN, 2) 'Number.isFinite()' pour vérifier si une valeur est finie, 3) 'Number.parseInt()' pour convertir une chaîne en entier, 4) 'Number.parseFloat()' pour convertir une chaîne en nombre flottant, 5) 'Number.toFixed()' pour formater un nombre avec un nombre fixe de décimales.",
+    "code": "Exemple d'utilisation de certaines méthodes de l'objet 'Number' :\n\n```javascript\nconsole.log(Number.isNaN(42)); // false\nconsole.log(Number.isFinite(42)); // true\nconsole.log(Number.parseInt('123')); // 123\nconsole.log(Number.parseFloat('3.14')); // 3.14\nconsole.log((3.14159).toFixed(2)); // '3.14'\n```\n"
+  },
+  "opérations_mathématiques": {
+    "description": "L'objet 'Number' prend en charge les opérations mathématiques courantes, telles que l'addition, la soustraction, la multiplication, la division et les opérations plus avancées telles que la puissance et la racine carrée.",
+    "code": "Exemple d'opérations mathématiques avec l'objet 'Number' :\n\n```javascript\nconst x = 5;\nconst y = 3;\nconst addition = x + y; // 8\nconst soustraction = x - y; // 2\nconst multiplication = x * y; // 15\nconst division = x / y; // 1.6666666666666667\nconst puissance = Math.pow(x, y); // 125\nconst racineCarree = Math.sqrt(x); // 2.23606797749979\n```\n"
+  },
+  "conversion_types": {
+    "description": "JavaScript effectue automatiquement la conversion de types lorsque vous effectuez des opérations entre des objets 'Number' et d'autres types de données, tels que des chaînes ou des booléens. Vous pouvez également effectuer des conversions explicites à l'aide de méthodes comme 'Number()' ou 'parseInt()'.",
+    "code": "Exemple de conversion automatique et explicite de types avec l'objet 'Number' :\n\n```javascript\nconst num = 42;\nconst texte = '123';\nconst somme = num + texte; // '42123' (conversion automatique)\nconst conversionExplicite = num + Number(texte); // 165 (conversion explicite)\n```\n"
+  },
+  "limitations": {
+    "description": "L'objet 'Number' a des limitations en termes de précision. Les calculs impliquant des nombres flottants peuvent entraîner des erreurs d'arrondi. Il est important de comprendre ces limitations lors de la manipulation de valeurs numériques en JavaScript.",
+    "code": "Exemple de limitation de précision avec l'objet 'Number' :\n\n```javascript\nconst resultat = 0.1 + 0.2; // 0.30000000000000004 (précision limitée)\nconsole.log(resultat); // Affiche une valeur légèrement incorrecte\n```\n"
+  }
+}

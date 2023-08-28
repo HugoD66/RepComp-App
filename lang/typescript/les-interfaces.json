@@ -1,0 +1,39 @@
+{
+  "general": "Les interfaces en TypeScript sont un mécanisme puissant pour définir la structure des objets, y compris leurs propriétés et leurs types. Elles sont largement utilisées pour garantir que les objets respectent une certaine forme ou structure.",
+
+  "définition_des_interfaces": {
+    "description": "Une interface est une structure nommée qui définit un contrat pour les objets. Elle spécifie quelles propriétés et méthodes un objet doit avoir. Les interfaces sont principalement utilisées pour décrire la forme des objets.",
+    "exemple": "Exemple de déclaration d'interface en TypeScript :",
+    "code": "interface Personne {\n    nom: string;\n    age: number;\n}"
+  },
+
+  "utilisation_des_interfaces": {
+    "description": "Les interfaces sont utilisées pour typer des objets et garantir qu'ils ont la structure attendue. Elles sont couramment utilisées pour définir des contrats que les classes doivent suivre.",
+    "exemple": "Exemple d'utilisation d'une interface en TypeScript :",
+    "code": "function afficherPersonne(personne: Personne) {\n    console.log(`Nom: ${personne.nom}, Âge: ${personne.age}`);\n}"
+  },
+
+  "propriétés_optionnelles": {
+    "description": "Les propriétés d'une interface peuvent être marquées comme optionnelles en utilisant le symbole '?'. Cela signifie que les objets qui implémentent cette interface peuvent ne pas avoir ces propriétés.",
+    "exemple": "Exemple d'interface avec propriété optionnelle :",
+    "code": "interface Point {\n    x: number;\n    y?: number; // La propriété y est optionnelle\n}"
+  },
+
+  "fonctions_d'interface": {
+    "description": "Les interfaces peuvent également définir la forme des fonctions. Cela permet de typer des fonctions et de garantir que leurs paramètres et leur valeur de retour correspondent à la structure attendue.",
+    "exemple": "Exemple d'interface pour une fonction en TypeScript :",
+    "code": "interface Calculatrice {\n    (a: number, b: number): number;\n}"
+  },
+
+  "héritage_d'interfaces": {
+    "description": "Les interfaces peuvent hériter d'autres interfaces. Cela permet de créer des interfaces plus spécifiques en ajoutant ou en modifiant des propriétés ou des méthodes.",
+    "exemple": "Exemple d'héritage d'interfaces en TypeScript :",
+    "code": "interface PersonneAvecEmail extends Personne {\n    email: string;\n}"
+  },
+
+  "implémentation_d'interfaces": {
+    "description": "Les classes en TypeScript peuvent implémenter des interfaces. Cela signifie qu'elles doivent respecter la structure définie par l'interface et fournir des implémentations pour les méthodes.",
+    "exemple": "Exemple d'implémentation d'interface en TypeScript :",
+    "code": "class Utilisateur implements Personne {\n    constructor(public nom: string, public age: number) {}\n}"
+  }
+}

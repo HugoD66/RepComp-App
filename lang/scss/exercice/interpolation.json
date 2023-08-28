@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une variable SCSS nommée '$font-family' avec la valeur 'Arial'. Utilisez l'interpolation pour inclure cette variable dans la déclaration 'font-family' d'une classe '.custom-font'.",
+    "correction": "$font-family: 'Arial';\n\n.custom-font {\n  font-family: #{$font-family};\n}"
+  },
+  "Exercice2": {
+    "description": "Définissez une variable SCSS '$button-color' avec la valeur 'blue'. Utilisez l'interpolation pour inclure cette variable dans une déclaration 'color' au sein d'une classe '.btn'.",
+    "correction": "$button-color: blue;\n\n.btn {\n  color: #{$button-color};\n}"
+  },
+  "Exercice3": {
+    "description": "Créez une variable SCSS '$padding' avec la valeur '10px'. Utilisez l'interpolation pour inclure cette variable dans une déclaration 'padding' au sein d'une classe '.box' et une classe '.button'.",
+    "correction": "$padding: 10px;\n\n.box, .button {\n  padding: #{$padding};\n}"
+  },
+  "Exercice4": {
+    "description": "Définissez une variable SCSS '$theme' avec la valeur 'dark'. Utilisez l'interpolation pour créer une classe '.theme-dark' en ajoutant la valeur de '$theme' à la classe.",
+    "correction": "$theme: 'dark';\n\n.#{$theme} {\n  // Votre style pour le thème sombre ici\n}"
+  },
+  "Exercice5": {
+    "description": "Créez une variable SCSS '$size' avec la valeur '24px'. Utilisez l'interpolation pour inclure cette variable dans les propriétés 'width' et 'height' d'une classe '.icon'.",
+    "correction": "$size: 24px;\n\n.icon {\n  width: #{$size};\n  height: #{$size};\n}"
+  }
+}

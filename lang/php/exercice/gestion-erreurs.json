@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une fonction en PHP qui génère une erreur fatale (E_ERROR) en essayant de diviser un nombre par zéro.",
+    "correction": "function divisionParZero() {\n  $nombre = 10;\n  $denominateur = 0;\n  $resultat = $nombre / $denominateur;\n}"
+  },
+  "Exercice2": {
+    "description": "Créez une fonction en PHP qui génère une erreur de notice (E_NOTICE) en essayant d'accéder à une variable non définie.",
+    "correction": "function variableNonDefinie() {\n  echo $variableNonDefinie;\n}"
+  },
+  "Exercice3": {
+    "description": "Créez une fonction en PHP qui utilise un gestionnaire d'erreurs personnalisé (set_error_handler) pour afficher les erreurs E_WARNING sous forme de messages.",
+    "correction": "function gestionErreurWarning($errno, $errstr, $errfile, $errline) {\n  echo 'Erreur : ' . $errstr;\n}\nset_error_handler('gestionErreurWarning', E_WARNING);"
+  },
+  "Exercice4": {
+    "description": "Créez une fonction en PHP qui utilise un gestionnaire d'erreurs personnalisé (set_error_handler) pour enregistrer les erreurs E_NOTICE dans un fichier journal (log).",
+    "correction": "function journalErreurs($errno, $errstr, $errfile, $errline) {\n  $message = 'Erreur : ' . $errstr . ' dans ' . $errfile . ' à la ligne ' . $errline;\n  file_put_contents('erreurs.log', $message, FILE_APPEND);\n}\nset_error_handler('journalErreurs', E_NOTICE);"
+  },
+  "Exercice5": {
+    "description": "Créez une fonction en PHP qui utilise un gestionnaire d'exceptions personnalisé (set_exception_handler) pour capturer et afficher une exception personnalisée.",
+    "correction": "function gestionException($exception) {\n  echo 'Exception capturée : ' . $exception->getMessage();\n}\nclass MonException extends Exception {}\nset_exception_handler('gestionException');"
+  }
+}

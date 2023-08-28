@@ -1,0 +1,27 @@
+{
+  "general": "L'API Fetch est une méthode JavaScript moderne qui permet de réaliser des requêtes HTTP asynchrones vers des serveurs. Elle offre une syntaxe simplifiée par rapport à l'ancienne méthode XHR (XMLHttpRequest). Fetch est devenue la méthode de choix pour effectuer des appels HTTP en JavaScript.",
+  "requete_get": {
+    "description": "Pour effectuer une requête GET avec Fetch, vous utilisez la fonction `fetch()` en spécifiant l'URL du serveur. Fetch renvoie une promesse qui résout en une réponse (objet Response) contenant les données de la requête.",
+    "code": "fetch('https://api.example.com/data')\n  .then(response => {\n    if (!response.ok) {\n      throw new Error('La requête n'a pas réussi.');\n    }\n    return response.json();\n  })\n  .then(data => {\n    console.log('Données récupérées : ' + JSON.stringify(data));\n  })\n  .catch(error => {\n    console.error('Erreur : ' + error);\n  });\n"
+  },
+  "requete_post": {
+    "description": "Pour effectuer une requête POST avec Fetch, vous devez inclure un objet de configuration qui spécifie la méthode (POST), les en-têtes (headers) et les données à envoyer. Vous pouvez également utiliser JSON.stringify() pour convertir des données en JSON.",
+    "code": "const donnees = { nom: 'John', age: 30 };\n\nfetch('https://api.example.com/enregistrement', {\n  method: 'POST',\n  headers: {\n    'Content-Type': 'application/json'\n  },\n  body: JSON.stringify(donnees)\n})\n  .then(response => response.json())\n  .then(data => {\n    console.log('Réponse du serveur : ' + JSON.stringify(data));\n  })\n  .catch(error => {\n    console.error('Erreur : ' + error);\n  });\n"
+  },
+  "gestion_en_tetes": {
+    "description": "Fetch vous permet de gérer les en-têtes HTTP, ce qui est essentiel pour personnaliser vos requêtes. Vous pouvez définir des en-têtes personnalisés, tels que l'authentification, ou gérer les en-têtes de réponse pour extraire des informations.",
+    "code": "fetch('https://api.example.com/data', {\n  headers: {\n    'Authorization': 'Bearer MonToken'\n  }\n})\n  .then(response => response.headers.get('Nom-De-L-En-Tête'))\n  .then(valeur => {\n    console.log('Valeur de l'en-tête : ' + valeur);\n  })\n  .catch(error => {\n    console.error('Erreur : ' + error);\n  });\n"
+  },
+  "gestion_des_erreurs": {
+    "description": "La gestion des erreurs est cruciale lors des appels HTTP. Vous devez vérifier si la réponse est OK (statut 200) et gérer les erreurs potentielles, telles que les réponses non valides ou les problèmes de réseau.",
+    "code": "fetch('https://api.example.com/data')\n  .then(response => {\n    if (!response.ok) {\n      throw new Error('Réponse non valide');\n    }\n    return response.json();\n  })\n  .then(data => {\n    console.log('Données récupérées : ' + JSON.stringify(data));\n  })\n  .catch(error => {\n    console.error('Erreur : ' + error);\n  });\n"
+  },
+  "utilisation_typique": {
+    "description": "Les appels Fetch sont couramment utilisés pour interagir avec des API REST, récupérer des données depuis des serveurs, envoyer des formulaires, et mettre à jour des interfaces utilisateur en fonction des réponses du serveur.",
+    "code": "fetch('https://api.example.com/articles')\n  .then(response => response.json())\n  .then(articles => {\n    articles.forEach(article => {\n      const div = document.createElement('div');\n      div.textContent = article.titre;\n      document.body.appendChild(div);\n    });\n  })\n  .catch(error => {\n    console.error('Erreur : ' + error);\n  });\n"
+  },
+  "meilleures_pratiques": {
+    "description": "Pour une utilisation optimale de Fetch, privilégiez l'utilisation des promesses pour gérer les réponses. Évitez d'utiliser Fetch pour les appels CORS (Cross-Origin Resource Sharing) sans configuration appropriée. Considérez l'utilisation de bibliothèques comme Axios pour simplifier davantage vos requêtes HTTP.",
+    "code": "fetch('https://api.example.com/data')\n  .then(response => {\n    if (!response.ok) {\n      throw new Error('Réponse non valide');\n    }\n    return response.json();\n  })\n  .then(data => {\n    console.log('Données récupérées : ' + JSON.stringify(data));\n  })\n  .catch(error => {\n    console.error('Erreur : ' + error);\n  });\n"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "general": "La gestion des fichiers en PHP est essentielle pour travailler avec des fichiers texte, des images, des vidéos et d'autres types de fichiers. Vous pouvez créer, lire, écrire, mettre à jour et supprimer des fichiers à l'aide de fonctions PHP dédiées.",
+  "ouverture_et_lecture_de_fichiers": {
+    "description": "PHP offre des fonctions pour ouvrir et lire le contenu des fichiers. Vous pouvez utiliser `fopen()` pour ouvrir un fichier, `fread()` pour lire son contenu et `fclose()` pour le fermer.",
+    "exemple": "Exemple d'ouverture et de lecture d'un fichier en PHP :",
+    "code": "<pre>&lt;?php\n$nom_fichier = 'exemple.txt';\n$handle = fopen($nom_fichier, 'r');\nif ($handle) {\n    while (($ligne = fgets($handle)) !== false) {\n        echo $ligne;\n    }\n    fclose($handle);\n} else {\n    echo 'Impossible d\\'ouvrir le fichier.';\n}\n?&gt;</pre>"
+  },
+  "écriture_et_mise_à_jour_de_fichiers": {
+    "description": "Vous pouvez également écrire et mettre à jour des fichiers en PHP. Utilisez `fopen()` avec le mode d'écriture, `fwrite()` pour écrire dans le fichier, et `fclose()` pour le fermer après l'écriture.",
+    "exemple": "Exemple d'écriture et de mise à jour d'un fichier en PHP :",
+    "code": "<pre>&lt;?php\n$nom_fichier = 'nouveau_fichier.txt';\n$contenu = 'Contenu à écrire dans le fichier.';\n$handle = fopen($nom_fichier, 'w');\nif ($handle) {\n    fwrite($handle, $contenu);\n    fclose($handle);\n    echo 'Fichier mis à jour.';\n} else {\n    echo 'Impossible d\\'ouvrir le fichier.';\n}\n?&gt;</pre>"
+  },
+  "suppression_de_fichiers": {
+    "description": "PHP vous permet de supprimer des fichiers existants à l'aide de la fonction `unlink()`. Assurez-vous d'avoir les autorisations nécessaires pour supprimer un fichier.",
+    "exemple": "Exemple de suppression d'un fichier en PHP :",
+    "code": "<pre>&lt;?php\n$nom_fichier = 'fichier_a_supprimer.txt';\nif (file_exists($nom_fichier)) {\n    if (unlink($nom_fichier)) {\n        echo 'Fichier supprimé avec succès.';\n    } else {\n        echo 'Impossible de supprimer le fichier.';\n    }\n} else {\n    echo 'Le fichier n\\'existe pas.';\n}\n?&gt;</pre>"
+  },
+  "manipulation_de_fichiers_et_répertoires": {
+    "description": "Vous pouvez effectuer des opérations de manipulation de fichiers et de répertoires en utilisant des fonctions comme `copy()`, `rename()`, `mkdir()`, `rmdir()`, etc.",
+    "exemple": null
+  },
+  "vérification_de_l_existence_et_des_propriétés_de_fichiers": {
+    "description": "PHP fournit des fonctions pour vérifier si un fichier existe (`file_exists()`), pour obtenir des informations sur un fichier (`filemtime()`, `filesize()`, etc.), et pour vérifier le type de fichier (`is_file()`, `is_dir()`, etc.).",
+    "exemple": null
+  }
+}

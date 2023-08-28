@@ -1,0 +1,19 @@
+{
+  "general": "La shallow copy (copie superficielle) d'un tableau en JavaScript consiste à créer une nouvelle copie du tableau, mais cette copie ne clone que les références aux objets dans le tableau d'origine, pas les objets eux-mêmes. Cela signifie que les modifications apportées aux objets à l'intérieur du tableau copié seront reflétées dans le tableau d'origine, mais les modifications de la structure du tableau (ajout ou suppression d'éléments) ne seront pas reflétées.",
+  "utilite": {
+    "description": "La shallow copy est utile lorsque vous avez besoin de dupliquer un tableau sans dupliquer tous les objets qu'il contient. Cela permet d'économiser de la mémoire et de maintenir des liens vers les mêmes objets si cela est souhaité.",
+    "exemple": "Lors de la gestion d'une liste de contacts, vous pouvez effectuer une shallow copy du tableau de contacts pour trier ou filtrer les contacts sans altérer les données d'origine."
+  },
+  "syntaxe": {
+    "description": "Il existe plusieurs façons de créer une shallow copy d'un tableau en JavaScript. Les méthodes les plus couramment utilisées incluent l'utilisation de l'opérateur de décomposition (`[...originalArray]`) et de la méthode `Array.slice()`.",
+    "code": "const originalArray = [1, 2, 3, 4, 5];\n\n// Utilisation de l'opérateur de décomposition\nconst shallowCopy1 = [...originalArray];\n\n// Utilisation de la méthode Array.slice()\nconst shallowCopy2 = originalArray.slice();\n"
+  },
+  "modification": {
+    "description": "La modification d'un élément à l'intérieur de la shallow copy n'affecte pas le tableau d'origine. Cependant, si les éléments du tableau sont des objets, les changements apportés à ces objets seront reflétés dans les deux tableaux (original et copie).",
+    "exemple": "Si le tableau d'origine contient des objets, la shallow copy conserve les mêmes références aux objets. Ainsi, si vous modifiez un objet dans le tableau copié, le même objet dans le tableau d'origine sera également modifié."
+  },
+  "avertissement": {
+    "description": "Lors de l'utilisation de la shallow copy, assurez-vous de comprendre comment les références aux objets fonctionnent. Si vous avez besoin d'une copie complètement indépendante de tous les objets, vous devrez effectuer une deep copy (copie profonde) du tableau, ce qui clonera également les objets internes.",
+    "exemple": "Une deep copy est nécessaire lorsque vous souhaitez modifier un objet dans la copie sans affecter l'objet d'origine. Cela implique généralement une copie récursive de chaque objet interne."
+  }
+}

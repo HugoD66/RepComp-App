@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez un tableau vide nommé 'monTableau'.",
+    "correction": "const monTableau = [];"
+  },
+  "Exercice2": {
+    "description": "Ajoutez les éléments 'rouge', 'vert' et 'bleu' à un tableau nommé 'couleurs'.",
+    "correction": "const couleurs = ['rouge', 'vert', 'bleu'];"
+  },
+  "Exercice3": {
+    "description": "Accédez au deuxième élément du tableau 'fruits' et stockez-le dans une variable 'deuxiemeFruit'.",
+    "correction": "const fruits = ['pomme', 'banane', 'orange'];\nconst deuxiemeFruit = fruits[1];"
+  },
+  "Exercice4": {
+    "description": "Supprimez le dernier élément du tableau 'nombres'.",
+    "correction": "const nombres = [1, 2, 3, 4, 5];\nnombres.pop();"
+  },
+  "Exercice5": {
+    "description": "Utilisez la méthode 'concat()' pour fusionner les tableaux 'a' et 'b' en un seul tableau 'c'.",
+    "correction": "const a = [1, 2, 3];\nconst b = [4, 5, 6];\nconst c = a.concat(b);"
+  }
+}

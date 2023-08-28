@@ -1,0 +1,23 @@
+{
+  "general": "Les variables en PHP sont des conteneurs qui permettent de stocker des valeurs, telles que des nombres, des chaînes de caractères, des tableaux et d'autres types de données. Elles sont utilisées pour stocker des informations temporaires et pour effectuer des opérations dans les scripts PHP.",
+  "déclaration_de_variables": {
+    "description": "En PHP, les variables sont déclarées en utilisant le signe dollar `$` suivi du nom de la variable. Les noms de variables sont sensibles à la casse et doivent commencer par une lettre ou un souligné `_`.",
+    "exemple": "Exemple de déclaration de variables en PHP :",
+    "code": "<pre>\n$nom = 'John';\n$âge = 30;\n$solde_compte = 1000.50;\n</pre>"
+  },
+  "types_de_données": {
+    "description": "PHP prend en charge différents types de données, tels que les chaînes de caractères, les entiers, les nombres à virgule flottante, les tableaux, les booléens, etc. Les types de données sont déterminés automatiquement lors de l'assignation d'une valeur à une variable.",
+    "exemple": "Exemple de types de données en PHP :",
+    "code": "<pre>\n$nom = 'John'; // Chaîne de caractères\n$âge = 30; // Entier\n$solde_compte = 1000.50; // Nombre à virgule flottante\n$est_majeur = true; // Booléen\n</pre>"
+  },
+  "affectation_de_valeurs": {
+    "description": "Vous pouvez affecter une valeur à une variable en utilisant l'opérateur d'affectation `=`. Les variables peuvent être réaffectées avec de nouvelles valeurs à tout moment.",
+    "exemple": "Exemple d'affectation de valeurs à des variables en PHP :",
+    "code": "<pre>\n$nom = 'Alice';\n$âge = 25;\n$âge = $âge + 1; // Réaffectation de la variable\n</pre>"
+  },
+  "utilisation_de_variables": {
+    "description": "Les variables peuvent être utilisées dans des expressions mathématiques, des chaînes de caractères, des conditions et d'autres endroits du code PHP pour effectuer des opérations et générer des résultats dynamiques.",
+    "exemple": "Exemple d'utilisation de variables en PHP :",
+    "code": "<pre>\n$nom = 'Alice';\n$âge = 25;\necho 'Bonjour, je m'appelle ' . $nom . ' et j'ai ' . $âge . ' ans.';\n// Affiche : Bonjour, je m'appelle Alice et j'ai 25 ans.\n</pre>"
+  }
+}

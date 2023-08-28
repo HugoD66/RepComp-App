@@ -1,0 +1,34 @@
+
+{
+  "general": "En TypeScript, vous pouvez créer de nouveaux types en utilisant des types existants comme base. Cela vous permet de définir des types plus spécifiques et adaptés à vos besoins, améliorant ainsi la sécurité du type et la lisibilité du code.",
+
+  "alias_de_type": {
+    "description": "Les alias de type vous permettent de créer des noms plus significatifs pour des types existants. Cela rend votre code plus lisible et facilite la maintenance en regroupant des types similaires sous un nom.",
+    "exemple": "Exemple d'alias de type en TypeScript :",
+    "code": "type Point = { x: number; y: number; };\nlet point: Point = { x: 1, y: 2 };"
+  },
+
+  "types_avec_intersection": {
+    "description": "L'opérateur d'intersection `&` vous permet de créer un nouveau type qui a toutes les propriétés de plusieurs types existants. Cela permet de combiner des types de manière flexible.",
+    "exemple": "Exemple de types avec intersection en TypeScript :",
+    "code": "type A = { a: number };\ntype B = { b: string };\ntype C = A & B;\nlet c: C = { a: 1, b: 'test' };"
+  },
+
+  "types_avec_union": {
+    "description": "L'opérateur d'union `|` vous permet de créer un nouveau type qui peut être l'un des types existants. Cela permet de gérer des valeurs de types multiples de manière plus concise.",
+    "exemple": "Exemple de types avec union en TypeScript :",
+    "code": "type Status = 'En cours' | 'Terminé' | 'Annulé';\nlet statut: Status = 'En cours';"
+  },
+
+  "types_avec_exclusion": {
+    "description": "L'opérateur d'exclusion `-` vous permet de créer un nouveau type en excluant des propriétés spécifiques d'un type existant. Cela est utile lorsque vous souhaitez supprimer certaines propriétés d'un type.",
+    "exemple": "Exemple de types avec exclusion en TypeScript :",
+    "code": "type Personne = { nom: string; âge: number; adresse: string };\ntype InfoPersonnelle = Omit<Personne, 'adresse'>;\nlet info: InfoPersonnelle = { nom: 'John', âge: 30 };"
+  },
+
+  "types_avec_intersection_et_union": {
+    "description": "Vous pouvez également combiner des opérateurs d'intersection et d'union pour créer des types complexes qui répondent à des besoins spécifiques.",
+    "exemple": "Exemple de types avec intersection et union en TypeScript :",
+    "code": "type A = { a: number };\ntype B = { b: string };\ntype C = A & (B | { c: boolean });\nlet c: C = { a: 1, b: 'test', c: true };"
+  }
+}

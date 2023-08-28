@@ -1,0 +1,23 @@
+{
+  "general": "Les tableaux sont une structure de données essentielle en JavaScript, vous permettant de stocker et de manipuler des collections d'éléments. Dans cette section, nous explorerons les opérations courantes sur les tableaux, notamment la création, la modification, la recherche et la suppression d'éléments.",
+  "creation": {
+    "description": "Créer un tableau en JavaScript est simple. Vous pouvez le faire en utilisant des crochets et en ajoutant des éléments entre eux.",
+    "code": "let fruits = ['pomme', 'banane', 'orange'];\n"
+  },
+  "acces_modification": {
+    "description": "Vous pouvez accéder et modifier les éléments d'un tableau en utilisant leur indice. Les indices commencent à zéro pour le premier élément.",
+    "code": "let fruits = ['pomme', 'banane', 'orange'];\n\n// Accéder à un élément\nlet premierFruit = fruits[0];\n\n// Modifier un élément\nfruits[1] = 'kiwi';\n"
+  },
+  "ajout_suppression": {
+    "description": "Vous pouvez ajouter et supprimer des éléments d'un tableau en utilisant différentes méthodes telles que push(), pop(), unshift(), shift(), splice(), etc.",
+    "code": "let fruits = ['pomme', 'banane', 'orange'];\n\n// Ajouter un élément à la fin\nfruits.push('kiwi');\n\n// Supprimer le dernier élément\nfruits.pop();\n\n// Ajouter un élément au début\nfruits.unshift('fraise');\n\n// Supprimer le premier élément\nfruits.shift();\n"
+  },
+  "recherche": {
+    "description": "Vous pouvez rechercher des éléments dans un tableau en utilisant différentes méthodes telles que indexOf(), includes(), find(), filter(), etc.",
+    "code": "let fruits = ['pomme', 'banane', 'orange'];\n\n// Rechercher l'indice d'un élément\nlet indice = fruits.indexOf('banane');\n\n// Vérifier si un élément existe\nlet existe = fruits.includes('kiwi');\n\n// Trouver le premier élément qui satisfait une condition\nlet fruitCher = fruits.find(fruit => fruit === 'pomme');\n\n// Filtrer les éléments qui satisfont une condition\nlet fruitsLongs = fruits.filter(fruit => fruit.length > 5);\n"
+  },
+  "iteration": {
+    "description": "Vous pouvez itérer à travers les éléments d'un tableau en utilisant différentes boucles telles que for, forEach(), map(), reduce(), etc.",
+    "code": "let fruits = ['pomme', 'banane', 'orange'];\n\n// Utilisation d'une boucle for\nfor (let i = 0; i < fruits.length; i++) {\n    console.log(fruits[i]);\n}\n\n// Utilisation de forEach()\nfruits.forEach(fruit => {\n    console.log(fruit);\n});\n\n// Utilisation de map() pour créer un nouveau tableau\nlet longueurs = fruits.map(fruit => fruit.length);\n\n// Utilisation de reduce() pour réduire le tableau à une seule valeur\nlet totalLongueur = fruits.reduce((total, fruit) => total + fruit.length, 0);\n"
+  }
+}

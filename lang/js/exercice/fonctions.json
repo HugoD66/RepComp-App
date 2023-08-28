@@ -1,0 +1,27 @@
+{
+  "Exercice1": {
+    "description": "Écrivez une fonction JavaScript appelée 'ajouter' qui prend deux paramètres (a et b) et renvoie la somme de ces deux nombres.",
+    "code": "",
+    "correction": "function add(a, b) {\n  return a + b;\n}"
+  },
+  "Exercice2": {
+    "description": "Écrivez une fonction JavaScript appelée 'soustraire' qui prend deux paramètres (a et b) et renvoie la différence entre ces deux nombres.",
+    "code": "",
+    "correction": "function subtract(a, b) {\n  return a - b;\n}"
+  },
+  "Exercice3": {
+    "description": "Écrivez une fonction JavaScript appelée 'multiplier' qui prend deux paramètres (a et b) et renvoie le produit de ces deux nombres.",
+    "code": "",
+    "correction": "function multiply(a, b) {\n  return a * b;\n}"
+  },
+  "Exercice4": {
+    "description": "Écrivez une fonction JavaScript appelée 'diviser' qui prend deux paramètres (a et b) et renvoie le résultat de la division de a par b. Assurez-vous de gérer le cas où b est égal à zéro.",
+    "code": "",
+    "correction": "function divide(a, b) {\n  if (b === 0) {\n    return 'Division par zéro impossible';\n  }\n  return a / b;\n}"
+  },
+  "Exercice5": {
+    "description": "Écrivez une fonction JavaScript appelée 'calculer' qui prend trois paramètres (a, b et opérateur) et renvoie le résultat de l'opération spécifiée (addition, soustraction, multiplication ou division) sur a et b.",
+    "code": "",
+    "correction": "function calculate(a, b, operator) {\n  switch (operator) {\n    case '+':\n      return a + b;\n    case '-':\n      return a - b;\n    case '*':\n      return a * b;\n    case '/':\n      if (b === 0) {\n        return 'Division par zéro impossible';\n      }\n      return a / b;\n    default:\n      return 'Opérateur non valide';\n  }\n}"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une fonction qui effectue une copie superficielle d'un objet JavaScript simple.",
+    "correction": "function shallowCopy(obj) {\n  const copiedObject = { ...obj };\n  return copiedObject;\n}"
+  },
+  "Exercice2": {
+    "description": "Créez une fonction qui effectue une copie superficielle d'un tableau JavaScript simple.",
+    "correction": "function shallowCopyArray(arr) {\n  const copiedArray = [...arr];\n  return copiedArray;\n}"
+  },
+  "Exercice3": {
+    "description": "Créez une fonction qui effectue une copie superficielle d'un objet JavaScript contenant des objets imbriqués.",
+    "correction": "function shallowCopyNestedObject(obj) {\n  const copiedObject = { ...obj };\n  for (const key in copiedObject) {\n    if (typeof copiedObject[key] === 'object') {\n      copiedObject[key] = { ...copiedObject[key] };\n    }\n  }\n  return copiedObject;\n}"
+  },
+  "Exercice4": {
+    "description": "Créez une fonction qui effectue une copie superficielle d'un tableau JavaScript contenant des tableaux imbriqués.",
+    "correction": "function shallowCopyNestedArray(arr) {\n  const copiedArray = [...arr];\n  for (let i = 0; i < copiedArray.length; i++) {\n    if (Array.isArray(copiedArray[i])) {\n      copiedArray[i] = [...copiedArray[i]];\n    }\n  }\n  return copiedArray;\n}"
+  },
+  "Exercice5": {
+    "description": "Créez une fonction qui effectue une copie superficielle d'un objet JavaScript contenant des tableaux imbriqués.",
+    "correction": "function shallowCopyObjectWithNestedArrays(obj) {\n  const copiedObject = { ...obj };\n  for (const key in copiedObject) {\n    if (Array.isArray(copiedObject[key])) {\n      copiedObject[key] = [...copiedObject[key]];\n    }\n  }\n  return copiedObject;\n}"
+  }
+}

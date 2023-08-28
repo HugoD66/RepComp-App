@@ -1,0 +1,23 @@
+{
+  "general": "Les structures de contrôle en PHP permettent de gérer le flux d'exécution des programmes. Elles incluent des instructions conditionnelles, des boucles et d'autres mécanismes pour prendre des décisions et répéter des actions.",
+  "instructions_conditionnelles": {
+    "description": "Les instructions conditionnelles permettent d'exécuter un bloc de code si une condition spécifique est vraie. En PHP, les structures conditionnelles courantes sont `if`, `else`, et `elseif`.",
+    "exemple": "Exemple d'instructions conditionnelles en PHP :",
+    "code": "<pre>\n$note = 75;\nif ($note >= 50) {\n    echo 'Bravo, vous avez réussi !';\n} else {\n    echo 'Dommage, vous devez réessayer.';\n}\n</pre>"
+  },
+  "boucles": {
+    "description": "Les boucles en PHP permettent de répéter un bloc de code jusqu'à ce qu'une condition spécifique soit satisfaite. Les boucles courantes sont `for`, `while` et `foreach`.",
+    "exemple": "Exemple de boucle `for` en PHP :",
+    "code": "<pre>\nfor ($i = 0; $i < 5; $i++) {\n    echo 'Tour ' . ($i + 1) . '\\n';\n}\n</pre>"
+  },
+  "instructions_de_saut": {
+    "description": "Les instructions de saut en PHP permettent de modifier le flux d'exécution en sautant vers un autre endroit du code. Les instructions `break` et `continue` sont couramment utilisées dans les boucles.",
+    "exemple": "Exemple d'instruction `break` en PHP :",
+    "code": "<pre>\n$chiffres = [1, 2, 3, 4, 5];\nforeach ($chiffres as $chiffre) {\n    if ($chiffre === 4) {\n        break; // Sort de la boucle si $chiffre est égal à 4\n    }\n    echo $chiffre . '\\n';\n}\n</pre>"
+  },
+  "structures_de_controle_sans_boucles": {
+    "description": "Outre les boucles et les instructions conditionnelles, PHP propose d'autres structures de contrôle telles que `switch` pour effectuer des actions différentes en fonction de la valeur d'une expression.",
+    "exemple": "Exemple de structure `switch` en PHP :",
+    "code": "<pre>\n$jour = 'lundi';\nswitch ($jour) {\n    case 'lundi':\n        echo 'C'est le début de la semaine.';\n        break;\n    case 'vendredi':\n        echo 'C'est bientôt le week-end.';\n        break;\n    default:\n        echo 'Jour non spécifié.';\n}\n</pre>"
+  }
+}

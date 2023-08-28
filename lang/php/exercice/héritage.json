@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez une classe de base 'Véhicule' avec les propriétés 'marque' et 'année'. Créez ensuite une classe 'Voiture' qui hérite de 'Véhicule' et ajoutez une propriété 'nbPortes'.",
+    "correction": "class Vehicule {\n  public $marque;\n  public $annee;\n}\n\nclass Voiture extends Vehicule {\n  public $nbPortes;\n}"
+  },
+  "Exercice2": {
+    "description": "Ajoutez un constructeur à la classe 'Véhicule' pour initialiser ses propriétés. Ajoutez également un constructeur à la classe 'Voiture' pour initialiser les propriétés héritées de 'Véhicule' ainsi que 'nbPortes'.",
+    "correction": "class Vehicule {\n  public $marque;\n  public $annee;\n\n  public function __construct($marque, $annee) {\n    $this->marque = $marque;\n    $this->annee = $annee;\n  }\n}\n\nclass Voiture extends Vehicule {\n  public $nbPortes;\n\n  public function __construct($marque, $annee, $nbPortes) {\n    parent::__construct($marque, $annee);\n    $this->nbPortes = $nbPortes;\n  }\n}"
+  },
+  "Exercice3": {
+    "description": "Ajoutez une méthode 'afficherDetails' à la classe 'Véhicule' qui affiche la marque et l'année du véhicule. Appelez cette méthode depuis la classe 'Voiture'.",
+    "correction": "class Vehicule {\n  public $marque;\n  public $annee;\n\n  public function __construct($marque, $annee) {\n    $this->marque = $marque;\n    $this->annee = $annee;\n  }\n\n  public function afficherDetails() {\n    echo 'Marque : ' . $this->marque . '<br>'; \n    echo 'Année : ' . $this->annee . '<br>'; \n  }\n}\n\nclass Voiture extends Vehicule {\n  public $nbPortes;\n\n  public function __construct($marque, $annee, $nbPortes) {\n    parent::__construct($marque, $annee);\n    $this->nbPortes = $nbPortes;\n  }\n\n  public function afficherDetails() {\n    parent::afficherDetails();\n    echo 'Nombre de portes : ' . $this->nbPortes . '<br>'; \n  }\n}"
+  },
+  "Exercice4": {
+    "description": "Ajoutez une classe 'Moto' qui hérite de 'Véhicule' et ajoutez une propriété 'typeMoteur' (par exemple : 'Essence' ou 'Électrique').",
+    "correction": "class Moto extends Vehicule {\n  public $typeMoteur;\n\n  public function __construct($marque, $annee, $typeMoteur) {\n    parent::__construct($marque, $annee);\n    $this->typeMoteur = $typeMoteur;\n  }\n}"
+  },
+  "Exercice5": {
+    "description": "Ajoutez une méthode 'afficherDetails' à la classe 'Moto' pour afficher la marque, l'année et le type de moteur de la moto. Appelez cette méthode depuis la classe 'Moto'.",
+    "correction": "class Moto extends Vehicule {\n  public $typeMoteur;\n\n  public function __construct($marque, $annee, $typeMoteur) {\n    parent::__construct($marque, $annee);\n    $this->typeMoteur = $typeMoteur;\n  }\n\n  public function afficherDetails() {\n    parent::afficherDetails();\n    echo 'Type de moteur : ' . $this->typeMoteur . '<br>'; \n  }\n}"
+  }
+}

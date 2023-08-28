@@ -1,0 +1,39 @@
+{
+  "general": "Les modules en TypeScript sont des mécanismes qui permettent d'organiser et de réutiliser du code en le divisant en fichiers séparés. Les modules facilitent la création de projets TypeScript évolutifs et maintenables en encourageant la séparation des responsabilités et la réutilisation du code.",
+
+  "modules_internes": {
+    "description": "Les modules internes, également appelés modules de fichiers, sont des modules qui sont définis dans le même fichier TypeScript. Ils sont utiles pour organiser le code au sein d'un fichier, mais ne sont pas destinés à être partagés entre plusieurs fichiers.",
+    "exemple": "Exemple de module interne en TypeScript :",
+    "code": "module MonModuleInterne {\n    export function maFonction(): void {\n        // ... code de la fonction ...\n    }\n}"
+  },
+
+  "exportation_et_importation": {
+    "description": "Pour partager des fonctionnalités entre différents fichiers TypeScript, vous pouvez utiliser les mots-clés `export` pour rendre des éléments disponibles à l'extérieur d'un module, et `import` pour les utiliser dans d'autres modules.",
+    "exemple": "Exemple d'exportation et d'importation en TypeScript :",
+    "code": "export function maFonctionExportee(): void {\n    // ... code de la fonction exportée ...\n}"
+  },
+
+  "modules_externes": {
+    "description": "Les modules externes sont des bibliothèques ou des packages TypeScript/JavaScript développés par d'autres développeurs et réutilisables. Vous pouvez les importer dans votre projet TypeScript pour utiliser leur fonctionnalité.",
+    "exemple": "Exemple d'importation d'un module externe en TypeScript :",
+    "code": "import * as maLibrairie from 'ma-librairie';\nmaLibrairie.maFonctionExterne();"
+  },
+
+  "modules_commonjs_et_es6": {
+    "description": "TypeScript prend en charge deux systèmes de modules populaires : CommonJS et ES6 (ECMAScript 2015). Vous pouvez choisir le système de modules qui convient le mieux à votre projet.",
+    "exemple": "Exemple d'importation avec CommonJS en TypeScript :",
+    "code": "const maLibrairie = require('ma-librairie');\nmaLibrairie.maFonctionExterne();"
+  },
+
+  "modules_amd_et_umd": {
+    "description": "Outre CommonJS et ES6, TypeScript prend également en charge les systèmes de modules AMD (Asynchronous Module Definition) et UMD (Universal Module Definition). Vous pouvez choisir celui qui correspond à votre environnement d'exécution.",
+    "exemple": "Exemple d'importation avec AMD en TypeScript :",
+    "code": "define(['ma-librairie'], function (maLibrairie) {\n    maLibrairie.maFonctionExterne();\n});"
+  },
+
+  "regroupement_de_modules": {
+    "description": "Il est possible de regrouper plusieurs modules en un seul fichier pour réduire les appels réseau et améliorer les performances de chargement. Cela peut être fait avec des outils tels que Webpack ou Rollup.",
+    "exemple": "Exemple de regroupement de modules avec Webpack :",
+    "code": "// webpack.config.js\nconst path = require('path');\nmodule.exports = {\n    entry: './src/mon-app.ts',\n    output: {\n        filename: 'bundle.js',\n        path: path.resolve(__dirname, 'dist')\n    }\n};"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "Exercice1": {
+    "description": "Créez un formulaire HTML avec un champ de saisie de texte et un bouton. Écrivez une fonction JavaScript qui capture le texte saisi par l'utilisateur lorsqu'il appuie sur le bouton et l'affiche dans la console.",
+    "code": "",
+    "correction": "document.getElementById('monFormulaire').addEventListener('submit', function (e) {\n  e.preventDefault();\n  const inputText = document.getElementById('texteSaisi').value;\n  console.log(inputText);\n});"
+  },
+  "Exercice2": {
+    "description": "Créez un formulaire HTML avec plusieurs cases à cocher (checkbox) et un bouton. Écrivez une fonction JavaScript qui capture les cases cochées par l'utilisateur lorsque le bouton est cliqué et les affiche dans la console.",
+    "code": "",
+    "correction": "document.getElementById('monFormulaire').addEventListener('submit', function (e) {\n  e.preventDefault();\n  const checkedBoxes = Array.from(document.querySelectorAll('input[type=\"checkbox\"]:checked'));\n  const selectedValues = checkedBoxes.map(box => box.value);\n  console.log(selectedValues);\n});"
+  },
+  "Exercice3": {
+    "description": "Créez un formulaire HTML avec un champ de sélection (select) et un bouton. Écrivez une fonction JavaScript qui capture l'option sélectionnée par l'utilisateur lorsque le bouton est cliqué et l'affiche dans la console.",
+    "code": "",
+    "correction": "document.getElementById('monFormulaire').addEventListener('submit', function (e) {\n  e.preventDefault();\n  const selectedOption = document.getElementById('maListe').value;\n  console.log(selectedOption);\n});"
+  },
+  "Exercice4": {
+    "description": "Créez un formulaire HTML avec des champs de saisie de texte pour le nom, l'e-mail et le mot de passe, ainsi qu'un bouton d'inscription. Écrivez une fonction JavaScript qui capture les données saisies par l'utilisateur lorsque le bouton est cliqué et les affiche dans la console.",
+    "code": "",
+    "correction": "document.getElementById('monFormulaire').addEventListener('submit', function (e) {\n  e.preventDefault();\n  const name = document.getElementById('nom').value;\n  const email = document.getElementById('email').value;\n  const password = document.getElementById('motDePasse').value;\n  console.log(`Nom: ${name}, E-mail: ${email}, Mot de passe: ${password}`);\n});"
+  },
+  "Exercice5": {
+    "description": "Créez un formulaire HTML avec un champ de recherche (input de type texte) et un bouton de recherche. Écrivez une fonction JavaScript qui capture le texte saisi par l'utilisateur lorsqu'il appuie sur le bouton et effectue une recherche simulée en affichant les résultats dans la console.",
+    "code": "",
+    "correction": "document.getElementById('monFormulaire').addEventListener('submit', function (e) {\n  e.preventDefault();\n  const searchText = document.getElementById('recherche').value;\n  simulateSearch(searchText);\n});\n\nfunction simulateSearch(query) {\n  // Code de recherche simulée ici\n  const results = ['Résultat 1', 'Résultat 2', 'Résultat 3'];\n  console.log('Résultats de la recherche :');\n  results.forEach(result => console.log(result));\n}"
+  }
+}

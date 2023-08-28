@@ -1,0 +1,22 @@
+{
+  "Exercice1": {
+    "description": "Créez un bouton HTML avec l'ID 'btnClick'. Ajoutez un écouteur d'événements pour détecter un clic sur ce bouton et affichez 'Clic détecté !' dans la console lorsque le bouton est cliqué.",
+    "correction": "const btnClick = document.getElementById('btnClick');\nbtnClick.addEventListener('click', () => {\n  console.log('Clic détecté !');\n});"
+  },
+  "Exercice2": {
+    "description": "Créez un champ de texte HTML avec l'ID 'textInput'. Ajoutez un écouteur d'événements pour détecter lorsque l'utilisateur appuie sur une touche dans le champ de texte et affichez la touche appuyée dans la console.",
+    "correction": "const textInput = document.getElementById('textInput');\ntextInput.addEventListener('keydown', (event) => {\n  console.log('Touche appuyée : ' + event.key);\n});"
+  },
+  "Exercice3": {
+    "description": "Créez un paragraphe HTML avec l'ID 'hoverParagraph'. Ajoutez un écouteur d'événements pour détecter lorsque la souris survole le paragraphe et affichez 'Souris sur le paragraphe !' dans la console.",
+    "correction": "const hoverParagraph = document.getElementById('hoverParagraph');\nhoverParagraph.addEventListener('mouseover', () => {\n  console.log('Souris sur le paragraphe !');\n});"
+  },
+  "Exercice4": {
+    "description": "Créez une liste HTML non ordonnée avec plusieurs éléments de liste. Ajoutez un écouteur d'événements pour détecter lorsque l'utilisateur clique sur un élément de liste et affichez le texte de l'élément cliqué dans la console.",
+    "correction": "const listItems = document.querySelectorAll('li');\nlistItems.forEach((item) => {\n  item.addEventListener('click', () => {\n    console.log('Élément cliqué : ' + item.textContent);\n  });\n});"
+  },
+  "Exercice5": {
+    "description": "Créez un bouton HTML avec l'ID 'btnToggle'. Ajoutez un écouteur d'événements pour alterner la visibilité d'un paragraphe HTML avec l'ID 'toggleParagraph' à chaque clic sur le bouton.",
+    "correction": "const btnToggle = document.getElementById('btnToggle');\nconst toggleParagraph = document.getElementById('toggleParagraph');\nlet isHidden = false;\nbtnToggle.addEventListener('click', () => {\n  if (isHidden) {\n    toggleParagraph.style.display = 'block';\n  } else {\n    toggleParagraph.style.display = 'none';\n  }\n  isHidden = !isHidden;\n});"
+  }
+}

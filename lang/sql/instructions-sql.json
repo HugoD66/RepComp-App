@@ -1,0 +1,45 @@
+{
+  "general": "Les instructions SQL sont des commandes utilisées pour interagir avec les bases de données relationnelles. Elles vous permettent de créer, modifier, interroger et gérer les données stockées dans une base de données.",
+
+  "create_table": {
+    "description": "L'instruction CREATE TABLE est utilisée pour créer une nouvelle table dans une base de données. Vous spécifiez les noms des colonnes, leurs types de données et d'autres contraintes.",
+    "exemple": "Exemple d'instruction CREATE TABLE :",
+    "code": " CREATE TABLE utilisateurs (id INT PRIMARY KEY, nom VARCHAR(50), âge INT);"
+  },
+
+  "alter_table": {
+    "description": "L'instruction ALTER TABLE permet de modifier une table existante en ajoutant, supprimant ou modifiant des colonnes. Vous pouvez également définir des contraintes telles que les clés primaires et étrangères.",
+    "exemple": "Exemple d'instruction ALTER TABLE :",
+    "code": " ALTER TABLE utilisateurs ADD email VARCHAR(100);"
+  },
+
+  "select": {
+    "description": "L'instruction SELECT est utilisée pour extraire des données d'une ou plusieurs tables. Vous pouvez spécifier les colonnes à récupérer, les critères de filtrage et les tables à utiliser dans la requête.",
+    "exemple": "Exemple d'instruction SELECT :",
+    "code": " SELECT nom, âge FROM utilisateurs WHERE âge > 25;"
+  },
+
+  "insert": {
+    "description": "L'instruction INSERT permet d'ajouter de nouvelles lignes de données à une table existante. Vous spécifiez les valeurs à insérer pour chaque colonne dans la nouvelle ligne.",
+    "exemple": "Exemple d'instruction INSERT :",
+    "code": " INSERT INTO utilisateurs (nom, âge) VALUES ('Doe', 30);"
+  },
+
+  "update": {
+    "description": "L'instruction UPDATE est utilisée pour mettre à jour des données existantes dans une table. Vous spécifiez les colonnes à mettre à jour, les nouvelles valeurs et les critères de filtrage.",
+    "exemple": "Exemple d'instruction UPDATE :",
+    "code": " UPDATE utilisateurs SET âge = 31 WHERE nom = 'Doe';"
+  },
+
+  "delete": {
+    "description": "L'instruction DELETE permet de supprimer des lignes de données d'une table. Vous spécifiez les critères de filtrage pour sélectionner les lignes à supprimer.",
+    "exemple": "Exemple d'instruction DELETE :",
+    "code": " DELETE FROM utilisateurs WHERE âge < 30;"
+  },
+
+  "create_index": {
+    "description": "L'instruction CREATE INDEX est utilisée pour créer un index sur une ou plusieurs colonnes d'une table. Les index améliorent les performances des requêtes en accélérant la recherche de données.",
+    "exemple": "Exemple d'instruction CREATE INDEX :",
+    "code": " CREATE INDEX idx_nom ON utilisateurs (nom);"
+  }
+}
