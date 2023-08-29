@@ -14,9 +14,12 @@ nav {
   width: 100%;
   top: 0;
   height: 8%;
+  opacity: 0;
   flex-direction: row;
   overflow-x: auto;
   overflow-y: hidden;
+  transform: translateY(-150px);
+  transition: transform 0.8s cubic-bezier(.5, 0, 0, 1);
   button {
     margin: 3%;
     height: 80%;
@@ -90,7 +93,7 @@ nav {
       transition: color 0.4s, transform 0.4s;
       font-family: $font5;
       transform-origin: left;
-      font-size: 1.2em;
+      font-size: 1.1em;
       &:hover {
         color: $colorMarron7;
         cursor: pointer;
@@ -98,7 +101,7 @@ nav {
       }
     }
     li.active {
-      color: $colorMarron7;
+      color: $colorCyan6;
       transform: scale(1.1);
     }
     p {
@@ -126,7 +129,6 @@ nav {
 
   article {
     background-color: $colorMarron1;
-    z-index: 5;
     transition: opacity 0.5s;
     box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.5);
     margin-left: 1%;
@@ -269,3 +271,73 @@ nav {
   background: #555;
 }
 
+.modal {
+  background-color: $colorMarron1;
+  width: 70%;
+  opacity: 1;
+  backdrop-filter: blur(8px);
+  height: 80%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 4% auto auto;
+  border-radius: 15px;
+  border: 1px solid $colorMarron4;
+  h3 {
+    text-align: center;
+    position: absolute;
+    font-size: 1.6em;
+    top: 10%;
+    color: $colorMarron6;
+    font-family: "JetBrains Mono",monospace;
+    user-select: none;
+  }
+  .modal-content {
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      input {
+        height: 25px;
+        font-family: $font1;
+        font-size: 1.1em;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        outline:  none;
+
+        &:focus {
+          border: none;
+          outline:  none;
+
+        }
+      }
+      button {
+        width: 100%;
+        height: 30px;
+        border: none;
+        font-size: 1.1em;
+        text-align: center;
+        transition: transform 0.5s, background-color 0.5s, color 0.5s; /* Définition de la transition ici */
+        background-color: $colorCyan1;
+        color: $colorMarron4;
+        &:hover {
+          transform: scale(1.1);
+          border: none;
+          background-color: $colorCyan5;
+          color: $colorMarron1;
+        }
+      }
+
+    }
+    #error-message {
+      color: red;
+    }
+  }
+
+}
